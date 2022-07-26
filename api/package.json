@@ -1,0 +1,29 @@
+{
+  "name": "api",
+  "version": "1.1.1",
+  "description": "pinturerialucas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "}"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
+    "exppress": "^0.0.1-security",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.18",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.1",
+    "webpack-cli": "^4.10.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.73.0"
+  }
+}
