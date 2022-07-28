@@ -1,74 +1,65 @@
-import { useEffect, useState } from "react"
-import NavBar from "../../NavBar/Navbar"
-import logo from '../../../img/standarLogo.jpg'
-import s from '../../accionesAdmin/subirCosas/Subir.module.css'
+// import { useEffect, useState } from "react"
+// import NavBar from "../../NavBar/Navbar"
+// import logo from '../../../img/standarLogo.jpg'
+// import s from '../../accionesAdmin/subirCosas/Subir.module.css'
 // // import './AddImages.css'
 // import { getAlbum, postImages } from "../../redux/Actions/Action";
 // import { useDispatch, useSelector } from "react-redux/es/exports";
 // import swal from "sweetalert";
 
 
-export default function Subir() {
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    // if (condicion1) {
-    //   //condicion1
-    // }
-    //condicion2;
-    //sweetalert.
-    alert("subido")
-  }
+// export default function Subir() {
 
 
-  return (
-    <div>
-      <NavBar />
-      <div className={s.contenedorGeneral}>
 
-      </div>
+//   return (
+//     <div>
+//       <NavBar />
+//       <div className={s.contenedorGeneral}>
 
-      <div className={s.accionesAdmin}>
-        <img src={logo} alt="" />
-        <div className={s.formContainer}>
-          <form onSubmit={handleSubmit}>
-            <h1 className={s.titSubir}><i>Subir Producto</i></h1>
-            <div>
-              <input type="text" name="" id="" placeholder="Nombre del producto:" />
-            </div>
+//       </div>
 
-            <div>
-              <textarea name="" id="" cols="100" rows="10" placeholder="Descripción del producto:"></textarea>
-            </div>
+//       <div className={s.accionesAdmin}>
+//         <img src={logo} alt="" />
+//         <div className={s.formContainer}>
+//           <form onSubmit={handleSubmit}>
+//             <h1 className={s.titSubir}><i>Subir Producto</i></h1>
+//             <div>
+//               <input type="text" name="" id="" placeholder="Nombre del producto:" />
+//             </div>
 
-            <div>
-              <label>Seccion a la que pertenezca el producto:</label>
-              <select>
-                <option value="">Revestimiento texturado</option>
-                <option value="">Látex color</option>
-                <option value="">Membranas</option>
-                <option value="">Preparación de la superficie</option>
-                <option value="">Auxiliares</option>
-              </select>
-            </div>
+//             <div>
+//               <textarea name="" id="" cols="100" rows="10" placeholder="Descripción del producto:"></textarea>
+//             </div>
 
-            <div>
+//             <div>
+//               <label>Seccion a la que pertenezca el producto:</label>
+//               <select>
+//                 <option value="">Revestimiento texturado</option>
+//                 <option value="">Látex color</option>
+//                 <option value="">Membranas</option>
+//                 <option value="">Preparación de la superficie</option>
+//                 <option value="">Auxiliares</option>
+//               </select>
+//             </div>
 
-              <input type="text" placeholder="Categoría" />
-            </div>
+//             <div>
 
-            <div>
-              <label>Subir imagen</label>
-              <input type="file" name="" id="" />
-            </div>
+//               <input type="text" placeholder="Categoría" />
+//             </div>
 
-            <button type="submit">Subir</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  )
-}
+//             <div>
+//               <label>Subir imagen</label>
+//               <input type="file" name="" id="" />
+//             </div>
+
+//             <button type="submit">Subir</button>
+//           </form>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
 
 // export default function AddImages() {
 //   const dispatch = useDispatch()
