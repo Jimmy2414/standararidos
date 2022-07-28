@@ -1,5 +1,7 @@
-const prueba = require('./routeprueba');
+const post = require('./routepost');
+const get = require('./routeget');
 const router = require('express').Router();
 
-router.use('/prueba', prueba);
+router.use('/post', post);
+router.use('/get', get);
 module.exports = router;

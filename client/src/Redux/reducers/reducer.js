@@ -1,11 +1,15 @@
-// const initialState = {
+const initialState = {
+  Productos: [],
+};
 
-// }
-
-// const rootReducer = (state = initialState, { type, payload }) => {
-//   switch (type) {
-
-//     default:
-//       return state;
-//   }
-// }
+export const reducerroot = (state = initialState, { type, payload }) => {
+  switch (type) {
+    case 'GET_TYPES':
+      return {
+        ...state,
+        Productos: payload,
+      };
+    default:
+      return state;
+  }
+};
