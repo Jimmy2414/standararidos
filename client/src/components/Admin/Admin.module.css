@@ -1,0 +1,38 @@
+.contenedorGeneral .seccionAdmin img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: rgb(165, 165, 165);
+}
+
+.contenedorGeneral .accionesAdmin {
+  display: flex;
+  margin: auto;
+  width: 60%;
+  height: 100%;
+  border: solid 2px rgb(0, 0, 0);
+  background-image: linear-gradient(#9810B3, #09010B);
+
+}
+
+.ayuda {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.ayuda h3 {
+  padding-top: 50px;
+}
+
+.ayuda p {
+  width: 50%;
+  font-size: 18px;
+  color: white;
+  padding-top: 10px;
+  text-align: justify;
+}

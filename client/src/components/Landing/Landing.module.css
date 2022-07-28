@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --colorVioleta: #9810B3;
+  --colorNegro: #09010B;
+  --colorBlanco: #F9F9F9;
+  --colorRojo: #BB1818;
+
+  --fuenteMenu: 'Montserrat', sans-serif;
+  --fuenteBotones: 'Staatliches', cursive;
+  --fuenteLetras: 'Roboto', sans-serif;
+  --fuenteTitPrincipal: 'Saira', sans-serif;
+}
+
+.titulo {
+  background-image: linear-gradient(#9810B3, #09010B);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.textocambiante {
+  display: flex;
+  margin-top: 0px;
+  width: 300px;
+  height: 40px;
+  color: var(--colorNegro);
+  font-family: var(--fuenteMenu);
+  font-size: 20px;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.renova {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-size: 30px;
+  font-weight: 800;
+
+}
+
+.textocambiante ul {
+  list-style: none;
+  padding-left: 10px;
+  color: var(--colorVioleta);
+
+  font-family: var(--fuenteBotones);
+  font-size: 30px;
+  font-weight: 900;
+
+  animation: cambiarpalabra 10s infinite;
+}
+
+.textocambiante ul,
+h3 {
+  margin: 0;
+
+}
+
+@keyframes cambiarpalabra {
+  0% {
+    margin-top: 0;
+  }
+
+  20% {
+    margin-top: 0;
+  }
+
+  25% {
+    margin-top: -40px;
+  }
+
+  50% {
+    margin-top: -40px;
+  }
+
+  55% {
+    margin-top: -80px;
+  }
+
+  70% {
+    margin-top: -80px;
+  }
+
+  85% {
+    margin-top: -40px;
+  }
+
+  95% {
+    margin-top: -40px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+.sliderShow {
+  margin-top: 10vh;
+  width: 90%;
+  height: 10%;
+  overflow: hidden;
+  margin: auto;
+
+}
+
+.sliderShow img {
+  z-index: -1;
+}
+
+.medio {
+
+  top: 20%;
+  left: 0%;
+  transform: translate(-50, -50);
+}
+
+.navegacion {
+  margin-top: 1rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 7;
+
+}
+
+.slides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  margin-top: 20vh;
+}
+
+.slide {
+  width: 20%;
+  transition: 0.6s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
