@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
 import logo from '../../img/standarLogo.jpg'
 import bannerUno from '../../img/bannerUno.jpg';
 import bannerDos from '../../img/bannerDos.jpg';
 import bannerTres from '../../img/bannerTres.jpg';
+import Productos from "../Productos/Productos";
+import { getProducto } from '../../Redux/actions/actions'
 import s from '../Landing/Landing.module.css'
 
+
 export default function Landing() {
+  const dispatch = useDispatch()
+
+  const allProductos = useSelector(state => state.Productos);
+  console.log(allProductos.map(e => e.descripcion))
+
+
+  useEffect(() => {
+    dispatch(getProducto())
+  }, [dispatch])
 
   return (
     <div className={s.contenedorLanding}>
@@ -43,7 +56,24 @@ export default function Landing() {
         </div>
       </div>
 
+      <div className={s.contenedorProductos}>
+        {allProductos?.map(e => {
+          return (
+            <div key={e.id}>
+              <Productos
+                // imagen={e.imagen}
+                nombre={e.nombre}
+                descripcion={e.descripcion}
+                categoria={e.categoria}
+                seccion={e.seccion}
+              />
 
+              {/* {console.log(e.nombre)} */}
+            </div>
+          )
+        })}
+
+      </div>
     </div>
   )
 }

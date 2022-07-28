@@ -12,8 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/admin" element={<Admin />} exact />
-        <Route path="/upLoad" element={<Subir />} exact />
-        <Route path="/file" element={<FileUpload />} exact />
+        <Route path="/upLoad" element={<FileUpload />} exact />
+        {/* <Route path="/file" element={<FileUpload />} exact /> */}
 
       </Routes>
 

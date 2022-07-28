@@ -1,0 +1,20 @@
+.contenedorProducto {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 50px;
+}
+
+.cardNombre {
+  color: red;
+}
