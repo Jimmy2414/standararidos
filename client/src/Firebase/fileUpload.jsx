@@ -130,7 +130,6 @@ export default function FileUpload() {
                 onChange={handleChangeProduct}
               />
             </div>
-
             <div>
               <textarea
                 name="descripcion"
@@ -157,7 +156,6 @@ export default function FileUpload() {
                 onChange={handleChangeProduct}
               />
             </div>
-
             <div>
               <input
                 type="text"
@@ -166,14 +164,12 @@ export default function FileUpload() {
                 onChange={handleChangeProduct}
               />
             </div>
-
             <div>
               <label>Subir imagen</label>
               <input type="file" name="imagen" onChange={handleChange} />
               <progress value={progress} max="100" />
               <div>{parseInt(progress) === -2 ? 0 : parseInt(progress)} %</div>
             </div>
-
             <button type="submit">Subir</button>
           </form>
         </div>
