@@ -30,6 +30,9 @@ export default function FileUpload() {
       uploadTask.on(
         'state_changed',
         snapshot => {
+          const progress1 =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          setProgress(progress1 - 2);
           switch (snapshot.state) {
             case 'paused':
               console.log('Upload is paused');
