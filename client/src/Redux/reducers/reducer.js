@@ -1,5 +1,6 @@
 const initialState = {
   Productos: [],
+  URL: '',
 };
 
 export const reducerroot = (state = initialState, { type, payload }) => {
@@ -13,10 +14,14 @@ export const reducerroot = (state = initialState, { type, payload }) => {
     case 'GET_PRODUCTOS_ALL':
       return {
         ...state,
-        Productos: payload
-      }
-
-    // CASE DEFAULT      
+        Productos: payload,
+      };
+    case 'POST_URL':
+      return {
+        ...state,
+        URL: payload,
+      };
+    // CASE DEFAULT
     default:
       return state;
   }

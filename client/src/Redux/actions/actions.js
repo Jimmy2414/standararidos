@@ -13,7 +13,10 @@ export function postProducto(payload) {
 export function getProducto() {
   return function (dispatch) {
     axios.get('/get').then(res => {
-      return dispatch({ type: 'GET_PRODUCTOS_ALL', payload: res.data })
-    })
-  }
+      return dispatch({ type: 'GET_PRODUCTOS_ALL', payload: res.data });
+    });
+  };
+}
+export function getUrl(url) {
+  return { type: 'POST_URL', payload: url };
 }
