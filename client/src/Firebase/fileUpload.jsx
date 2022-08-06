@@ -101,17 +101,15 @@ export default function FileUpload() {
         Swal.fire('Los cambios no se guardaron', '', 'info');
       }
     });
-    // Swal.fire({
-    //   position: 'center',
-    //   icon: 'success',
-    //   title: 'Your work has been saved',
-    //   showConfirmButton: false,
-    //   timer: 1500
-    // })
   }
   function handleChangeProduct(e) {
     setProducto({ ...producto, [e.target.name]: e.target.value });
   }
+
+  function handleSelectSeccion(e) {
+    setProducto({ ...producto, seccion: e.target.value })
+  }
+
   return (
     <div>
       <NavBar />
@@ -145,19 +143,16 @@ export default function FileUpload() {
             </div>
 
             <div>
-              {/* <label>Seccion a la que pertenezca el producto:</label>
-              <select>
-                <option value="">Revestimiento texturado</option>
-                <option value="">Látex color</option>
-                <option value="">Membranas</option>
-                <option value="">Preparación de la superficie</option>
-                <option value="">Auxiliares</option>
-              </select> */}
-              <input
-                type="text"
-                name="seccion"
-                onChange={handleChangeProduct}
-              />
+              <label>Seccion a la que pertenezca el producto:</label>
+              <select onChange={handleSelectSeccion}>
+                <option value="" disabled>Sección</option>
+                <option value="Revestimiento Texturado">Revestimiento texturado</option>
+                <option value="Látex Color">Látex color</option>
+                <option value="Membranas">Membranas</option>
+                <option value="Preparación de la superficie">Preparación de la superficie</option>
+                <option value="Auxiliares">Auxiliares</option>
+              </select>
+
             </div>
             <div>
               <input

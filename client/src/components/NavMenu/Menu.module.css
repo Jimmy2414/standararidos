@@ -1,0 +1,21 @@
+.navMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-direction: row;
+}
+
+.navMenu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-direction: row;
+}
+
+.navMenu ul li {
+  list-style: none;
+  padding: 8px;
+  font-size: 18px;
+}
