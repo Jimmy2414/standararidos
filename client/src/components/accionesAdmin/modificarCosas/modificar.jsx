@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import Productos from "../../Productos/Productos";
 import { getProducto, filterProductoPorNombre } from '../../../Redux/actions/actions'
-import NavMenu from "../../NavMenu/Menu";
+import NavBar from '../../NavBar/Navbar'
 import s from '../../accionesAdmin/modificarCosas/modificar.module.css'
 
 export default function ModificarProductos() {
@@ -48,12 +48,12 @@ export default function ModificarProductos() {
   }
   return (
     <div>
-      <NavMenu />
+      <NavBar />
 
-      <div>
-        <form className="buscador" onSubmit={handleSubmit}>
+      <div className={s.contenedorBuscador}>
+        <form className={s.form} onSubmit={handleSubmit}>
           <input
-            className="inputS"
+            className={s.inputS}
             type="text"
             name="search"
             id="Search"
@@ -61,12 +61,14 @@ export default function ModificarProductos() {
             value={productoFilter}
             onChange={handleChange}
           />
-          <button className="botones" type="submit" onClick={handleSubmit}>
-            Buscar
-          </button>
-          <button type="button" onClick={recargar}>
-            Recargar
-          </button>
+          <div className={s.contenedorBotones}>
+            <button className={s.btnBuscar} type="submit" onClick={handleSubmit}>
+              Buscar
+            </button>
+            <button className={s.btnRecargar} type="button" onClick={recargar}>
+              Recargar
+            </button>
+          </div>
         </form>
         <br />
 
