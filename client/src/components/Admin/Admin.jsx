@@ -20,16 +20,41 @@ export default function Admin() {
         <div className={s.accionesAdmin}>
           <div className={s.ayuda}>
             <h2>ACCIONES DE ADMINISTRADOR:</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis velit esse ad placeat quibusdam voluptatibus totam molestiae iste? Corporis libero facere amet repellat labore ea a ut soluta doloribus rerum?</p>
+            <p>Estas son las opciones que tiene el administrador para poder realizar cualquier tipo de acción: "Subir productos", "Modificar productos" y "Eliminar productos". <br />
+              A continuación, se le detallara paso a paso como usar cada una de las acciones.
+            </p>
 
             <h3>Subir productos:</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio saepe illum, voluptatum qui officia consequuntur eos eaque, doloremque aliquam expedita adipisci provident. Voluptas vel ullam aliquid odit distinctio exercitationem totam.</p>
+
+            <ol>
+              <li>Dar nombre al producto en el primer campo</li>
+              <li>Escribir una descripción en el segundo campo</li>
+              <li>Elegir la sección a la cual pertenece el producto</li>
+              <li>Escribirle una categoria.</li>
+              <li>Subir la imagen perteneciente al producto (Acepta archivos: JPG, JPEG, PNG)</li>
+            </ol>
+            <p>Se cargará el producto en la base de datos y al finalizar dará una alerta diciendo que se subio correctamente.</p>
+            <p>Presionar el boton "SUBIR" para finalizar. (Tendra 2 opciones, "GUARDAR" o "CANCELAR")</p>
+
 
             <h3>Modificar productos:</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam dolores sed quisquam ratione consequatur, explicabo eos quis mollitia? Ab eaque at sint velit maxime natus exercitationem expedita ad earum laboriosam?</p>
+            <ol>
+              <li>Escribir el nombre producto con el buscador</li>
+              <li>Presionar "BUSCAR" o presionar la tecla "ENTER"</li>
+              <li>Presionar en el boton "MODIFICAR" debajo del producto. (Al presionarlo, se abrirá un modal con los campos a cambiar)</li>
+              <li>Escribir el campo a modificar</li>
+            </ol>
+            <p>Una vez terminado, seleccionar "MODIFICAR" (Si no se quiere guardar, presionar "CANCELAR")</p>
+            <p>El boton "RECARGAR" del buscador, traerá todos los productos una vez más.</p>
 
             <h3>Eliminar productos:</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quam inventore impedit eaque rem doloribus eum ea in quo possimus numquam suscipit, quidem fugiat dicta debitis animi. Tempore, consectetur itaque.</p>
+            <ol>
+              <li>Escribir el nombre producto con el buscador</li>
+              <li>Presionar "BUSCAR" o presionar la tecla "ENTER"</li>
+              <li>Presionar en el boton "ELIMINAR" debajo del producto. (Al presionarlo, se abrirá un modal con 2 opciones "BORRAR" o "CANCELAR")</li>
+            </ol>
+            <h5>¡ADVERTENCIA!</h5>
+            <p>Una vez eliminado el producto desaparecerá permanentemente de la base de datos. </p>
           </div>
         </div>
       </div>

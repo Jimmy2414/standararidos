@@ -40,3 +40,32 @@ export function filterProductoPorNombre(nombre) {
     return dispatch({ type: 'SEARCH_SEARCH', payload: data });
   };
 }
+
+//modificar
+
+export function modificarProducto(id, input) {
+  return async dispatch => {
+    try {
+      let { data } = await axios.put(`/${id}`, input)
+      return dispatch({ type: 'UPDATE_PRODUCTO', payload: data })
+    }
+    catch (err) {
+      alert(err.response.data)
+    }
+  }
+}
+
+
+
+
+//DELETE
+
+export function deleteProducto(id) {
+  return async dispatch => {
+    await axios.delete(`/del/${id}`)
+    return dispatch({ type: 'DELETE_PRODUCTO' })
+  }
+
+
+
+}

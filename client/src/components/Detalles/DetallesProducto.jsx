@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { detalleProducto } from "../../Redux/actions/actions";
 import NavMenu from "../NavMenu/Menu";
-
+import Footer from "../Footer/Footer";
 import s from '../Detalles/DetallesProducto.module.css'
 
 export default function DetalleProducto(props) {
@@ -31,6 +31,7 @@ export default function DetalleProducto(props) {
           <p className={s.cardDescripcion}><u>Descripción</u>: {detalle.descripcion.split(' ').slice(0, 19).join(' ') + ' ...'}</p>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

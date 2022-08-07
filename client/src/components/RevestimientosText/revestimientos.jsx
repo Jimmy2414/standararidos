@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProducto } from '../../Redux/actions/actions';
 import Productos from "../Productos/Productos";
 import NavMenu from "../NavMenu/Menu";
+import Footer from "../Footer/Footer";
 import { useState } from "react";
 
 export default function Revestimientos() {
@@ -44,6 +45,8 @@ export default function Revestimientos() {
 
         })}
       </div>
+
+      <Footer />
     </div>
   )
 }

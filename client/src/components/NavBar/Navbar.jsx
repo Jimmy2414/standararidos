@@ -9,6 +9,10 @@ export default function NavBar() {
       <div>
         <nav>
           <ul>
+            <NavLink to={'/admin'}>
+              <li>Admin</li>
+            </NavLink>
+
             <NavLink to={'/upLoad'}>
               <li>Subir producto</li>
             </NavLink>

@@ -7,11 +7,7 @@ const initialState = {
 
 export const reducerroot = (state = initialState, { type, payload }) => {
   switch (type) {
-    // case 'GET_TYPES':
-    //   return {
-    //     ...state,
-    //     Productos: payload,
-    //   };
+
 
     case 'GET_PRODUCTOS_ALL':
       return {
@@ -41,6 +37,11 @@ export const reducerroot = (state = initialState, { type, payload }) => {
         ...state,
         detalleProducto: payload
       }
+
+    case 'DELETE_PRODUCTO':
+      return {
+        ...state
+      };
 
   }
 };

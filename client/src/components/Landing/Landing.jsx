@@ -7,6 +7,7 @@ import bannerTres from '../../img/bannerTres.jpg';
 import Productos from '../Productos/Productos';
 import { getProducto } from '../../Redux/actions/actions';
 import NavMenu from '../NavMenu/Menu';
+import Footer from '../Footer/Footer';
 import s from '../Landing/Landing.module.css';
 
 export default function Landing() {
@@ -42,39 +43,6 @@ export default function Landing() {
         </ul>
       </div>
 
-      {/* <div className={s.sliderShow}>
-        <div className={s.slides}>
-          <div className={s.slide}>
-            <a
-              href="https://api.whatsapp.com/send?phone=+541170347165&text=¡Hola, Necesito información para empezar mi proyecto!"
-              target="_blank"
-            >
-              <img width="100%" src={bannerUno} />
-            </a>
-          </div>
-          <div className={s.slide}>
-            <a href="revest.html" target="_blank">
-              <img
-                width="100%"
-                src={bannerDos}
-                alt="consultas standar-aridos"
-              />
-            </a>
-          </div>
-
-          <div className={s.slide}>
-            <img
-              width="100%"
-              src={bannerTres}
-              alt="aplicacion standar aridos"
-            />
-          </div>
-        </div>
-      </div> */}
-
-
-
-
       <h3 className={s.title_destacados}>Productos Destacados</h3>
 
       <div className={s.contenedorProductos}>
@@ -92,6 +60,8 @@ export default function Landing() {
           );
         })}
       </div>
+
+      <Footer />
     </div>
   );
 }

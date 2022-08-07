@@ -165,8 +165,10 @@ export default function FileUpload() {
             <div>
               <label>Subir imagen</label>
               <input type="file" name="imagen" onChange={handleChange} />
-              <progress value={progress} max="100" />
-              <div>{parseInt(progress) === -2 ? 0 : parseInt(progress)} %</div>
+              <div className={s.carga}>
+                <progress className={s.barradecarga} value={progress} max="100" />
+                <div className={s.porcentaje}>{parseInt(progress) === -2 ? 0 : parseInt(progress)} %</div>
+              </div>
             </div>
             <button type="submit">Subir</button>
           </form>

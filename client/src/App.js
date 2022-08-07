@@ -11,6 +11,7 @@ import PreparacionSuperficie from './components/Preparacion de la superficie/Pre
 import Auxiliares from './components/Auxiliares/auxiliares';
 import Detalle from './components/Detalles/DetallesProducto';
 import ModificarProductos from './components/accionesAdmin/modificarCosas/modificar';
+import EliminarProducto from './components/accionesAdmin/eliminarCosas/eliminar';
 
 import './App.css';
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/preparacion-de-la-superficie" element={<PreparacionSuperficie />} exact />
         <Route path="/auxilires" element={<Auxiliares />} exact />
         <Route path="/detalle/:id" element={<Detalle />} exact />
+        <Route path="/delete" element={<EliminarProducto />} exact />
       </Routes>
 
     </div>

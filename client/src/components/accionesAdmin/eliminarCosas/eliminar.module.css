@@ -1,0 +1,37 @@
+.contenedorBuscador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  flex-direction: column;
+}
+
+.form {
+  border: none;
+}
+
+.inputS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 50%;
+}
+
+.contenedorBotones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.productos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+}
