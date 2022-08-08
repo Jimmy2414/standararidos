@@ -3,12 +3,11 @@ const initialState = {
   nombreProducto: [],
   detalleProducto: [],
   URL: '',
+  ProductoBefore: [],
 };
 
 export const reducerroot = (state = initialState, { type, payload }) => {
   switch (type) {
-
-
     case 'GET_PRODUCTOS_ALL':
       return {
         ...state,
@@ -25,23 +24,31 @@ export const reducerroot = (state = initialState, { type, payload }) => {
 
     //BUSCAR
     case 'SEARCH_SEARCH':
-      const nombre = state.Productos
+      const nombre = state.Productos;
       return {
         ...state,
         nombreProducto: nombre,
-        Productos: payload
+        Productos: payload,
       };
 
     case 'DETALLE_PRODUCTO':
       return {
         ...state,
-        detalleProducto: payload
-      }
+        detalleProducto: payload,
+      };
 
     case 'DELETE_PRODUCTO':
       return {
-        ...state
+        ...state,
       };
-
+    case 'MODIFICAR_PRODUCTO':
+      return {
+        ...state,
+      };
+    case 'Detalle_Before':
+      return {
+        ...state,
+        ProductoBefore: payload,
+      };
   }
 };

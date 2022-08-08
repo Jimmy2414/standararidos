@@ -2,8 +2,8 @@
 import { Route, Routes } from 'react-router-dom';
 import Landing from './components/Landing/Landing';
 import Admin from './components/Admin/Admin';
-import Subir from './components/accionesAdmin/subirCosas/Subir'
-import FileUpload from './Firebase/fileUpload'
+import Subir from './components/accionesAdmin/subirCosas/Subir';
+import FileUpload from './Firebase/fileUpload';
 import Revestimientos from './components/RevestimientosText/revestimientos';
 import LatexColor from './components/LatexColor/latex';
 import Membranas from './components/Membranas/membranas';
@@ -23,15 +23,23 @@ function App() {
         <Route path="/admin" element={<Admin />} exact />
         <Route path="/upLoad" element={<FileUpload />} exact />
         <Route path="/upDate" element={<ModificarProductos />} exact />
-        <Route path="/revestimientos-texturados" element={<Revestimientos />} exact />
+        <Route path="/upDate/:id" element={<ModificarProductos />} exact />
+        <Route
+          path="/revestimientos-texturados"
+          element={<Revestimientos />}
+          exact
+        />
         <Route path="/latex-color" element={<LatexColor />} exact />
         <Route path="/membranas" element={<Membranas />} exact />
-        <Route path="/preparacion-de-la-superficie" element={<PreparacionSuperficie />} exact />
+        <Route
+          path="/preparacion-de-la-superficie"
+          element={<PreparacionSuperficie />}
+          exact
+        />
         <Route path="/auxilires" element={<Auxiliares />} exact />
         <Route path="/detalle/:id" element={<Detalle />} exact />
         <Route path="/delete" element={<EliminarProducto />} exact />
       </Routes>
-
     </div>
   );
 }

@@ -25,7 +25,14 @@ export function detalleProducto(id) {
     });
   };
 }
-
+export function productoBefore(id) {
+  console.log(id);
+  return function (dispatch) {
+    axios.get(`/get/${id}`).then(res => {
+      return dispatch({ type: 'Detalle_Before', payload: res.data });
+    });
+  };
+}
 export function getUrl(url) {
   return { type: 'POST_URL', payload: url };
 }
@@ -46,26 +53,23 @@ export function filterProductoPorNombre(nombre) {
 export function modificarProducto(id, input) {
   return async dispatch => {
     try {
-      let { data } = await axios.put(`/${id}`, input)
-      return dispatch({ type: 'UPDATE_PRODUCTO', payload: data })
+      let { data } = await axios.put(`/put/${id}`, {
+        nombre: input.nombre,
+        descripcion: input.descripcion,
+        categoria: input.categoria,
+      });
+      return dispatch({ type: 'MODIFICAR_PRODUCTO', payload: data });
+    } catch (err) {
+      alert(err.response.data);
     }
-    catch (err) {
-      alert(err.response.data)
-    }
-  }
+  };
 }
-
-
-
 
 //DELETE
 
 export function deleteProducto(id) {
   return async dispatch => {
-    await axios.delete(`/del/${id}`)
-    return dispatch({ type: 'DELETE_PRODUCTO' })
-  }
-
-
-
+    await axios.delete(`/del/${id}`);
+    return dispatch({ type: 'DELETE_PRODUCTO' });
+  };
 }
