@@ -11,7 +11,7 @@ import NavBar from '../../NavBar/Navbar';
 import { Modal, TextField, button, Button } from '@material-ui/core';
 import s from '../../accionesAdmin/modificarCosas/modificar.module.css';
 import { Link, useParams } from 'react-router-dom';
-
+import Swal from 'sweetalert2';
 export default function ModificarProductos() {
   const dispatch = useDispatch();
   const BeforeProduct = useSelector(state => state.ProductoBefore);
@@ -19,9 +19,10 @@ export default function ModificarProductos() {
   console.log(allProductos.map(e => e.descripcion));
 
   const [putModal, setInputModal] = useState(false);
-  const { id } = useParams();
+  let key = useParams();
+  console.log(key.id);
+  let id = allProductos.find(e => e.id === key.id);
   console.log(id);
-
   const [input, setInput] = useState({
     nombre: '',
     descripcion: '',
@@ -44,19 +45,36 @@ export default function ModificarProductos() {
     console.log(input);
   };
   const EditProducto = () => {
-    dispatch(modificarProducto(id, input))
+    dispatch(modificarProducto(key.id, input))
       .then(res => dispatch(getProducto()))
       .then(res => alert('producto Modificado'), window.location.reload());
   };
 
   const cerrar = () => {
-    setInputModal(!putModal);
     window.location.reload();
+  };
+
+  const abrir = () => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+    }).then(result => {
+      if (result.isConfirmed) {
+        Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+        console.log(key.id);
+        dispatch(productoBefore(key.id));
+        // setInputModal(!putModal);
+      }
+    });
   };
   const cerrarEditar = () => {
     setInputModal(!putModal);
-    dispatch(productoBefore(id));
-
+    // dispatch(productoBefore(id));
     setInput({
       nombre: BeforeProduct.nombre,
       descripcion: BeforeProduct.descripcion,
@@ -172,7 +190,7 @@ export default function ModificarProductos() {
                 seccion={e.seccion}
               />
               <Link to={'/upDate/' + e.id}>
-                <button onClick={cerrarEditar}>Modificar</button>
+                <button onClick={abrir}>Modificar</button>
               </Link>
             </div>
           );

@@ -51,6 +51,7 @@ export function filterProductoPorNombre(nombre) {
 //modificar
 
 export function modificarProducto(id, input) {
+  console.log(id);
   return async dispatch => {
     try {
       let { data } = await axios.put(`/put/${id}`, {
