@@ -26,12 +26,22 @@ export function detalleProducto(id) {
   };
 }
 export function productoBefore(id) {
+
+  // return function (dispatch) {
+  //   axios.get(`/get/${id}`).then(res => {
+  //     return dispatch({ type: 'Detalle_Before', payload: res.data });
+  //   });
+  // };
   console.log(id);
-  return function (dispatch) {
-    axios.get(`/get/${id}`).then(res => {
-      return dispatch({ type: 'Detalle_Before', payload: res.data });
-    });
-  };
+  return async (dispatch) => {
+    try {
+      let { data } = await axios.get(`/get/${id}`)
+      return dispatch({ type: 'Detalle_Before', payload: data })
+    }
+    catch (err) {
+      alert("error de detalle before")
+    }
+  }
 }
 export function getUrl(url) {
   return { type: 'POST_URL', payload: url };
@@ -61,7 +71,7 @@ export function modificarProducto(id, input) {
       });
       return dispatch({ type: 'MODIFICAR_PRODUCTO', payload: data });
     } catch (err) {
-      alert(err.response.data);
+      alert("no se puede");
     }
   };
 }

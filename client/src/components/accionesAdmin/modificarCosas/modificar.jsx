@@ -16,13 +16,15 @@ export default function ModificarProductos() {
   const dispatch = useDispatch();
   const BeforeProduct = useSelector(state => state.ProductoBefore);
   const allProductos = useSelector(state => state.Productos);
-  console.log(allProductos.map(e => e.descripcion));
+  console.log(allProductos.map(e => e.id));
 
   const [putModal, setInputModal] = useState(false);
   let key = useParams();
   console.log(key.id);
-  let id = allProductos.find(e => e.id === key.id);
-  console.log(id);
+
+  let id = allProductos.find(e => e.id);
+  console.log(id)
+
   const [input, setInput] = useState({
     nombre: '',
     descripcion: '',
@@ -33,11 +35,45 @@ export default function ModificarProductos() {
 
   useEffect(() => {
     dispatch(getProducto());
+
+    // dispatch(productoBefore())
   }, [dispatch]);
 
+
+  // FUNCIONES DE RETURN
+  function handleChange(e) {
+    e.preventDefault();
+    setProductoFilter(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    try {
+      if (productoFilter.length) {
+        dispatch(filterProductoPorNombre(productoFilter));
+      } else {
+        alert('Debe escribir el nombre de un producto');
+      }
+    } catch (err) {
+      throw new Error(err);
+    }
+  }
+
+  function recargar(e) {
+    e.preventDefault();
+    try {
+      dispatch(getProducto());
+    } catch (err) {
+      throw new Error(err);
+    }
+  }
+
+
+  // FUNCIONES MODAL
   const handleChangeData = e => {
     e.preventDefault();
-
+    dispatch(productoBefore(key.id))
+    console.log(key.id)
     setInput({
       ...input,
       [e.target.name]: e.target.value,
@@ -45,36 +81,26 @@ export default function ModificarProductos() {
     console.log(input);
   };
   const EditProducto = () => {
+    console.log(key.id)
     dispatch(modificarProducto(key.id, input))
       .then(res => dispatch(getProducto()))
-      .then(res => alert('producto Modificado'), window.location.reload());
+      .then(res => alert('producto Modificado'),);
+    // window.location.reload()
   };
 
   const cerrar = () => {
-    window.location.reload();
+
+    setInputModal(false).then(window.location.reload())
   };
 
   const abrir = () => {
-    Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
-    }).then(result => {
-      if (result.isConfirmed) {
-        Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
-        console.log(key.id);
-        dispatch(productoBefore(key.id));
-        // setInputModal(!putModal);
-      }
-    });
+
+    // dispatch(productoBefore(key.id));
+    setInputModal(!putModal);
   };
   const cerrarEditar = () => {
     setInputModal(!putModal);
-    // dispatch(productoBefore(id));
+    dispatch(productoBefore(id));
     setInput({
       nombre: BeforeProduct.nombre,
       descripcion: BeforeProduct.descripcion,
@@ -83,6 +109,10 @@ export default function ModificarProductos() {
     });
     console.log(input);
   };
+
+
+
+  // MODAL
   const bodyEditar = (
     <div className={s.bodyEditar}>
       <h3>Modificar producto:</h3>
@@ -119,37 +149,10 @@ export default function ModificarProductos() {
     </div>
   );
 
-  function handleChange(e) {
-    e.preventDefault();
-    setProductoFilter(e.target.value);
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    try {
-      if (productoFilter.length) {
-        dispatch(filterProductoPorNombre(productoFilter));
-      } else {
-        alert('Debe escribir un nombre de un pais');
-      }
-    } catch (err) {
-      throw new Error(err);
-    }
-  }
-
-  function recargar(e) {
-    e.preventDefault();
-    try {
-      dispatch(getProducto());
-    } catch (err) {
-      throw new Error(err);
-    }
-  }
-
+  // RETURN
   return (
     <div>
       <NavBar />
-
       <div className={s.contenedorBuscador}>
         <h2>Modificar Producto</h2>
         <form className={s.form} onSubmit={handleSubmit}>
