@@ -23,17 +23,36 @@ export default function Landing() {
   return (
     <div className={s.contenedorLanding}>
 
+      <div className={s.textoArriba}>
+        <p>Pilcomayo 3764 - Villa Tesei (Hurlingham) - Provincia de Buenos Aires</p>
+        <p>Copyright · 2022 · Standar Aridos</p>
+      </div>
+
       <div className={s.menu}>
 
-        <img src={logo} alt="" />
+        <div className={s.contenedorLogo}>
+          <img src={logo} alt="" />
+        </div>
+
+
         <div className={s.menu_landing}>
           <NavMenu />
         </div>
       </div>
 
-      <div className={s.titulo}>
+      {/* <div className={s.titulo}>
         <h1>Standar Aridos</h1>
+      </div> */}
+
+
+      <div className={s.carouselImg}>
+        <ul>
+          <li><img src={bannerUno} alt="" /></li>
+          <li><img src={bannerDos} alt="" /></li>
+          <li><img src={bannerTres} alt="" /></li>
+        </ul>
       </div>
+
       <div className={s.textocambiante}>
         <h3 className={s.renova}>¡renová</h3>
         <ul>

@@ -1,3 +1,15 @@
+:root {
+  --colorVioleta: #9810B3;
+  --colorNegro: #09010B;
+  --colorBlanco: #F9F9F9;
+  --colorRojo: #BB1818;
+
+  --fuenteMenu: 'Montserrat', sans-serif;
+  --fuenteBotones: 'Staatliches', cursive;
+  --fuenteLetras: 'Roboto', sans-serif;
+  --fuenteTitPrincipal: 'Saira', sans-serif;
+}
+
 .navMenu {
   display: flex;
   justify-content: center;
@@ -12,10 +24,22 @@
   align-items: center;
   margin: auto;
   flex-direction: row;
+  width: 100%;
 }
 
 .navMenu ul li {
   list-style: none;
   padding: 8px;
-  font-size: 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.navMenu ul li:hover {
+  border-top: 2px black solid;
+  color: var(--colorVioleta);
+  font-weight: 700;
+}
+
+.navMenu ul li:active {
+  border-top: 2px black solid;
 }
