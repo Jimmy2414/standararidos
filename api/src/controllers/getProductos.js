@@ -15,7 +15,7 @@ async function getProductos(req, res) {
   res.send(Productostotal);
 }
 async function getProductosByID(req, res) {
-  const { id } = req.params;
+  const { id } = req.query;
   const productosID = await Productos.findByPk(id);
   res.send(productosID);
   console.log(id);

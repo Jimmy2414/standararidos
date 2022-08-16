@@ -12,62 +12,17 @@ import { Modal, TextField, button, Button } from '@material-ui/core';
 import s from '../../accionesAdmin/modificarCosas/modificar.module.css';
 import { Link, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
-let idp;
-export default function ModificarProductos() {
+
+export default function EditarProducto() {
+  const [putModal, setInputModal] = useState(false);
   const dispatch = useDispatch();
   const BeforeProduct = useSelector(state => state.ProductoBefore);
-
-  const allProductos = useSelector(state => state.Productos);
-  console.log(allProductos.map(e => e.id));
-
-  const [putModal, setInputModal] = useState(false);
-
-  let { id } = useParams();
-  idp = id;
-  console.log(idp);
-
   const [input, setInput] = useState({
     nombre: '',
     descripcion: '',
     categoria: '',
     seccion: '',
   });
-  const [productoFilter, setProductoFilter] = useState('');
-
-  useEffect(() => {
-    dispatch(getProducto());
-
-    // dispatch(productoBefore())
-  }, [dispatch]);
-
-  // FUNCIONES DE RETURN
-  function handleChange(e) {
-    e.preventDefault();
-    setProductoFilter(e.target.value);
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    try {
-      if (productoFilter.length) {
-        dispatch(filterProductoPorNombre(productoFilter));
-      } else {
-        alert('Debe escribir el nombre de un producto');
-      }
-    } catch (err) {
-      throw new Error(err);
-    }
-  }
-
-  function recargar(e) {
-    e.preventDefault();
-    try {
-      dispatch(getProducto());
-    } catch (err) {
-      throw new Error(err);
-    }
-  }
-
   // FUNCIONES MODAL
   const handleChangeData = e => {
     e.preventDefault();
@@ -79,7 +34,7 @@ export default function ModificarProductos() {
     console.log(input);
   };
   const EditProducto = () => {
-    dispatch(modificarProducto(id, input))
+    dispatch(modificarProducto(BeforeProduct.id, input))
       .then(res => dispatch(getProducto()))
       .then(res => alert('producto Modificado'));
     // window.location.reload()
@@ -90,20 +45,16 @@ export default function ModificarProductos() {
   };
 
   const abrir = () => {
-    console.log(idp);
-    setTimeout(() => {
-      dispatch(productoBefore(idp));
-    }, 1000);
-
     Swal.fire({
-      title: 'Seguro que deseas editar?',
+      title: 'Do you want to save the changes?',
       showDenyButton: true,
-      showCancelButton: false,
-      confirmButtonText: 'si',
-      denyButtonText: `no`,
+      showCancelButton: true,
+      confirmButtonText: 'Save',
+      denyButtonText: `Don't save`,
     }).then(result => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success');
         setInputModal(!putModal);
 
         setInput({
@@ -159,57 +110,11 @@ export default function ModificarProductos() {
     </div>
   );
 
-  // RETURN
   return (
     <div>
-      <NavBar />
-      <div className={s.contenedorBuscador}>
-        <h2>Modificar Producto</h2>
-        <form className={s.form} onSubmit={handleSubmit}>
-          <input
-            className={s.inputS}
-            type="text"
-            name="search"
-            id="Search"
-            placeholder=" Buscar..."
-            value={productoFilter}
-            onChange={handleChange}
-          />
-          <div className={s.contenedorBotones}>
-            <button
-              className={s.btnBuscar}
-              type="submit"
-              onClick={handleSubmit}
-            >
-              Buscar
-            </button>
-            <button className={s.btnRecargar} type="button" onClick={recargar}>
-              Recargar
-            </button>
-          </div>
-        </form>
-        <br />
-      </div>
-
-      <div className={s.productos}>
-        {allProductos?.map(e => {
-          return (
-            <div key={e.id}>
-              <Productos
-                imagen={e.imagen}
-                nombre={e.nombre}
-                descripcion={e.descripcion}
-                categoria={e.categoria}
-                seccion={e.seccion}
-              />
-              <Link to={'/upDate/' + e.id}>
-                <button onClick={abrir}>Modificar</button>
-              </Link>
-            </div>
-          );
-        })}
-      </div>
-
+      {BeforeProduct.map(e => {
+        return <p>{e.nombre}</p>;
+      })}{' '}
       <Modal open={putModal} onClose={cerrarEditar}>
         {bodyEditar}
       </Modal>
