@@ -12,7 +12,7 @@ import Auxiliares from './components/Auxiliares/auxiliares';
 import Detalle from './components/Detalles/DetallesProducto';
 import ModificarProductos from './components/accionesAdmin/modificarCosas/modificar';
 import EliminarProducto from './components/accionesAdmin/eliminarCosas/eliminar';
-
+import EditarProducto from './components/accionesAdmin/modificarCosas/editar';
 import './App.css';
 
 function App() {

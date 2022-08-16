@@ -9,6 +9,6 @@ const {
 } = require('../controllers/getProductos');
 router.get('/', getProductos);
 router.get('/search/:nombre', getProductByName);
-router.get('/:id', getProductosByID);
+router.get('/search', getProductosByID);
 
 module.exports = router;
