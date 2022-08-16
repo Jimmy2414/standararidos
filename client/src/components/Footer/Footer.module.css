@@ -6,7 +6,8 @@
   align-items: center;
   margin: auto;
   flex-direction: column;
-  border-top: solid 2px red;
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 
 .footerItems {

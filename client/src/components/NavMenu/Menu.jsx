@@ -6,6 +6,7 @@ export default function NavMenu() {
 
   return (
     <div className={s.navMenu}>
+
       <nav>
         <ul>
           <NavLink to={'/'}>

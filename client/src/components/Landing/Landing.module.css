@@ -21,6 +21,23 @@
   --fuenteTitPrincipal: 'Saira', sans-serif;
 }
 
+.textoArriba {
+  color: white;
+  background-color: #09010B;
+  width: 100%;
+  height: 30px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.contenedorLogo {
+  width: 100%;
+  border-bottom: 1px #979797 solid;
+}
+
 .titulo {
   /* background-image: linear-gradient(#9810B3, #09010B);
   background-position: center;
@@ -33,6 +50,42 @@
   margin: auto;
 
 }
+
+.carouselImg {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  /* overflow: hidden; */
+}
+
+.carouselImg ul {
+  display: flex;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carouselImg li {
+  list-style: none;
+  width: 100%;
+  height: 30%;
+  animation: cambiar 5s ease;
+}
+
+/* @keyframes cambiar {
+  0% {
+    margin-left: 0%;
+  }
+
+  50% {
+    margin-left: -50%;
+  }
+
+  100% {
+    margin-left: -100%;
+  }
+} */
+
 
 .textocambiante {
   display: flex;
@@ -120,52 +173,6 @@ h3 {
   }
 }
 
-.sliderShow {
-
-  width: 90%;
-  height: 10%;
-  overflow: hidden;
-  margin: auto;
-
-}
-
-.sliderShow img {
-  z-index: -1;
-}
-
-.medio {
-
-  top: 20%;
-  left: 0%;
-  transform: translate(-50, -50);
-}
-
-.navegacion {
-  margin-top: 1rem;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  z-index: 7;
-
-}
-
-.slides {
-  width: 500%;
-  height: 100%;
-  display: flex;
-  margin-top: 20vh;
-}
-
-.slide {
-  width: 20%;
-  transition: 0.6s;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-}
 
 .title_destacados {
   font-size: 50px;
@@ -174,12 +181,16 @@ h3 {
 }
 
 .contenedorProductos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
   margin: auto;
-  width: 80%;
-  gap: 10px;
+  width: 100%;
+  /* gap: 0px; */
+  padding: 10px;
   margin-top: 50px;
+  background-color: #edebe5;
 }

@@ -35,8 +35,9 @@ export default function Footer() {
       </div>
 
       <div className={s.infoFinal}>
-        <p>Pilcomayo 3764 - Villa Tesei (Hurlingham) - Provincia de Buenos Aires</p>
-        <p>Copyright · 2022 · Standar Aridos</p>
+        {/* <p>Pilcomayo 3764 - Villa Tesei (Hurlingham) - Provincia de Buenos Aires</p>
+        <p>Copyright · 2022 · Standar Aridos</p> */}
+        <p>Creado por: Lucas Cencig & Juan Muñoz</p>
       </div>
     </div>
   )
