@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import { useState } from "react";
 import s from '../LatexColor/latex.module.css'
 
+import bannerLatex from '../../img/bannerLatex.jpg'
 export default function LatexColor() {
 
 
@@ -26,8 +27,11 @@ export default function LatexColor() {
       <NavMenu />
 
       <div className={s.layout}>
-        <div>
+        <div className={s.titulo}>
           <h1>Látex Color</h1>
+        </div>
+        <div className={s.bannerLatex}>
+          <img src={bannerLatex} alt="banner-latex" />
         </div>
         <div className={s.contenedorProducto}>
           {latexColor?.map(e => {

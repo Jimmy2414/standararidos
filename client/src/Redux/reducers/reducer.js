@@ -4,6 +4,7 @@ const initialState = {
   detalleProducto: [],
   URL: '',
   ProductoBefore: [],
+  productoFiltro: []
 };
 
 export const reducerroot = (state = initialState, { type, payload }) => {
@@ -50,5 +51,7 @@ export const reducerroot = (state = initialState, { type, payload }) => {
         ...state,
         ProductoBefore: payload,
       };
+
+
   }
 };

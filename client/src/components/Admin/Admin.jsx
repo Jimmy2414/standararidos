@@ -27,11 +27,11 @@ export default function Admin() {
             <h3>Subir productos:</h3>
 
             <ol>
-              <li>Dar nombre al producto en el primer campo</li>
-              <li>Escribir una descripción en el segundo campo</li>
-              <li>Elegir la sección a la cual pertenece el producto</li>
-              <li>Escribirle una categoria.</li>
-              <li>Subir la imagen perteneciente al producto (Acepta archivos: JPG, JPEG, PNG)</li>
+              <li>1-Dar nombre al producto en el primer campo</li>
+              <li>2-Escribir una descripción en el segundo campo</li>
+              <li>3-Elegir la sección a la cual pertenece el producto</li>
+              <li>4-Escribirle una categoria.</li>
+              <li>5-Subir la imagen perteneciente al producto (Acepta archivos: JPG, JPEG, PNG)</li>
             </ol>
             <p>Se cargará el producto en la base de datos y al finalizar dará una alerta diciendo que se subio correctamente.</p>
             <p>Presionar el boton "SUBIR" para finalizar. (Tendra 2 opciones, "GUARDAR" o "CANCELAR")</p>
@@ -39,19 +39,19 @@ export default function Admin() {
 
             <h3>Modificar productos:</h3>
             <ol>
-              <li>Escribir el nombre producto con el buscador</li>
-              <li>Presionar "BUSCAR" o presionar la tecla "ENTER"</li>
-              <li>Presionar en el boton "MODIFICAR" debajo del producto. (Al presionarlo, se abrirá un modal con los campos a cambiar)</li>
-              <li>Escribir el campo a modificar</li>
+              <li>1-Escribir el nombre producto con el buscador</li>
+              <li>2-Presionar "BUSCAR" o presionar la tecla "ENTER"</li>
+              <li>3-Presionar en el boton "MODIFICAR" debajo del producto. (Al presionarlo, se abrirá un modal con los campos a cambiar)</li>
+              <li>4-Escribir el campo a modificar</li>
             </ol>
             <p>Una vez terminado, seleccionar "MODIFICAR" (Si no se quiere guardar, presionar "CANCELAR")</p>
             <p>El boton "RECARGAR" del buscador, traerá todos los productos una vez más.</p>
 
             <h3>Eliminar productos:</h3>
             <ol>
-              <li>Escribir el nombre producto con el buscador</li>
-              <li>Presionar "BUSCAR" o presionar la tecla "ENTER"</li>
-              <li>Presionar en el boton "ELIMINAR" debajo del producto. (Al presionarlo, se abrirá un modal con 2 opciones "BORRAR" o "CANCELAR")</li>
+              <li>1-Escribir el nombre producto con el buscador</li>
+              <li>2-Presionar "BUSCAR" o presionar la tecla "ENTER"</li>
+              <li>3-Presionar en el boton "ELIMINAR" debajo del producto. (Al presionarlo, se abrirá un modal con 2 opciones "BORRAR" o "CANCELAR")</li>
             </ol>
             <h5>¡ADVERTENCIA!</h5>
             <p>Una vez eliminado el producto desaparecerá permanentemente de la base de datos. </p>

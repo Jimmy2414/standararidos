@@ -57,8 +57,12 @@
 }
 
 .carouselImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   width: 100%;
-  height: 100%;
+
   margin-top: 10px;
   /* overflow: hidden; */
 }
@@ -73,8 +77,13 @@
 .carouselImg li {
   list-style: none;
   width: 100%;
-  height: 30%;
+  height: 100%;
   animation: cambiar 5s ease;
+}
+
+.carouselImg img {
+  width: 100%;
+  height: 100%;
 }
 
 /* @keyframes cambiar {

@@ -20,6 +20,11 @@ export default function Landing() {
     dispatch(getProducto());
   }, [dispatch]);
 
+  const sortProducts = allProductos.sort((a, b) =>
+    a.id - b.id
+  )
+
+
   return (
     <div className={s.contenedorLanding}>
 
@@ -65,7 +70,8 @@ export default function Landing() {
       <h3 className={s.title_destacados}>Productos Destacados</h3>
       <p className={s.aclaracion}>Clickea sobre el producto para ver el detalle</p>
       <div className={s.contenedorProductos}>
-        {allProductos?.slice(0, 6).reverse().map(e => {
+        {sortProducts?.reverse().slice(0, 6).map(e => {
+
           return (
             <div key={e.id}>
               <Productos
@@ -78,6 +84,7 @@ export default function Landing() {
               />
             </div>
           );
+
         })}
       </div>
 
