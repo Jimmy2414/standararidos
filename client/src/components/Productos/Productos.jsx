@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from 'react-router-dom'
+
 import s from '../Productos/Productos.module.css'
 
 export default function Productos({ id, imagen, nombre, seccion, categoria, descripcion }) {
@@ -13,7 +14,7 @@ export default function Productos({ id, imagen, nombre, seccion, categoria, desc
 
         <div className={s.card} key={id}>
 
-          <img className={s.cardImg} src={imagen} alt="fotoProducto" />
+          <img className={s.cardImg} src={imagen || 'https://i0.wp.com/elfutbolito.mx/wp-content/uploads/2019/04/image-not-found.png?ssl=1'} alt="fotoProducto" />
 
           <h2 className={s.cardNombre}>{nombre}</h2>
 

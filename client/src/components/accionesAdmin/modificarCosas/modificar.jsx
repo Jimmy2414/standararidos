@@ -207,10 +207,8 @@ export default function ModificarProductos() {
                 descripcion={e.descripcion}
                 categoria={e.categoria}
                 seccion={e.seccion}
+
               />
-
-
-
               <div className={s.btnModificar}>
                 <Link to={'/upDate/' + e.id}>
                   <button onClick={abrir}>Modificar</button>

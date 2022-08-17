@@ -65,7 +65,7 @@ export default function Landing() {
       <h3 className={s.title_destacados}>Productos Destacados</h3>
       <p className={s.aclaracion}>Clickea sobre el producto para ver el detalle</p>
       <div className={s.contenedorProductos}>
-        {allProductos?.slice(0, 8).map(e => {
+        {allProductos?.slice(0, 6).reverse().map(e => {
           return (
             <div key={e.id}>
               <Productos

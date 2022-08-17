@@ -1,0 +1,12 @@
+.layout {
+  width: 100%;
+  background-color: #e5e5e5;
+}
+
+.contenedorProducto {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+}
