@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import NavBar from '../components/NavBar/Navbar';
 import { postProducto, getUrl } from '../Redux/actions/actions';
 import logo from '../img/standarLogo.jpg';
+import validations from './validations';
 import s from '../components/accionesAdmin/subirCosas/Subir.module.css';
 
 export default function FileUpload() {
@@ -20,8 +21,11 @@ export default function FileUpload() {
     descripcion: '',
     seccion: '',
     categoria: '',
+
   });
   const [file, setFile] = useState('');
+
+  const [error, setError] = useState({})
   console.log(producto);
   useEffect(() => {
     if (file) {
@@ -75,35 +79,54 @@ export default function FileUpload() {
 
   function handleChange(e) {
     setFile(e.target.files[0]);
+
   }
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    setFile('');
-    Swal.fire({
-      title: 'Quieres guardar los cambios?',
-      showDenyButton: true,
-      showCancelButton: true,
-      confirmButtonText: 'Guardar',
-      cancelButtonText: 'Cancelar',
-      denyButtonText: `NO guardar`,
-    }).then(result => {
-      /* Read more about isConfirmed, isDenied below */
-      if (result.isConfirmed) {
-        const totalProducto = {
-          ...producto,
-          imagen: URL,
-        };
-        dispatch(postProducto(totalProducto));
-        Swal.fire('Enviado!', 'Ok.', 'success').then(window.location.reload());
-      } else if (result.isDenied) {
-        Swal.fire('Los cambios no se guardaron', '', 'info');
-      }
-    });
+    if (producto.nombre.length > 0
+      && producto.descripcion.length > 10
+      && typeof producto.categoria === "string"
+      && producto.categoria.length > 0
+      && producto.seccion.length > 0
+    ) {
+
+      setFile('');
+      Swal.fire({
+        title: 'Quieres guardar los cambios?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Guardar',
+        cancelButtonText: 'Cancelar',
+        denyButtonText: `NO guardar`,
+      }).then(result => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          const totalProducto = {
+            ...producto,
+            imagen: URL,
+          };
+          dispatch(postProducto(totalProducto));
+          Swal.fire('Enviado!', 'Ok.', 'success').then(window.location.reload());
+        } else if (result.isDenied) {
+          Swal.fire('Los cambios no se guardaron', '', 'info');
+        }
+      })
+    }
+    else {
+      alert("No se llenaron todos los campos")
+    };
   }
   function handleChangeProduct(e) {
     setProducto({ ...producto, [e.target.name]: e.target.value });
+    setError(
+      validations({
+        ...producto,
+        [e.target.nombre]: e.target.value
+      })
+    )
+
   }
 
   function handleSelectSeccion(e) {
@@ -130,6 +153,7 @@ export default function FileUpload() {
                 placeholder="Nombre del producto:"
                 onChange={handleChangeProduct}
               />
+              {error.nombre && <span className={s.error}>{error.nombre}</span>}
             </div>
             <div>
               <textarea
@@ -140,20 +164,21 @@ export default function FileUpload() {
                 placeholder="Descripción del producto:"
                 onChange={handleChangeProduct}
               ></textarea>
+              {error.descripcion && <span>{error.descripcion}</span>}
             </div>
 
             <div>
               <label>Seccion a la que pertenezca el producto:</label>
               <select onChange={handleSelectSeccion}>
-                <option value="" disabled>Sección</option>
+                <option value="" >Sección</option>
                 <option value="Revestimiento Texturado">Revestimiento texturado</option>
                 <option value="Látex Color">Látex color</option>
                 <option value="Membranas">Membranas</option>
                 <option value="Preparación de la superficie">Preparación de la superficie</option>
                 <option value="Auxiliares">Auxiliares</option>
               </select>
-
             </div>
+
             <div>
               <input
                 type="text"
@@ -161,6 +186,7 @@ export default function FileUpload() {
                 placeholder="Categoría"
                 onChange={handleChangeProduct}
               />
+              {error.categoria && <span className={s.error}>{error.categoria}</span>}
             </div>
             <div>
               <label>Subir imagen</label>
@@ -170,6 +196,7 @@ export default function FileUpload() {
                 <div className={s.porcentaje}>{parseInt(progress) === -2 ? 0 : parseInt(progress)} %</div>
               </div>
             </div>
+
             <button type="submit">Subir</button>
           </form>
         </div>

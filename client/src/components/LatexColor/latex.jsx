@@ -5,6 +5,7 @@ import Productos from "../Productos/Productos";
 import NavMenu from "../NavMenu/Menu";
 import Footer from "../Footer/Footer";
 import { useState } from "react";
+import s from '../LatexColor/latex.module.css'
 
 export default function LatexColor() {
 
@@ -24,27 +25,29 @@ export default function LatexColor() {
     <div>
       <NavMenu />
 
-      <div>
-        <h1>Látex Color</h1>
-      </div>
-      <div >
-        {latexColor?.map(e => {
+      <div className={s.layout}>
+        <div>
+          <h1>Látex Color</h1>
+        </div>
+        <div className={s.contenedorProducto}>
+          {latexColor?.map(e => {
 
-          return (
-            <div key={e.id}>
-              <Productos
-                id={e.id}
-                imagen={e.imagen}
-                nombre={e.nombre}
-                descripcion={e.descripcion}
-                categoria={e.categoria}
-                seccion={e.seccion}
-              />
-            </div>
-          );
+            return (
+              <div key={e.id}>
+                <Productos
+                  id={e.id}
+                  imagen={e.imagen}
+                  nombre={e.nombre}
+                  descripcion={e.descripcion}
+                  categoria={e.categoria}
+                  seccion={e.seccion}
+                />
+              </div>
+            );
 
 
-        })}
+          })}
+        </div>
       </div>
       <Footer />
     </div>

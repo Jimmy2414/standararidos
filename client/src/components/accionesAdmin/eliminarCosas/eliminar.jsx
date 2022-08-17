@@ -115,6 +115,7 @@ export default function EliminarProducto() {
           return (
             <div key={e.id}>
               <Productos
+                id={e.id}
                 imagen={e.imagen}
                 nombre={e.nombre}
                 descripcion={e.descripcion}

@@ -1,11 +1,15 @@
+.contenedorProducto {
+  width: 100%;
+}
+
 .card {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: flex-start;
   margin: auto;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 200px;
+  width: 250px;
   height: 350px;
   background: lightgrey;
   border: 3px inset white;
@@ -19,6 +23,10 @@
   font-weight: bolder;
   color: #000000;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  padding: 10px;
+
 
 }
 
@@ -41,6 +49,7 @@
   font-weight: 700;
   text-transform: uppercase;
   padding: 8px;
+
 }
 
 .cardCategoria {
@@ -49,6 +58,7 @@
   font-size: 16px;
   letter-spacing: 2px;
   font-weight: 400;
+  text-align: justify;
 
 }
 
@@ -63,12 +73,14 @@
   text-align: center;
   font-size: 16px;
   font-weight: 400;
+  text-align: justify;
 }
 
 .cardSeccion u {
   font-weight: 700;
   font-size: 18;
   letter-spacing: 0;
+  text-align: justify;
 }
 
 .cardDescripcion {
@@ -76,11 +88,15 @@
   font-size: 16px;
   letter-spacing: 0px;
   font-weight: 400;
+  text-align: center;
+  width: 220px;
 }
+
 
 .cardDescripcion u {
   text-align: justify;
   font-weight: 700;
   font-size: 18;
   letter-spacing: 0;
+  text-align: justify;
 }
