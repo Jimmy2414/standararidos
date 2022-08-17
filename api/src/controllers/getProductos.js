@@ -13,7 +13,7 @@ async function getProductByName(req, res) {
 }
 async function getProductos(req, res) {
   const Productostotal = await Productos.findAll();
-  res.send(Productostotal);
+  res.send(Productostotal.sort());
 }
 async function getProductosByID(req, res) {
   const { id } = req.query;
