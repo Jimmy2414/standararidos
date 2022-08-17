@@ -73,3 +73,7 @@
   margin: auto;
   flex-wrap: wrap;
 }
+
+.btnModificar button {
+  font-size: 20px;
+}

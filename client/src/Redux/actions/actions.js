@@ -19,10 +19,18 @@ export function getProducto() {
 }
 
 export function detalleProducto(id) {
-  return function (dispatch) {
-    axios.get(`/producto/${id}`).then(res => {
-      return dispatch({ type: 'DETALLE_PRODUCTO', payload: res.data });
-    });
+  // return function (dispatch) {
+  //   axios.get(`/producto/${id}`).then(res => {
+  //     return dispatch({ type: 'DETALLE_PRODUCTO', payload: res.data });
+  //   });
+  // };
+  return async dispatch => {
+    try {
+      let { data } = await axios.get(`/get/search?id=${id}`);
+      return dispatch({ type: 'DETALLE_PRODUCTO', payload: data });
+    } catch (err) {
+      alert('error de detalle before');
+    }
   };
 }
 export function productoBefore(productId) {

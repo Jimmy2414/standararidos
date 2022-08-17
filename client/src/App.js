@@ -37,7 +37,7 @@ function App() {
           exact
         />
         <Route path="/auxilires" element={<Auxiliares />} exact />
-        <Route path="/detalle/:id" element={<Detalle />} exact />
+        <Route path="/search/:id" element={<Detalle />} exact />
         <Route path="/delete" element={<EliminarProducto />} exact />
       </Routes>
     </div>

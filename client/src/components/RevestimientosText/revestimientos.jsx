@@ -3,10 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProducto } from '../../Redux/actions/actions';
 import Productos from "../Productos/Productos";
 import NavMenu from "../NavMenu/Menu";
+import { NavLink } from 'react-router-dom'
 import Footer from "../Footer/Footer";
 import { useState } from "react";
 
-export default function Revestimientos() {
+export default function Revestimientos(props) {
 
 
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ export default function Revestimientos() {
           return (
             <div key={e.id}>
               <Productos
+                id={e.id}
                 imagen={e.imagen}
                 nombre={e.nombre}
                 descripcion={e.descripcion}

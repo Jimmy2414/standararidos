@@ -33,6 +33,7 @@ export default function LatexColor() {
           return (
             <div key={e.id}>
               <Productos
+                id={e.id}
                 imagen={e.imagen}
                 nombre={e.nombre}
                 descripcion={e.descripcion}

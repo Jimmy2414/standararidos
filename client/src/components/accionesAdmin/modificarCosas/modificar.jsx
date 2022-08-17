@@ -10,17 +10,20 @@ import {
 import NavBar from '../../NavBar/Navbar';
 import { Modal, TextField, button, Button } from '@material-ui/core';
 import s from '../../accionesAdmin/modificarCosas/modificar.module.css';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+
 let idp;
 export default function ModificarProductos() {
   const dispatch = useDispatch();
+  let navigate = useNavigate();
   const BeforeProduct = useSelector(state => state.ProductoBefore);
 
   const allProductos = useSelector(state => state.Productos);
   console.log(allProductos.map(e => e.id));
 
   const [putModal, setInputModal] = useState(false);
+
 
   let { id } = useParams();
   idp = id;
@@ -83,10 +86,12 @@ export default function ModificarProductos() {
       .then(res => dispatch(getProducto()))
       .then(res => alert('producto Modificado'));
     // window.location.reload()
+    navigate('/upDate')
   };
 
   const cerrar = () => {
-    setInputModal(false).then(window.location.reload());
+    setInputModal(false)
+    window.location.reload();
   };
 
   const abrir = () => {
@@ -196,15 +201,21 @@ export default function ModificarProductos() {
           return (
             <div key={e.id}>
               <Productos
+                id={e.id}
                 imagen={e.imagen}
                 nombre={e.nombre}
                 descripcion={e.descripcion}
                 categoria={e.categoria}
                 seccion={e.seccion}
               />
-              <Link to={'/upDate/' + e.id}>
-                <button onClick={abrir}>Modificar</button>
-              </Link>
+
+
+
+              <div className={s.btnModificar}>
+                <Link to={'/upDate/' + e.id}>
+                  <button onClick={abrir}>Modificar</button>
+                </Link>
+              </div>
             </div>
           );
         })}

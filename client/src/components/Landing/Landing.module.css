@@ -33,6 +33,11 @@
   margin: auto;
 }
 
+.aclaracion {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .contenedorLogo {
   width: 100%;
   border-bottom: 1px #979797 solid;

@@ -1,0 +1,72 @@
+.contenedorLogo {
+  width: 100%;
+  border-bottom: 1px #979797 solid;
+}
+
+.btnVolver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+  width: 200px;
+  height: 40px;
+  border: 1px rgba(0, 0, 0, 0.406) solid;
+  border-radius: 5px;
+}
+
+.contenedorCard {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.cardNombre {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.cardImg {
+  width: 80%;
+  height: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+.cardCategoria {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardCategoria u {
+  font-size: 30px;
+}
+
+.cardSeccion {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardSeccion u {
+  font-size: 30px;
+}
+
+.cardDescripcion {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+}
+
+.cardDescripcion u {
+  font-size: 30px;
+}

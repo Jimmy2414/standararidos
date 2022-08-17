@@ -36,9 +36,17 @@ li {
 .contacto ul {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin: auto;
   flex-direction: column;
+}
+
+.contacto li {
+  margin-bottom: 5px;
+}
+
+.contacto a {
+  color: white;
 }
 
 .inicio {
@@ -55,10 +63,22 @@ li {
 
 .inicio ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
   margin: auto;
   flex-direction: column;
+
+}
+
+.inicio li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+.inicio li:hover {
+  padding-bottom: 2px;
+  border-bottom: solid 1px white;
 }
 
 .redes {
@@ -78,7 +98,23 @@ li {
   justify-content: center;
   align-items: flex-start;
   margin: auto;
-  flex-direction: column;
+  flex-direction: row;
+  margin-top: 10px;
+
+}
+
+.redes li {
+  font-size: 50px;
+  padding: 10px;
+
+}
+
+.redes li:hover {
+  border-bottom: solid 1px white;
+}
+
+.redes a {
+  color: white;
 }
 
 .infoFinal {
