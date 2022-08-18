@@ -32,7 +32,7 @@ export default function EliminarProducto() {
       if (productoFilter.length) {
         dispatch(filterProductoPorNombre(productoFilter))
       } else {
-        alert('Debe escribir un nombre de un pais')
+        alert('Debe escribir un nombre de un producto')
       }
     }
     catch (err) {

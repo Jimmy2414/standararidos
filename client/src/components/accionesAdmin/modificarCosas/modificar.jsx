@@ -20,6 +20,7 @@ export default function ModificarProductos() {
   const BeforeProduct = useSelector(state => state.ProductoBefore);
 
   const allProductos = useSelector(state => state.Productos);
+
   console.log(allProductos.map(e => e.id));
 
   const [putModal, setInputModal] = useState(false);
@@ -54,11 +55,13 @@ export default function ModificarProductos() {
     try {
       if (productoFilter.length) {
         dispatch(filterProductoPorNombre(productoFilter));
-      } else {
-        alert('Debe escribir el nombre de un producto');
+      }
+
+      else {
+        alert('Debe escribir el nombre de un producto.');
       }
     } catch (err) {
-      throw new Error(err);
+      throw new Error(err)
     }
   }
 
