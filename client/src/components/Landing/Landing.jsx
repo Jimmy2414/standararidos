@@ -13,11 +13,14 @@ import s from '../Landing/Landing.module.css';
 export default function Landing() {
   const dispatch = useDispatch();
 
+
   const allProductos = useSelector(state => state.Productos);
   console.log(allProductos.map(e => e.descripcion));
 
   useEffect(() => {
+
     dispatch(getProducto());
+
   }, [dispatch]);
 
   const sortProducts = allProductos.sort((a, b) =>
@@ -58,14 +61,14 @@ export default function Landing() {
         </ul>
       </div>
 
-      <div className={s.textocambiante}>
+      {/* <div className={s.textocambiante}>
         <h3 className={s.renova}>¡renová</h3>
         <ul>
           <li>tus Espacios!</li>
           <li>tu Hogar!</li>
           <li>tu Vida!</li>
         </ul>
-      </div>
+      </div> */}
 
       <h3 className={s.title_destacados}>Productos Destacados</h3>
       <p className={s.aclaracion}>Clickea sobre el producto para ver el detalle</p>

@@ -18,7 +18,8 @@
   align-items: center;
   margin: auto;
   flex-direction: column;
-  background-color: #9810B3;
+  /* background-color: #09010B; */
+  background-color: #000000;
   color: white;
   margin-bottom: -20%;
 }
@@ -133,7 +134,15 @@ li {
 .infoFinal {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: auto;
   flex-direction: column;
+  width: 100%;
+  height: 50px;
+  color: rgb(170, 170, 170);
+  background-color: rgb(64, 64, 64);
+}
+
+.infoFinal p {
+  margin-left: 2%;
 }

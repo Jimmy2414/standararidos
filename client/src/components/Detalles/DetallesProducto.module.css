@@ -1,6 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --colorVioleta: #9810B3;
+  --colorNegro: #09010B;
+  --colorBlanco: #F9F9F9;
+  --colorRojo: #BB1818;
+
+  --fuenteMenu: 'Montserrat', sans-serif;
+  --fuenteBotones: 'Staatliches', cursive;
+  --fuenteLetras: 'Roboto', sans-serif;
+  --fuenteTitPrincipal: 'Saira', sans-serif;
+}
+
 .contenedorLogo {
   width: 100%;
   border-bottom: 1px #979797 solid;
+}
+
+.contenedorProducto {
+  width: 98.5%;
+  height: 100%;
+  background-color: #edebe5;
+  padding: 8px;
 }
 
 .btnVolver {
@@ -16,7 +40,7 @@
 }
 
 .contenedorCard {
-  width: 90%;
+  width: 80%;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -29,11 +53,12 @@
 .cardNombre {
   font-size: 50px;
   text-transform: uppercase;
+  font-family: var(--fuenteMenu);
 }
 
 .cardImg {
-  width: 80%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   border-radius: 10px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -44,20 +69,28 @@
   font-size: 20px;
   display: flex;
   flex-direction: column;
+  font-weight: 400;
+  margin-bottom: 2%;
+  font-family: var(--fuenteMenu);
 }
 
-.cardCategoria u {
+.cardCategoria b {
   font-size: 30px;
+  font-weight: 700;
 }
 
 .cardSeccion {
   font-size: 20px;
   display: flex;
   flex-direction: column;
+  font-weight: 400;
+  margin-bottom: 2%;
+  font-family: var(--fuenteMenu);
 }
 
-.cardSeccion u {
+.cardSeccion b {
   font-size: 30px;
+  font-weight: 700;
 }
 
 .cardDescripcion {
@@ -65,8 +98,13 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 10%;
+  font-weight: 400;
+  text-align: justify;
+  font-family: var(--fuenteMenu);
 }
 
-.cardDescripcion u {
+.cardDescripcion b {
   font-size: 30px;
+  font-weight: 700;
+  text-align: center;
 }

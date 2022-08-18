@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --colorVioleta: #9810B3;
+  --colorNegro: #09010B;
+  --colorBlanco: #F9F9F9;
+  --colorRojo: #BB1818;
+
+  --fuenteMenu: 'Montserrat', sans-serif;
+  --fuenteBotones: 'Staatliches', cursive;
+  --fuenteLetras: 'Roboto', sans-serif;
+  --fuenteTitPrincipal: 'Saira', sans-serif;
+}
+
 .layout {
   width: 100%;
   background-color: #e5e5e5;
@@ -19,4 +36,39 @@
   width: 80%;
   margin-top: 30px;
   min-width: 250px;
+}
+
+
+.info {
+  width: 80%;
+  text-align: justify;
+  margin-top: 5%;
+  margin: auto;
+}
+
+.imginfoaux {
+  min-width: 150px;
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 5%;
+}
+
+
+
+.info h3 {
+  font-size: 20px;
+  font-family: var(--fuenteLetras);
+}
+
+.info p {
+  font-size: 16px;
+  font-family: var(--fuenteLetras);
+  margin-bottom: 2%;
+}
+
+.enRojo {
+  color: #BB1818;
+  font-weight: 700;
 }

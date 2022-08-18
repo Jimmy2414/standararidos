@@ -40,10 +40,12 @@ export default function DetalleProducto(props) {
           <h2 className={s.cardNombre}>{detalle.nombre}</h2>
           <img className={s.cardImg} src={detalle.imagen} alt="fotoProducto" />
 
-          <h3 className={s.cardCategoria}><u>Categoría:</u> {detalle.categoria}</h3>
-          <h3 className={s.cardSeccion}><u>Sección:</u> {detalle.seccion}</h3>
-          <p className={s.cardDescripcion}><u>Descripción:</u> {detalle.descripcion}</p>
+          <h3 className={s.cardCategoria}><b>Categoría:</b> {detalle.categoria}</h3>
+          <h3 className={s.cardSeccion}><b>Sección:</b> {detalle.seccion}</h3>
+          <p className={s.cardDescripcion}><b>Descripción:</b> {detalle.descripcion}</p>
         </div>
+
+
       </div>
 
       <Footer />

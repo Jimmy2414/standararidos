@@ -33,10 +33,7 @@
   margin: auto;
 }
 
-.aclaracion {
-  font-size: 18px;
-  font-weight: 600;
-}
+
 
 .contenedorLogo {
   width: 100%;
@@ -57,48 +54,75 @@
 }
 
 .carouselImg {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
   width: 100%;
-
   margin-top: 10px;
-  /* overflow: hidden; */
+  overflow: hidden; */
+  margin: auto;
+  /* min-width: 100%; */
+  width: 100%;
+  height: 50%;
+  /* border: solid 2px rgba(0, 0, 0, 0); */
+  overflow: hidden;
+  margin-top: 0px;
+  z-index: -1;
 }
 
 .carouselImg ul {
+
   display: flex;
-  width: 100%;
+
   position: relative;
   overflow: hidden;
+
+  width: 300%;
+  height: 50%;
+  padding: 0;
+  /* border-radius: 10px; */
+  animation: cambio 10s infinite alternate;
+
 }
 
 .carouselImg li {
   list-style: none;
   width: 100%;
   height: 100%;
-  animation: cambiar 5s ease;
 }
 
 .carouselImg img {
   width: 100%;
-  height: 100%;
+  height: 50%;
+  border-right: 2px solid black;
 }
 
-/* @keyframes cambiar {
+@keyframes cambio {
   0% {
-    margin-left: 0%;
+    margin-left: 0;
+  }
+
+  24% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -100%;
   }
 
   50% {
-    margin-left: -50%;
+    margin-left: -100%;
+  }
+
+  51% {
+    margin-left: -200%;
   }
 
   100% {
-    margin-left: -100%;
+    margin-left: -200%;
   }
-} */
+}
 
 
 .textocambiante {
@@ -191,7 +215,14 @@ h3 {
 .title_destacados {
   font-size: 50px;
   font-weight: 700;
-  margin-top: 50px;
+  /* margin-top: -20%; */
+  font-family: var(--fuenteMenu);
+}
+
+.aclaracion {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--fuenteMenu);
 }
 
 .contenedorProductos {
@@ -205,6 +236,6 @@ h3 {
   width: 98%;
   /* gap: 0px; */
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 30px;
   background-color: #edebe5;
 }

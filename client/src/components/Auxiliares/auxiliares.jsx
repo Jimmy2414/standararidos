@@ -37,8 +37,8 @@ export default function Auxiliares() {
           <img src={bannerAux} alt="banner-latex" />
         </div>
 
+        <img className={s.imginfoaux} src={base} alt="base" />
         <div className={s.info}>
-          <img src={base} alt="base" />
           <h3>Base</h3>
           <p>
             Es un auxiliar necesario a la hora de aplicar revestimiento texturado. La base es un recubrimiento previo que sirve para preparar la superficie, brindando una mejor adherencia a sus paredes y optimizando el rendimiento del texturado.

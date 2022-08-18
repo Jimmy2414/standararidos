@@ -31,12 +31,14 @@
   list-style: none;
   padding: 8px;
   font-size: 16px;
+  font-weight: 700;
+  color: var(--colorNegro);
   text-transform: uppercase;
 }
 
 .navMenu ul li:hover {
-  border-top: 2px black solid;
-  color: var(--colorVioleta);
+  border-top: 1px black solid;
+  color: var(--colorNegro);
   font-weight: 700;
 }
 
