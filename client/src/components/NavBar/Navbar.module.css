@@ -23,7 +23,8 @@
   margin: auto;
   width: 100%;
   height: 10vh;
-  background-image: linear-gradient(#9810B3, #09010B);
+  background-color: #F9F9F9;
+  color: #09010B;
 }
 
 .contenedorGeneral nav ul {
@@ -41,11 +42,15 @@
   margin: auto;
   list-style: none;
   padding: 10px;
-  color: white;
+  color: #09010B;
   font-size: 18px;
   font-family: var(--fuenteMenu);
   font-weight: 700;
   text-decoration: none;
+}
+
+.contenedorGeneral nav ul li:hover {
+  border-top: 1px black solid;
 }
 
 .contenedorGeneral navlink {

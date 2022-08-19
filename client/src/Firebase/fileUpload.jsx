@@ -139,12 +139,12 @@ export default function FileUpload() {
       <div className={s.contenedorGeneral}></div>
 
       <div className={s.accionesAdmin}>
-        <img src={logo} alt="" />
+
         <div className={s.formContainer}>
+          <h1 className={s.titSubir}>
+            <i>Subir Producto</i>
+          </h1>
           <form onSubmit={handleSubmit}>
-            <h1 className={s.titSubir}>
-              <i>Subir Producto</i>
-            </h1>
             <div>
               <input
                 type="text"
@@ -155,7 +155,7 @@ export default function FileUpload() {
               />
               {error.nombre && <span className={s.error}>{error.nombre}</span>}
             </div>
-            <div>
+            <div className={s.divtextarea}>
               <textarea
                 name="descripcion"
                 id=""
@@ -195,6 +195,7 @@ export default function FileUpload() {
                 <progress className={s.barradecarga} value={progress} max="100" />
                 <div className={s.porcentaje}>{parseInt(progress) === -2 ? 0 : parseInt(progress)} %</div>
               </div>
+
             </div>
 
             <button type="submit">Subir</button>

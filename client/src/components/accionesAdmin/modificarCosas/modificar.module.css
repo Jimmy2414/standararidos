@@ -1,18 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --colorVioleta: #9810B3;
+  --colorNegro: #09010B;
+  --colorBlanco: #F9F9F9;
+  --colorRojo: #BB1818;
+
+  --fuenteMenu: 'Montserrat', sans-serif;
+  --fuenteBotones: 'Staatliches', cursive;
+  --fuenteLetras: 'Roboto', sans-serif;
+  --fuenteTitPrincipal: 'Saira', sans-serif;
+}
+
 .bodyEditar {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  background-image: linear-gradient(#9810B3, #ffff);
+  background-color: #e5e5e5;
+  padding: 10px;
   flex-direction: column;
   width: 50%;
-  height: 50%;
+  height: 40%;
   margin-top: 10%;
+}
+
+.bodyEditar h3 {
+  margin-top: 2%;
+  font-family: var(--fuenteLetras);
+  font-weight: 700;
+  font-size: 25px;
 }
 
 .inputEdit {
   width: 90%;
   margin-top: 20px;
+
 }
 
 .botonesEdit {
@@ -36,7 +62,40 @@
 }
 
 .form {
+  background-color: #9e9e9e;
+  color: #09010B;
   border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  width: 96%;
+}
+
+.btnBuscar {
+  width: 100%;
+  margin-bottom: 5%;
+  border-radius: 0;
+  background-color: #F9F9F9;
+  font-family: var(--fuenteMenu);
+  font-weight: 700;
+  transition: all .2s ease;
+}
+
+.btnBuscar:hover {
+  background-color: royalblue;
+  transition: all .2s ease;
+}
+
+.btnRecargar {
+  width: 100%;
+  border-radius: 0;
+  background-color: #F9F9F9;
+}
+
+.btnRecargar:hover {
+  background-color: royalblue;
+  transition: all .2s ease;
 }
 
 .contenedorBuscador {
@@ -44,8 +103,17 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: 80%;
+  width: 100%;
   flex-direction: column;
+  background-color: #9e9e9e;
+  color: #09010B;
+}
+
+.contenedorBuscador h2 {
+  font-size: 50px;
+  margin-top: 5%;
+  font-family: var(--fuenteLetras);
+  font-weight: 700;
 
 }
 
@@ -55,6 +123,9 @@
   align-items: center;
   margin: auto;
   width: 50%;
+  border-radius: 0;
+  outline: none;
+  border: solid transparent 2px;
 }
 
 .contenedorBotones {
@@ -66,12 +137,18 @@
   padding: 20px;
 }
 
+.contenedorProductos {
+  padding: 10px;
+  background-color: #e5e5e5;
+}
+
 .productos {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: auto;
   flex-wrap: wrap;
+
 }
 
 .btnModificar {

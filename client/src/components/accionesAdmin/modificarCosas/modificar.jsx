@@ -199,27 +199,29 @@ export default function ModificarProductos() {
         <br />
       </div>
 
-      <div className={s.productos}>
-        {allProductos?.map(e => {
-          return (
-            <div key={e.id}>
-              <Productos
-                id={e.id}
-                imagen={e.imagen}
-                nombre={e.nombre}
-                descripcion={e.descripcion}
-                categoria={e.categoria}
-                seccion={e.seccion}
+      <div className={s.contenedorProductos}>
+        <div className={s.productos}>
+          {allProductos?.map(e => {
+            return (
+              <div key={e.id}>
+                <Productos
+                  id={e.id}
+                  imagen={e.imagen}
+                  nombre={e.nombre}
+                  descripcion={e.descripcion}
+                  categoria={e.categoria}
+                  seccion={e.seccion}
 
-              />
-              <div className={s.btnModificar}>
-                <Link to={'/upDate/' + e.id}>
-                  <button onClick={abrir}>Modificar</button>
-                </Link>
+                />
+                <div className={s.btnModificar}>
+                  <Link to={'/upDate/' + e.id}>
+                    <button onClick={abrir}>Modificar</button>
+                  </Link>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
 
       <Modal open={putModal} onClose={cerrarEditar}>

@@ -110,22 +110,25 @@ export default function EliminarProducto() {
 
       </div>
 
-      <div className={s.productos}>
-        {allProductos?.map(e => {
-          return (
-            <div key={e.id}>
-              <Productos
-                id={e.id}
-                imagen={e.imagen}
-                nombre={e.nombre}
-                descripcion={e.descripcion}
-                categoria={e.categoria}
-                seccion={e.seccion}
-              />
-              <button onClick={() => deleteProductoFn(e.id)}>Eliminar</button>
-            </div>
-          );
-        })}
+
+      <div className={s.contenedorProductos}>
+        <div className={s.productos}>
+          {allProductos?.map(e => {
+            return (
+              <div key={e.id}>
+                <Productos
+                  id={e.id}
+                  imagen={e.imagen}
+                  nombre={e.nombre}
+                  descripcion={e.descripcion}
+                  categoria={e.categoria}
+                  seccion={e.seccion}
+                />
+                <button onClick={() => deleteProductoFn(e.id)}>Eliminar</button>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   )

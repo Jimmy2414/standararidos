@@ -9,10 +9,11 @@
 .contenedorGeneral .accionesAdmin {
   display: flex;
   margin: auto;
-  width: 60%;
+  width: 90%;
   height: 100%;
   border: solid 2px rgb(0, 0, 0);
-  background-image: linear-gradient(#9810B3, black);
+  background-color: #e5e5e5;
+
 
 }
 
@@ -27,7 +28,7 @@
 
 .ayuda h2 {
   padding-top: 50px;
-  color: white;
+  color: black;
   font-size: 30px;
   text-decoration: underline;
   padding-bottom: 8px;
@@ -35,7 +36,7 @@
 
 .ayuda h3 {
   padding-top: 50px;
-  color: white;
+  color: black;
   font-size: 30px;
   text-decoration: underline;
   padding-bottom: 8px;
@@ -43,17 +44,19 @@
 
 .ayuda ol {
   width: 50%;
-  color: white;
+  color: black;
   font-weight: 700;
   font-size: 20px;
+  text-align: justify;
 }
 
 .ayuda p {
   width: 50%;
   font-size: 16px;
-  color: white;
+  color: black;
   padding-top: 10px;
   text-align: justify;
+
 }
 
 .ayuda h5 {
