@@ -7,13 +7,22 @@ import s from '../eliminarCosas/eliminar.module.css'
 import Swal from 'sweetalert2'
 
 export default function EliminarProducto() {
+
+
   const dispatch = useDispatch();
 
 
   const allProductos = useSelector(state => state.Productos);
   console.log(allProductos.map(e => e.descripcion));
 
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
     dispatch(getProducto());
   }, [dispatch]);
 
@@ -112,23 +121,31 @@ export default function EliminarProducto() {
 
 
       <div className={s.contenedorProductos}>
-        <div className={s.productos}>
-          {allProductos?.map(e => {
-            return (
-              <div key={e.id}>
-                <Productos
-                  id={e.id}
-                  imagen={e.imagen}
-                  nombre={e.nombre}
-                  descripcion={e.descripcion}
-                  categoria={e.categoria}
-                  seccion={e.seccion}
-                />
-                <button onClick={() => deleteProductoFn(e.id)}>Eliminar</button>
-              </div>
-            );
-          })}
-        </div>
+
+        {loading ? (<div className={s.loaderfondo}>
+          <div className={s.loader}>
+          </div>
+        </div>) : (
+
+          <div className={s.productos}>
+            {allProductos?.map(e => {
+              return (
+                <div key={e.id}>
+                  <Productos
+                    id={e.id}
+                    imagen={e.imagen}
+                    nombre={e.nombre}
+                    descripcion={e.descripcion}
+                    categoria={e.categoria}
+                    seccion={e.seccion}
+                  />
+                  <button onClick={() => deleteProductoFn(e.id)}>Eliminar</button>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
       </div>
     </div>
   )

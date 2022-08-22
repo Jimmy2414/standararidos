@@ -12,9 +12,10 @@ import { Modal, TextField, button, Button } from '@material-ui/core';
 import s from '../../accionesAdmin/modificarCosas/modificar.module.css';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-
+import { NavLink } from 'react-router-dom'
 let idp;
 export default function ModificarProductos() {
+
   const dispatch = useDispatch();
   let navigate = useNavigate();
   const BeforeProduct = useSelector(state => state.ProductoBefore);
@@ -38,7 +39,14 @@ export default function ModificarProductos() {
   });
   const [productoFilter, setProductoFilter] = useState('');
 
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
     dispatch(getProducto());
 
     // dispatch(productoBefore())
@@ -200,19 +208,26 @@ export default function ModificarProductos() {
       </div>
 
       <div className={s.contenedorProductos}>
-        <div className={s.productos}>
+
+        {loading ? (
+          <div className={s.loaderfondo}>
+            <div className={s.loader}>
+            </div>
+          </div>
+        ) : (<div className={s.productos}>
           {allProductos?.map(e => {
             return (
               <div key={e.id}>
-                <Productos
-                  id={e.id}
-                  imagen={e.imagen}
-                  nombre={e.nombre}
-                  descripcion={e.descripcion}
-                  categoria={e.categoria}
-                  seccion={e.seccion}
-
-                />
+                <NavLink to={`/search/detalle/${e.id}`}>
+                  <Productos
+                    id={e.id}
+                    imagen={e.imagen}
+                    nombre={e.nombre}
+                    descripcion={e.descripcion}
+                    categoria={e.categoria}
+                    seccion={e.seccion}
+                  />
+                </NavLink>
                 <div className={s.btnModificar}>
                   <Link to={'/upDate/' + e.id}>
                     <button onClick={abrir}>Modificar</button>
@@ -221,7 +236,9 @@ export default function ModificarProductos() {
               </div>
             );
           })}
-        </div>
+        </div>)}
+
+
       </div>
 
       <Modal open={putModal} onClose={cerrarEditar}>

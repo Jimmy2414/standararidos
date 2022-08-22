@@ -24,7 +24,10 @@ export default function DetalleProducto(props) {
 
   return (
     <div className={s.conetenedorDetalle}>
-
+      <div className={s.textoArriba}>
+        <p>Pilcomayo 3764 - Villa Tesei (Hurlingham) - Provincia de Buenos Aires</p>
+        <p>Copyright · 2022 · Standar Aridos</p>
+      </div>
       <div className={s.contenedorLogo}>
         <img src={logo} alt="" />
       </div>
@@ -37,18 +40,22 @@ export default function DetalleProducto(props) {
           </NavLink>
         </div>
         <div className={s.contenedorCard} key={detalle.id}>
-          <h2 className={s.cardNombre}>{detalle.nombre}</h2>
+
           <img className={s.cardImg} src={detalle.imagen} alt="fotoProducto" />
 
-          <h3 className={s.cardCategoria}><b>Categoría:</b> {detalle.categoria}</h3>
-          <h3 className={s.cardSeccion}><b>Sección:</b> {detalle.seccion}</h3>
-          <p className={s.cardDescripcion}><b>Descripción:</b> {detalle.descripcion}</p>
+          <div className={s.info}>
+            <h2 className={s.cardNombre}>{detalle.nombre}</h2>
+
+            <h3 className={s.cardCategoria}><b>Categoría:</b> {detalle.categoria}</h3>
+            <h3 className={s.cardSeccion}><b>Sección:</b> {detalle.seccion}</h3>
+            <p className={s.cardDescripcion}><b>Descripción:</b> {detalle.descripcion}</p>
+          </div>
         </div>
 
 
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

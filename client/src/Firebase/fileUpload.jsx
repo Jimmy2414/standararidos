@@ -108,6 +108,7 @@ export default function FileUpload() {
             imagen: URL,
           };
           dispatch(postProducto(totalProducto));
+          console.log(totalProducto)
           Swal.fire('Enviado!', 'Ok.', 'success').then(window.location.reload());
         } else if (result.isDenied) {
           Swal.fire('Los cambios no se guardaron', '', 'info');

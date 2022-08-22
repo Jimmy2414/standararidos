@@ -15,6 +15,18 @@
   --fuenteTitPrincipal: 'Saira', sans-serif;
 }
 
+.textoArriba {
+  color: white;
+  background-color: #09010B;
+  width: 100%;
+  height: 30px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
 .contenedorLogo {
   width: 100%;
   border-bottom: 1px #979797 solid;
@@ -23,8 +35,30 @@
 .contenedorProducto {
   width: 98.5%;
   height: 100%;
-  background-color: #edebe5;
+  background-color: #e5e5e5;
   padding: 8px;
+  /* background-color: white;
+  padding: 40px;
+  display: flex;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+  transform: scale(0);
+  animation: scale 0.3s ease forwards; */
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .btnVolver {
@@ -37,18 +71,32 @@
   height: 40px;
   border: 1px rgba(0, 0, 0, 0.406) solid;
   border-radius: 5px;
+  margin-bottom: 2%;
 }
 
 .contenedorCard {
-  width: 80%;
+  /* width: 80%;
   height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: auto;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 50px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  background-color: white;
+  padding: 40px;
+  display: flex;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+  transform: scale(0);
+  animation: scale 0.3s ease forwards;
 }
+
+
 
 .cardNombre {
   font-size: 50px;
@@ -57,11 +105,13 @@
 }
 
 .cardImg {
-  width: 50%;
-  height: 50%;
+  width: 30%;
+  height: 30%;
   border-radius: 10px;
   margin-bottom: 20px;
   margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
 }
 
 

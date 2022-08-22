@@ -40,14 +40,11 @@ export default function Landing() {
   return (
     <div>
       {loading ?
-        (<div className={s.loader}>
-          <div className={s.first}>
-            <div className={s.second}>
-              <div className={s.third}>
-              </div>
+        (
+          <div className={s.loaderfondo}>
+            <div className={s.loader}>
             </div>
-          </div>
-        </div>) : (
+          </div>) : (
           <div className={s.contenedorLanding}>
 
             <div className={s.textoArriba}>
@@ -55,30 +52,28 @@ export default function Landing() {
               <p>Copyright · 2022 · Standar Aridos</p>
             </div>
 
-            <div className={s.menu}>
 
-              <div className={s.contenedorLogo}>
-                <img src={logo} alt="" />
-              </div>
-
-
-              <div className={s.menu_landing}>
-                <NavMenu />
-              </div>
+            <div className={s.contenedorLogo}>
+              <img src={logo} alt="Logo" />
+              {/* <h1>STANDAR ARIDOS</h1> */}
             </div>
 
-            {/* <div className={s.titulo}>
-        <h1>Standar Aridos</h1>
-      </div> */}
+
+            <div className={s.menu_landing}>
+              <NavMenu />
+            </div>
+
+
 
 
             <div className={s.carouselImg}>
               <ul>
-                <li><img src={bannerUno} alt="" /></li>
-                <li><img src={bannerDos} alt="" /></li>
-                <li><img src={bannerTres} alt="" /></li>
+                <li></li>
+                <li></li>
+                <li></li>
               </ul>
             </div>
+
 
             {/* <div className={s.textocambiante}>
         <h3 className={s.renova}>¡renová</h3>
@@ -109,6 +104,7 @@ export default function Landing() {
 
               })}
             </div>
+
 
             <Footer />
           </div>

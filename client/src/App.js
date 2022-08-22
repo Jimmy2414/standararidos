@@ -13,6 +13,7 @@ import Detalle from './components/Detalles/DetallesProducto';
 import ModificarProductos from './components/accionesAdmin/modificarCosas/modificar';
 import EliminarProducto from './components/accionesAdmin/eliminarCosas/eliminar';
 import EditarProducto from './components/accionesAdmin/modificarCosas/editar';
+import DetalleAdmin from './components/detalleAdmin/detalleAdmin';
 import './App.css';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path="/auxilires" element={<Auxiliares />} exact />
         <Route path="/search/:id" element={<Detalle />} exact />
         <Route path="/delete" element={<EliminarProducto />} exact />
+        <Route path="/search/detalle/:id" element={<DetalleAdmin />} exact />
       </Routes>
     </div>
   );

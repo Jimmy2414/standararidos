@@ -41,35 +41,19 @@
   border-bottom: 1px #979797 solid;
 }
 
-.titulo {
-  /* background-image: linear-gradient(#9810B3, #09010B);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
 
-}
 
 .carouselImg {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
+
   margin: auto;
+  min-width: 100%;
   width: 100%;
-  margin-top: 10px;
-  overflow: hidden; */
-  margin: auto;
-  /* min-width: 100%; */
-  width: 100%;
-  height: 50%;
-  /* border: solid 2px rgba(0, 0, 0, 0); */
+
   overflow: hidden;
   margin-top: 0px;
+  border: transparent 1px black;
   z-index: -1;
+  background-color: #e5e5e5;
 }
 
 .carouselImg ul {
@@ -80,17 +64,112 @@
   overflow: hidden;
 
   width: 300%;
-  height: 50%;
+
   padding: 0;
-  /* border-radius: 10px; */
+  border: transparent 1px black;
   animation: cambio 10s infinite alternate;
 
 }
+
 
 .carouselImg li {
   list-style: none;
   width: 100%;
   height: 100%;
+  border: transparent 1px black;
+  min-width: 800px;
+}
+
+.carouselImg li:nth-child(1) {
+  width: 100%;
+  height: 700px;
+  background-image: url('../../img/pexels-anni-roenkae-3219951.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: transparent 1px black;
+}
+
+.carouselImg li:nth-child(1)::before {
+  content: 'MANDANOS TU CONSULTA Y TE ASESORAMOS';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 60%;
+  color: #fff;
+  font-size: 50px;
+  position: relative;
+  top: 65%;
+  left: 0%;
+  background-color: #9810B3;
+  border-radius: 110px;
+  padding: 5px;
+  font-family: var(--fuenteLetras);
+}
+
+.carouselImg li:nth-child(1)::after {
+  content: "¿NO SABES POR DONDE EMPEZAR?";
+
+  color: #fff;
+  font-size: 50px;
+  position: relative;
+  top: 60px;
+  background-color: #9797977e;
+  border-radius: 100px;
+  padding: 10px;
+  backdrop-filter: blur(7px);
+  padding: 5px;
+}
+
+.carouselImg li:nth-child(2) {
+  width: 100%;
+  height: 700px;
+  background-image: url('../../img/pexels-kelly-2928233.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: transparent 1px black;
+}
+
+.carouselImg li:nth-child(2)::before {
+  content: '¿DONDE APLICAR REVESTIMIENTO TEXTURADO?';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 60%;
+  color: #fff;
+  font-size: 50px;
+  position: relative;
+  top: 65%;
+  left: 0%;
+  background-color: #9810B3;
+  border-radius: 110px;
+  padding: 5px;
+  font-family: var(--fuenteLetras);
+}
+
+/* .carouselImg li:nth-child(2)::after {
+  content: "";
+
+  color: #9810B3;
+  font-size: 50px;
+  position: relative;
+  top: 60px;
+  background-color: #979797;
+  padding: 5px;
+} */
+
+
+.carouselImg li:nth-child(3) {
+  width: 100%;
+  height: 700px;
+  background-image: url('../../img/bannerTres.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: transparent 1px black;
 }
 
 .carouselImg img {
@@ -218,6 +297,7 @@ h3 {
   font-weight: 700;
   /* margin-top: -20%; */
   font-family: var(--fuenteMenu);
+  padding: 20px;
 }
 
 .aclaracion {
@@ -244,155 +324,63 @@ h3 {
 
 /* LOADER */
 
+.loaderfondo {
+  background-color: #09010B;
+  width: 99vw;
+  height: 100vh;
+
+}
+
 .loader {
+  /* color of spining  */
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #09010B;
+  color: #BB1818;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  background-color: #09010B;
-  position: relative;
-  margin-top: 20%;
-  width: 2.5em;
-  height: 2.5em;
-  transform-origin: center;
-  transition: 1s;
-  border-radius: 50px;
-  box-shadow: inset 0px 0px 10px purple,
-    inset 5px 5px 12px rgba(44, 0, 114, 0.8),
-    inset 8px 8px 1px rgba(160, 120, 255, 0.7),
-    0px 0px 1px rgba(160, 120, 255, 0.6);
-  animation: 1.2s linear infinite 0s running first682;
-
+  /* margin-top: 25%; */
 }
 
-.loader div {
-  width: inherit;
-  height: inherit;
-  position: absolute;
-
-}
-
-.first {
-  transform: rotate(90deg)
-}
-
-.first::before {
-  --width: 1em;
-  --height: 1em;
+.loader:before,
+.loader:after {
   content: "";
   position: absolute;
-  top: 100%;
-  left: calc(50% - var(--width)/2);
-  width: 1em;
-  height: 1em;
-  background-color: rgb(44, 0, 114);
-  box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
-    0px 0px 2px white;
-  border-radius: 50px;
-  animation: 0.8s ease-in 0s infinite running jump2;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 10px solid transparent;
+  border-top-color: #BB1818;
 }
 
-.second {
-  transform: rotate(90deg);
+.loader:before {
+  z-index: 100;
+  animation: spin 1s infinite;
 }
 
-.second::before {
-  --width: 1em;
-  --height: 1em;
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: calc(50% - var(--width)/2);
-  width: 1em;
-  height: 1em;
-  background-color: rgb(44, 0, 114);
-  box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
-    0px 0px 2px white;
-  border-radius: 50px;
-  animation: 1.5s ease-in 0s infinite running jump2;
+.loader:after {
+  border: 10px solid #979797;
 }
 
-.third {
-  transform: rotate(90deg)
-}
-
-.third::before {
-  --width: 1em;
-  --height: 1em;
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: calc(50% - var(--width)/2);
-  width: 1em;
-  height: 1em;
-  background-color: rgb(44, 0, 114);
-  box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
-    0px 0px 2px white;
-  border-radius: 50px;
-  animation: 1.6s ease-in 0s infinite running jump2;
-}
-
-.loader::after {
-  --width: 1em;
-  --height: 1em;
-  content: "";
-  margin-top: 20%;
-  position: absolute;
-  top: 100%;
-  left: calc(50% - var(--width)/2);
-  width: 1em;
-  height: 1em;
-  background-color: rgb(44, 0, 114);
-  box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
-    0px 0px 2px white;
-  border-radius: 50px;
-  animation: 1.2s ease-in 1s alternate infinite running jump2;
-}
-
-@keyframes first682 {
+@keyframes spin {
   0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(0deg);
-    transform: rotate(90deg)
-  }
-
-  50% {
-    transform: rotate(90deg);
-    transform: rotate(180deg);
-  }
-
-  75% {
-    transform: rotate(180deg);
-    transform: rotate(270deg)
   }
 
   100% {
-    transform: rotate(270deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     transform: rotate(360deg);
-  }
-}
-
-@keyframes jump2 {
-  0% {
-    top: 100%;
-  }
-
-  25% {
-    top: 230%
-  }
-
-  50% {
-    top: 100%;
-  }
-
-  75% {
-    height: 0.6em
-  }
-
-  100% {
-    height: 1em
   }
 }

@@ -1,0 +1,12 @@
+.btnVolver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+  width: 200px;
+  height: 40px;
+  border: 1px rgba(0, 0, 0, 0.406) solid;
+  border-radius: 5px;
+  margin-bottom: 2%;
+}

@@ -3,6 +3,25 @@
   background-color: #e5e5e5;
 }
 
+.textoArriba {
+  color: white;
+  background-color: #09010B;
+  width: 100%;
+  height: 30px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+
+
+.contenedorLogo {
+  width: 100%;
+  border-bottom: 1px #979797 solid;
+}
+
 .contenedorProducto {
   display: flex;
   justify-content: space-evenly;
@@ -37,4 +56,69 @@
   font-size: 16px;
   font-family: var(--fuenteLetras);
   margin-bottom: 2%;
+}
+
+
+
+/* LOADER */
+
+.loaderfondo {
+  background-color: #09010B;
+  width: 99vw;
+  height: 100vh;
+
+}
+
+.loader {
+  /* color of spining  */
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #09010B;
+  color: #BB1818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  /* margin-top: 25%; */
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 10px solid transparent;
+  border-top-color: #BB1818;
+}
+
+.loader:before {
+  z-index: 100;
+  animation: spin 1s infinite;
+}
+
+.loader:after {
+  border: 10px solid #979797;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

@@ -17,7 +17,11 @@ export default function Footer() {
         </div>
 
         <div className={s.inicio}>
-          <h2>Inicio</h2>
+          {/* <p>Somos una marca joven con el objetivo de desarrollar productos para todo aquel que quiera remodelar y acondicionar su hogar, a su manera. <br />
+            Nos dedicamos a fabricar y comercializar, productos para la construcción que sirvan para todo tipo de necesidades, y además brindar un aspecto decorativo característico al tanto de las tendencias emergentes. Ejemplo de ello, son los revestimientos texturados, un producto intrínseco a nuestra marca. <br />
+            Constantemente, buscamos mejorar nuestras fórmulas de manera que se adecúen aún más a las expectativas de nuestros clientes. <br />
+            Apuntamos a lograr, día a día, un producto de suma calidad y resistencia. </p> */}
+          {/* <h2>Inicio</h2>
           <ul>
             <NavLink to={'/revestimientos-texturados'}>
               <li>Revestimientos Texturados</li>
@@ -38,7 +42,7 @@ export default function Footer() {
             <NavLink to={'/auxilires'}>
               <li>Auxiliares</li>
             </NavLink>
-          </ul>
+          </ul> */}
         </div>
 
         <div className={s.redes}>
@@ -52,6 +56,13 @@ export default function Footer() {
             <li><a href="https://www.instagram.com/standararidos/?hl=es" target="_blank"><FaInstagram /></a></li>
 
           </ul>
+        </div>
+
+        <div className={s.titulo}>
+          <span><p className={s.quienessomos}>¿QUIENES SOMOS?</p>  Somos una marca joven con el objetivo de desarrollar productos para todo aquel que quiera remodelar y acondicionar su hogar, a su manera. <br />
+            Nos dedicamos a fabricar y comercializar, productos para la construcción que sirvan para todo tipo de necesidades, y además brindar un aspecto decorativo característico al tanto de las tendencias emergentes. Ejemplo de ello, son los revestimientos texturados, un producto intrínseco a nuestra marca. <br />
+            Constantemente, buscamos mejorar nuestras fórmulas de manera que se adecúen aún más a las expectativas de nuestros clientes. <br />
+            Apuntamos a lograr, día a día, un producto de suma calidad y resistencia. </span>
         </div>
       </div>
 
