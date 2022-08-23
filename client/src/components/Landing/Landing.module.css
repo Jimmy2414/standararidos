@@ -21,6 +21,9 @@
   --fuenteTitPrincipal: 'Saira', sans-serif;
 }
 
+.contenedorLanding {
+  min-width: 375px;
+}
 
 .textoArriba {
   color: white;
@@ -48,11 +51,9 @@
 
 
 .carouselImg {
-
   margin: auto;
   min-width: 100%;
   width: 100%;
-
   overflow: hidden;
   margin-top: 0px;
   border: transparent 1px black;
@@ -61,18 +62,13 @@
 }
 
 .carouselImg ul {
-
   display: flex;
-
   position: relative;
   overflow: hidden;
-
   width: 300%;
-
   padding: 0;
   border: transparent 1px black;
-  animation: cambio 10s infinite alternate;
-
+  /* animation: cambio 10s infinite alternate; */
 }
 
 
@@ -94,7 +90,7 @@
   border: transparent 1px black;
 }
 
-.carouselImg li:nth-child(1)::before {
+/* .carouselImg li:nth-child(1)::before {
   content: 'MANDANOS TU CONSULTA Y TE ASESORAMOS';
   display: flex;
   justify-content: center;
@@ -124,7 +120,7 @@
   padding: 10px;
   backdrop-filter: blur(7px);
   padding: 5px;
-}
+} */
 
 .carouselImg li:nth-child(2) {
   width: 100%;
@@ -136,6 +132,7 @@
   border: transparent 1px black;
 }
 
+/* 
 .carouselImg li:nth-child(2)::before {
   content: '¿DONDE APLICAR REVESTIMIENTO TEXTURADO?';
   display: flex;
@@ -152,7 +149,7 @@
   border-radius: 110px;
   padding: 5px;
   font-family: var(--fuenteLetras);
-}
+} */
 
 /* .carouselImg li:nth-child(2)::after {
   content: "";
@@ -209,91 +206,6 @@
 }
 
 
-.textocambiante {
-  display: flex;
-  margin-top: 0px;
-  width: 300px;
-  height: 40px;
-  color: var(--colorNegro);
-  font-family: var(--fuenteMenu);
-  font-size: 20px;
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 40px;
-  position: relative;
-  top: 25%;
-  left: 0;
-  right: 0;
-  margin-bottom: 50px;
-  margin: auto;
-  overflow: hidden;
-
-}
-
-.renova {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  font-size: 30px;
-  font-weight: 800;
-
-}
-
-.textocambiante ul {
-  list-style: none;
-  padding-left: 10px;
-  color: var(--colorVioleta);
-
-  font-family: var(--fuenteBotones);
-  font-size: 30px;
-  font-weight: 900;
-
-  animation: cambiarpalabra 10s infinite;
-}
-
-.textocambiante ul,
-h3 {
-  margin: 0;
-
-}
-
-@keyframes cambiarpalabra {
-  0% {
-    margin-top: 0;
-  }
-
-  20% {
-    margin-top: 0;
-  }
-
-  25% {
-    margin-top: -40px;
-  }
-
-  50% {
-    margin-top: -40px;
-  }
-
-  55% {
-    margin-top: -80px;
-  }
-
-  70% {
-    margin-top: -80px;
-  }
-
-  85% {
-    margin-top: -40px;
-  }
-
-  95% {
-    margin-top: -40px;
-  }
-
-  100% {
-    margin-top: 0;
-  }
-}
 
 
 .title_destacados {
@@ -340,6 +252,116 @@ h3 {
     flex-direction: column;
     /* padding: 5px; */
   }
+
+
+  .contenedorLogo {
+    width: 100%;
+    border-bottom: 1px #979797 solid;
+  }
+
+  .contenedorLogo img {
+    width: 60%;
+    height: 10%;
+  }
+
+  .carouselImg {
+    margin: auto;
+    min-width: 250px;
+    width: 370px;
+    overflow: hidden;
+    margin-top: 0px;
+    border: transparent 1px black;
+    z-index: -1;
+    background-color: #e5e5e5;
+
+  }
+
+  .carouselImg ul {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 1125px;
+    min-width: 375px;
+    padding: 0;
+    border: transparent 1px black;
+    animation: cambio 10s infinite alternate;
+  }
+
+  .carouselImg li {
+    list-style: none;
+    width: 375px;
+    min-width: 375px;
+    height: 100%;
+    border: transparent 1px black;
+    min-width: 800px;
+  }
+
+  .carouselImg li:nth-child(1) {
+    width: 375px;
+    min-width: 375px;
+    height: 300px;
+    background-image: url('../../img/bannerAux.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: transparent 1px black;
+  }
+
+  .carouselImg li:nth-child(2) {
+    width: 375px;
+    min-width: 375px;
+    height: 300px;
+    background-image: url('../../img/bannerDos.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: transparent 1px black;
+  }
+
+  .carouselImg li:nth-child(3) {
+    width: 375px;
+    min-width: 375px;
+    height: 300px;
+    background-image: url('../../img/bannerTres.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: transparent 1px black;
+  }
+
+  .carouselImg img {
+    width: 375px;
+    min-width: 375px;
+    height: 100%;
+    border-right: 2px solid black;
+  }
+
+  @keyframes cambio {
+    0% {
+      margin-left: 0;
+    }
+
+    24% {
+      margin-left: 0;
+    }
+
+    25% {
+      margin-left: -375px;
+    }
+
+    50% {
+      margin-left: -375px;
+    }
+
+    51% {
+      margin-left: -750px;
+    }
+
+    100% {
+      margin-left: -750px;
+    }
+  }
+
 }
 
 /* LOADER */
@@ -403,4 +425,6 @@ h3 {
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+
+
 }
