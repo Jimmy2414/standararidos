@@ -10,6 +10,7 @@
   --fuenteTitPrincipal: 'Saira', sans-serif;
 }
 
+
 .navMenu {
   display: flex;
   /* justify-content: center; */
@@ -52,4 +53,102 @@
 
 .navMenu ul li:active {
   border-top: 2px black solid;
+}
+
+.button_menu {
+  display: none;
+}
+
+@media (max-width: 475px) {
+  .menu_container {
+    height: 50px;
+  }
+
+  .button_menu {
+    display: block;
+  }
+
+  .button_menu {
+    /* position: absolute;
+    left: 50%;
+    top: 13%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2%;
+    color: #09010B;
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+
+
+  .button_menu_input {
+    opacity: 0;
+  }
+
+  .button_menu_input:checked+.navMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    /* padding: 10px 10px 20px; */
+    /* gap: 16px; */
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    left: 0%;
+    top: 15%;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+    transform: translateX(0%);
+    transition: all 1s ease;
+  }
+
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    /* padding: 10px 10px 20px; */
+    /* gap: 16px; */
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    left: 0%;
+    top: 15%;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+    transform: translateX(-100%);
+    transition: all 1s ease;
+  }
+
+  .navMenu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navMenu ul li {
+    list-style: none;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--colorNegro);
+    text-transform: uppercase;
+  }
+
+  .navMenu ul li:hover {
+    background-color: rgb(185, 185, 185);
+    color: var(--colorNegro);
+    font-weight: 700;
+  }
 }
