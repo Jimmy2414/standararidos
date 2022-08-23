@@ -5,9 +5,10 @@ import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-// import reportWebVitals from './reportWebVitals';
+
 import store from '../src/Redux/store/store';
-axios.defaults.baseURL = REACT_APP_API || 'http://localhost:3001';
+
+axios.defaults.baseURL = process.env.REACT_APP_API || 'http://localhost:3001';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
