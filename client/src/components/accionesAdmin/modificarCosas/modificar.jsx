@@ -12,10 +12,9 @@ import { Modal, TextField, button, Button } from '@material-ui/core';
 import s from '../../accionesAdmin/modificarCosas/modificar.module.css';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 let idp;
 export default function ModificarProductos() {
-
   const dispatch = useDispatch();
   let navigate = useNavigate();
   const BeforeProduct = useSelector(state => state.ProductoBefore);
@@ -25,7 +24,6 @@ export default function ModificarProductos() {
   console.log(allProductos.map(e => e.id));
 
   const [putModal, setInputModal] = useState(false);
-
 
   let { id } = useParams();
   idp = id;
@@ -41,7 +39,6 @@ export default function ModificarProductos() {
 
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
@@ -63,13 +60,11 @@ export default function ModificarProductos() {
     try {
       if (productoFilter.length) {
         dispatch(filterProductoPorNombre(productoFilter));
-      }
-
-      else {
+      } else {
         alert('Debe escribir el nombre de un producto.');
       }
     } catch (err) {
-      throw new Error(err)
+      throw new Error(err);
     }
   }
 
@@ -96,12 +91,12 @@ export default function ModificarProductos() {
     dispatch(modificarProducto(id, input))
       .then(res => dispatch(getProducto()))
       .then(res => alert('producto Modificado'));
-    // window.location.reload()
-    navigate('/upDate')
+    window.location.reload();
+    navigate('/upDate');
   };
 
   const cerrar = () => {
-    setInputModal(false)
+    setInputModal(false);
     window.location.reload();
   };
 
@@ -208,37 +203,35 @@ export default function ModificarProductos() {
       </div>
 
       <div className={s.contenedorProductos}>
-
         {loading ? (
           <div className={s.loaderfondo}>
-            <div className={s.loader}>
-            </div>
+            <div className={s.loader}></div>
           </div>
-        ) : (<div className={s.productos}>
-          {allProductos?.map(e => {
-            return (
-              <div key={e.id}>
-                <NavLink to={`/admin/detalle/${e.id}`}>
-                  <Productos
-                    id={e.id}
-                    imagen={e.imagen}
-                    nombre={e.nombre}
-                    descripcion={e.descripcion}
-                    categoria={e.categoria}
-                    seccion={e.seccion}
-                  />
-                </NavLink>
-                <div className={s.btnModificar}>
-                  <Link to={'/upDate/' + e.id}>
-                    <button onClick={abrir}>Modificar</button>
-                  </Link>
+        ) : (
+          <div className={s.productos}>
+            {allProductos?.map(e => {
+              return (
+                <div key={e.id}>
+                  <NavLink to={`/admin/detalle/${e.id}`}>
+                    <Productos
+                      id={e.id}
+                      imagen={e.imagen}
+                      nombre={e.nombre}
+                      descripcion={e.descripcion}
+                      categoria={e.categoria}
+                      seccion={e.seccion}
+                    />
+                  </NavLink>
+                  <div className={s.btnModificar}>
+                    <Link to={'/upDate/' + e.id}>
+                      <button onClick={abrir}>Modificar</button>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>)}
-
-
+              );
+            })}
+          </div>
+        )}
       </div>
 
       <Modal open={putModal} onClose={cerrarEditar}>
