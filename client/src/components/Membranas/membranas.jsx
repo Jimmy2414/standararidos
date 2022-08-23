@@ -6,6 +6,7 @@ import NavMenu from "../NavMenu/Menu";
 import Footer from "../Footer/Footer";
 import { useState } from "react";
 import logo from '../../img/standarLogo.jpg';
+import { NavLink } from 'react-router-dom'
 import bannerMembranas from '../../img/bannerMembranas.jpg'
 
 import s from '../Membranas/membranas.module.css'
@@ -81,14 +82,16 @@ export default function Membranas() {
 
                 return (
                   <div key={e.id}>
-                    <Productos
-                      id={e.id}
-                      imagen={e.imagen}
-                      nombre={e.nombre}
-                      descripcion={e.descripcion}
-                      categoria={e.categoria}
-                      seccion={e.seccion}
-                    />
+                    <NavLink to={`/search/${e.id}`}>
+                      <Productos
+                        id={e.id}
+                        imagen={e.imagen}
+                        nombre={e.nombre}
+                        descripcion={e.descripcion}
+                        categoria={e.categoria}
+                        seccion={e.seccion}
+                      />
+                    </NavLink>
                   </div>
                 );
 

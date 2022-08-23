@@ -5,7 +5,7 @@ import Productos from "../Productos/Productos";
 import NavMenu from "../NavMenu/Menu";
 import Footer from "../Footer/Footer";
 import { useState } from "react";
-
+import { NavLink } from 'react-router-dom'
 import logo from '../../img/standarLogo.jpg';
 import bannerAux from '../../img/bannerAux.jpg'
 import base from '../../img/base.jpg'
@@ -83,14 +83,16 @@ export default function Auxiliares() {
 
               return (
                 <div key={e.id}>
-                  <Productos
-                    id={e.id}
-                    imagen={e.imagen}
-                    nombre={e.nombre}
-                    descripcion={e.descripcion}
-                    categoria={e.categoria}
-                    seccion={e.seccion}
-                  />
+                  <NavLink to={`/search/${e.id}`}>
+                    <Productos
+                      id={e.id}
+                      imagen={e.imagen}
+                      nombre={e.nombre}
+                      descripcion={e.descripcion}
+                      categoria={e.categoria}
+                      seccion={e.seccion}
+                    />
+                  </NavLink>
                 </div>
               );
 

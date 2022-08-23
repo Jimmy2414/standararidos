@@ -8,6 +8,8 @@ import { useState } from "react";
 import s from '../LatexColor/latex.module.css'
 import logo from '../../img/standarLogo.jpg';
 import bannerLatex from '../../img/bannerLatex.jpg'
+import Paginacion from "../Paginado/paginado";
+import { NavLink } from 'react-router-dom'
 export default function LatexColor() {
 
   const [loading, setLoading] = useState(false);
@@ -23,7 +25,38 @@ export default function LatexColor() {
   const allProductos = useSelector(state => state.Productos);
   console.log(allProductos.map(e => e.descripcion));
 
-  const latexColor = allProductos.filter(e => e.seccion === "Látex Color")
+  // const latexColor = allProductos.filter(e => e.seccion === "Látex Color")
+
+  const [curretPage, setCurrentPage] = useState(1);
+  const [productosPorPagina, setcountriesPorPagina] = useState(4);
+  const indexProductLast = curretPage * productosPorPagina;
+  const indexProductFirst = indexProductLast - productosPorPagina;
+  const latexColor = allProductos.filter(e => e.seccion === "Látex Color").slice(
+    indexProductFirst,
+    indexProductLast
+  );
+
+  const paginado = pageNumber => {
+    let page = curretPage;
+    // if (pageNumber === 'inicio') {
+    //   setCurrentPage(1);
+    // } 
+    //  if (pageNumber === 'final') {
+    //   setCurrentPage(Math.ceil(allProductos.length / productosPorPagina));
+    // } 
+    if (
+      pageNumber === 'siguiente' &&
+      curretPage < Math.ceil(allProductos.length / productosPorPagina)
+    ) {
+      page = curretPage + 1;
+      setCurrentPage(page);
+    } else if (pageNumber === 'anterior' && curretPage > 1) {
+      page = curretPage - 1;
+      setCurrentPage(page);
+    } else if (typeof pageNumber === 'number') {
+      setCurrentPage(pageNumber);
+    }
+  };
 
   useEffect(() => {
     dispatch(getProducto());
@@ -66,21 +99,27 @@ export default function LatexColor() {
 
                 return (
                   <div key={e.id}>
-                    <Productos
-                      id={e.id}
-                      imagen={e.imagen}
-                      nombre={e.nombre}
-                      descripcion={e.descripcion}
-                      categoria={e.categoria}
-                      seccion={e.seccion}
-                    />
+                    <NavLink to={`/search/${e.id}`}>
+                      <Productos
+                        id={e.id}
+                        imagen={e.imagen}
+                        nombre={e.nombre}
+                        descripcion={e.descripcion}
+                        categoria={e.categoria}
+                        seccion={e.seccion}
+                      />
+                    </NavLink>
                   </div>
                 );
-
-
               })}
             </div>
           </div>
+          <Paginacion
+            curretPage={curretPage}
+            productosPorPagina={productosPorPagina}
+            allProductos={allProductos.length}
+            paginado={paginado}
+          />
           <Footer />
         </div>)}
 

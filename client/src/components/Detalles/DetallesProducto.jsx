@@ -29,7 +29,7 @@ export default function DetalleProducto(props) {
         <p>Copyright · 2022 · Standar Aridos</p>
       </div>
       <div className={s.contenedorLogo}>
-        <img src={logo} alt="" />
+        <img src={logo} alt="logo" />
       </div>
 
       <NavMenu />

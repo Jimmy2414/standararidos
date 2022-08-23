@@ -127,3 +127,32 @@
     transform: rotate(360deg);
   }
 }
+
+
+@media (max-width: 475px) {
+  .textoArriba {
+    color: white;
+    background-color: #09010B;
+    width: 100%;
+    height: 30px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: justify;
+    flex-direction: column;
+    /* padding: 5px; */
+  }
+
+
+  .contenedorLogo {
+    width: 100%;
+    border-bottom: 1px #979797 solid;
+  }
+
+  .contenedorLogo img {
+    width: 60%;
+    height: 10%;
+  }
+}
