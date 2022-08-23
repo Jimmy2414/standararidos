@@ -218,7 +218,7 @@ export default function ModificarProductos() {
           {allProductos?.map(e => {
             return (
               <div key={e.id}>
-                <NavLink to={`/search/detalle/${e.id}`}>
+                <NavLink to={`/admin/detalle/${e.id}`}>
                   <Productos
                     id={e.id}
                     imagen={e.imagen}

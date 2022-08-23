@@ -39,6 +39,11 @@
   border-bottom: 1px #979797 solid;
 }
 
+.contenedorLogo img {
+  width: 30%;
+  height: 20%;
+}
+
 .contenedorProducto {
   display: flex;
   justify-content: space-evenly;

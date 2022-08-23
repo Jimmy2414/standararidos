@@ -32,6 +32,11 @@
   border-bottom: 1px #979797 solid;
 }
 
+.contenedorLogo img {
+  width: 30%;
+  height: 20%;
+}
+
 .contenedorProducto {
   width: 98.5%;
   height: 100%;
@@ -105,8 +110,8 @@
 }
 
 .cardImg {
-  width: 30%;
-  height: 30%;
+  width: 50%;
+  height: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
   margin-top: 20px;
