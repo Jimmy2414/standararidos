@@ -7,7 +7,8 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 // import reportWebVitals from './reportWebVitals';
 import store from '../src/Redux/store/store';
-axios.defaults.baseURL = 'http://localhost:3001' || 'https://standararidos.herokuapp.com';
+axios.defaults.baseURL = REACT_APP_API || 'http://localhost:3001';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
