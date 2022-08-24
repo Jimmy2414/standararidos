@@ -14,12 +14,12 @@ import s from '../Auxiliares/auxiliares.module.css'
 export default function Auxiliares() {
 
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 100);
+  // }, []);
 
   const dispatch = useDispatch();
 
@@ -62,7 +62,7 @@ export default function Auxiliares() {
             <img src={bannerAux} alt="banner-latex" />
           </div>
 
-          <img className={s.imginfoaux} src={base} alt="base" />
+          {/* <img className={s.imginfoaux} src={base} alt="base" /> */}
           <div className={s.info}>
             <h3>Base</h3>
             <p>
@@ -70,10 +70,10 @@ export default function Auxiliares() {
               Es una imprimación que otorga un fondo uniforme, en especial cuando se trata de revestimiento a llana, para nivelar y evitar que se vea el color de la superficie de abajo. La base junto al texturado, garantizan una total impermeabilidad sobre la superficie.</p>
             <p className={s.enRojo}>Dejar secar 24 horas antes del texturado. No colocar sobre revoques recien hechos.</p>
 
-            <h3>Rendimiento:</h3>
+            <h3>Rendimiento</h3>
             <p>6,2 a 6,5 kg / 12 mts².</p>
 
-            <h3>Presentación:</h3>
+            <h3>Presentación</h3>
             <p>Baldes de 6.5 kg, 15 kg y 30 kg..</p>
           </div>
 

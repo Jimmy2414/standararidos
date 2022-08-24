@@ -9,6 +9,7 @@ import { getProducto } from '../../Redux/actions/actions';
 import NavMenu from '../NavMenu/Menu';
 import Footer from '../Footer/Footer';
 import s from '../Landing/Landing.module.css';
+import fotoNosotros from '../../img/fotonosotros1.jpg'
 import { NavLink } from 'react-router-dom';
 export default function Landing() {
   const [loading, setLoading] = useState(false);
@@ -16,7 +17,7 @@ export default function Landing() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 500);
   }, []);
 
   const dispatch = useDispatch();
@@ -73,6 +74,15 @@ export default function Landing() {
           <li>tu Vida!</li>
         </ul>
       </div> */}
+          <div className={s.seccionQuienesSomos}>
+            <img src={fotoNosotros} alt="" />
+            <div className={s.titulo}>
+              <span><p className={s.quienessomos}>STANDAR ARIDOS</p>  Somos una marca joven con el objetivo de desarrollar productos para todo aquel que quiera remodelar y acondicionar su hogar, a su manera. <br />
+                Nos dedicamos a fabricar y comercializar, productos para la construcción que sirvan para todo tipo de necesidades, y además brindar un aspecto decorativo característico al tanto de las tendencias emergentes. Ejemplo de ello, son los revestimientos texturados, un producto intrínseco a nuestra marca. <br />
+                Constantemente, buscamos mejorar nuestras fórmulas de manera que se adecúen aún más a las expectativas de nuestros clientes. <br />
+                Apuntamos a lograr, día a día, un producto de suma calidad y resistencia. </span>
+            </div>
+          </div>
 
           <h3 className={s.title_destacados}>Productos Destacados</h3>
           <p className={s.aclaracion}>

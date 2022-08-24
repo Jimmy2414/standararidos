@@ -13,12 +13,12 @@ import s from '../Membranas/membranas.module.css'
 
 export default function Membranas() {
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 100);
+  // }, []);
 
   const dispatch = useDispatch();
 
@@ -62,17 +62,17 @@ export default function Membranas() {
             </div>
 
             <div className={s.info}>
-              <h3>Nivel de tránsito:</h3>
+              <h3>Nivel de tránsito</h3>
               <p>Bajo.
                 Es transitable por lo cual se puede caminar sobre ella. Se puede aplicar en techos, terrazas y balcones; así como muros y superficies con filtraciones.</p>
 
-              <h3>Aplicación:</h3>
+              <h3>Aplicación</h3>
               <p>Es de fácil aplicación, se coloca como una pintura, con un rodillo o pincel o soplete. Puede darle varias manos para asegurarse de cubrir la totalidad de la superficie. Debe dejarse secar al menos 24 horas antes de aplicar la siguiente mano, dependiendo de las condiciones climáticas, para lograr la adherencia al sustrato. Y luego, dejar secar al tacto entre las siguientes manos.</p>
 
-              <h3>Colores disponibles:</h3>
+              <h3>Colores disponibles</h3>
               <p>Blanco y rojo.</p>
 
-              <h3>Presentación:</h3>
+              <h3>Presentación</h3>
               <p>Baldes de 1, 4, 10 y 20 kg.</p>
             </div>
 
