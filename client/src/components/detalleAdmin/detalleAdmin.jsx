@@ -31,7 +31,7 @@ export default function DetalleAdmin() {
     navigate('/upDate');
     setProductod('');
     window.location.reload();
-    deleteState();
+    dispatch(deleteState());
   }
   return (
     <div>
