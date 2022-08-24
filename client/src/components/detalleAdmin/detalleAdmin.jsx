@@ -7,6 +7,7 @@ import s from '../detalleAdmin/detalleAdmin.module.css';
 import { useState } from 'react';
 
 export default function DetalleAdmin() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [productod, setProductod] = useState();
   const [id2, setId2] = useState();
