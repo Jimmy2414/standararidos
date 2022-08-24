@@ -4,7 +4,7 @@ const initialState = {
   detalleProducto: [],
   URL: '',
   ProductoBefore: [],
-  productoFiltro: []
+  productoFiltro: [],
 };
 
 export const reducerroot = (state = initialState, { type, payload }) => {
@@ -51,7 +51,10 @@ export const reducerroot = (state = initialState, { type, payload }) => {
         ...state,
         ProductoBefore: payload,
       };
-
-
+    case 'DELETE_STATE':
+      return {
+        ...state,
+        detalleProducto: [],
+      };
   }
 };

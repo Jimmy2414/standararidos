@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-
+import { deleteState } from '../../Redux/actions/actions';
 import s from '../detalleAdmin/detalleAdmin.module.css';
 import { useState } from 'react';
 
@@ -31,6 +31,7 @@ export default function DetalleAdmin() {
     navigate('/upDate');
     setProductod('');
     window.location.reload();
+    deleteState();
   }
   return (
     <div>

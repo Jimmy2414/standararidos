@@ -1,6 +1,6 @@
 import axios from 'axios';
 export function postProducto(payload) {
-  console.log(payload)
+  console.log(payload);
   return async function () {
     try {
       const response = await axios.post('/post', payload);
@@ -93,5 +93,8 @@ export function deleteProducto(id) {
   };
 }
 
-
-
+export function deleteState() {
+  return async dispatch => {
+    return dispatch({ type: 'DELETE_STATE' });
+  };
+}
