@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import logo from '../../img/standarLogo.jpg';
-import bannerUno from '../../img/bannerUno.jpg';
-import bannerDos from '../../img/bannerDos.jpg';
-import bannerTres from '../../img/bannerTres.jpg';
+
 import Productos from '../Productos/Productos';
 import { getProducto, deleteState } from '../../Redux/actions/actions';
 import NavMenu from '../NavMenu/Menu';
