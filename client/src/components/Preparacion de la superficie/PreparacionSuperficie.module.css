@@ -1,3 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --colorVioleta: #9810B3;
+  --colorNegro: #09010B;
+  --colorBlanco: #F9F9F9;
+  --colorRojo: #BB1818;
+
+  --fuenteMenu: 'Montserrat', sans-serif;
+  --fuenteBotones: 'Staatliches', cursive;
+  --fuenteLetras: 'Roboto', sans-serif;
+  --fuenteTitPrincipal: 'Saira', sans-serif;
+}
+
 .layout {
   width: 100%;
   background-color: #e5e5e5;
@@ -15,6 +38,9 @@
   margin: auto;
 }
 
+.textoArriba p {
+  padding: 10px;
+}
 
 
 .contenedorLogo {
@@ -37,7 +63,7 @@
 
 .titulo h1 {
   padding-top: 20px;
-  font-family: var(--fuenteTitPrincipal);
+  font-family: var(--fuenteLetras);
 }
 
 .bannerPrepSup img {

@@ -12,7 +12,7 @@ export default function Footer() {
           <h2>Contacto</h2>
           <ul>
             <li>Tel: <a href="https://api.whatsapp.com/send?phone=+541170347165&text=%C2%A1Hola,%20tengo%20una%20consulta!" target="_blank">(011) 7034-7165</a></li>
-            <li>Email: Standararidos@hotmail.com</li>
+            <li>Email: standararidos@hotmail.com</li>
           </ul>
         </div>
 
@@ -58,12 +58,12 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className={s.titulo}>
+        {/* <div className={s.titulo}>
           <span><p className={s.quienessomos}>¿QUIENES SOMOS?</p>  Somos una marca joven con el objetivo de desarrollar productos para todo aquel que quiera remodelar y acondicionar su hogar, a su manera. <br />
             Nos dedicamos a fabricar y comercializar, productos para la construcción que sirvan para todo tipo de necesidades, y además brindar un aspecto decorativo característico al tanto de las tendencias emergentes. Ejemplo de ello, son los revestimientos texturados, un producto intrínseco a nuestra marca. <br />
             Constantemente, buscamos mejorar nuestras fórmulas de manera que se adecúen aún más a las expectativas de nuestros clientes. <br />
             Apuntamos a lograr, día a día, un producto de suma calidad y resistencia. </span>
-        </div>
+        </div> */}
       </div>
 
       <div className={s.infoFinal}>

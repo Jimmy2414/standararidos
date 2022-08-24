@@ -29,9 +29,11 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 150px; */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 5px;
+
+  gap: 155px;
   margin-bottom: 10px;
 }
 
@@ -76,6 +78,7 @@
 
 .contacto h2 {
   margin-bottom: 10px;
+  font-weight: 100;
 }
 
 li {
@@ -141,6 +144,7 @@ li {
 
 .redes h2 {
   margin-bottom: 10px;
+  display: none;
 }
 
 .redes ul {

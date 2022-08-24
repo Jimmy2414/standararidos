@@ -17,7 +17,12 @@
 
 .layout {
   width: 100%;
-  /* background-color: #e5e5e5; */
+  background-color: #e5e5e5;
+}
+
+.layoutDos {
+  background-color: #fff;
+
 }
 
 .textoArriba {
@@ -30,6 +35,10 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+}
+
+.textoArriba p {
+  padding: 10px;
 }
 
 .contenedorLogo {
@@ -53,21 +62,24 @@
 
 .titulo h1 {
   padding-top: 20px;
-  font-family: var(--fuenteTitPrincipal);
+  font-family: var(--fuenteLetras);
 }
 
 .bannerRevest img {
   width: 80%;
   margin-top: 30px;
   min-width: 250px;
+  background-color: #e5e5e5;
 }
 
 .descripcionRevest {
   width: 80%;
+  /* height: 0px; */
   text-align: justify;
   margin: auto;
   font-size: 18px;
   font-family: var(--fuenteLetras);
+
 }
 
 .aRodillo {
@@ -75,21 +87,26 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  flex-direction: column;
+  flex-direction: row;
   width: 80%;
   margin-top: 5%;
+  /* background-color: #fff; */
+  font-family: var(--fuenteLetras);
 }
 
 .aRodillo img {
   min-width: 150px;
-  width: 180px;
-  height: 180px;
+  width: 400px;
+  height: 400px;
+  margin-top: 1%;
   margin-bottom: 2%;
+  margin-right: 2%;
 }
 
 .info {
   width: 80%;
   text-align: justify;
+  font-family: var(--fuenteLetras);
 }
 
 .info h3 {
@@ -108,21 +125,25 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  flex-direction: column;
+  flex-direction: row-reverse;
   width: 80%;
   margin-top: 5%;
+  font-family: var(--fuenteLetras);
+  /* background-color: #fff; */
 }
 
 .aLlana img {
   min-width: 150px;
-  width: 180px;
-  height: 180px;
+  width: 400px;
+  height: 400px;
   margin-bottom: 2%;
+  margin-left: 2%;
 }
 
 .info {
   width: 80%;
   text-align: justify;
+  font-family: var(--fuenteLetras);
 }
 
 .info h3 {

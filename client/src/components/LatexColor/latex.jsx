@@ -13,12 +13,12 @@ import { NavLink } from 'react-router-dom'
 export default function LatexColor() {
 
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 100);
+  // }, []);
 
   const dispatch = useDispatch();
 

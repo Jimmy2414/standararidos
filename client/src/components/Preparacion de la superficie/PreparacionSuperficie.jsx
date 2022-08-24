@@ -13,12 +13,12 @@ import s from '../Preparacion de la superficie/PreparacionSuperficie.module.css'
 export default function PreparacionSuperficie() {
 
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 100);
+  // }, []);
 
   const dispatch = useDispatch();
 
