@@ -32,7 +32,7 @@ export default function DetalleAdmin() {
     navigate('/upDate');
     setProductod('');
     window.location.reload();
-    dispatch(deleteState());
+    // dispatch(deleteState());
   }
   return (
     <div>

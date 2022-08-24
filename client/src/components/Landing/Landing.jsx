@@ -5,7 +5,7 @@ import bannerUno from '../../img/bannerUno.jpg';
 import bannerDos from '../../img/bannerDos.jpg';
 import bannerTres from '../../img/bannerTres.jpg';
 import Productos from '../Productos/Productos';
-import { getProducto } from '../../Redux/actions/actions';
+import { getProducto, deleteState } from '../../Redux/actions/actions';
 import NavMenu from '../NavMenu/Menu';
 import Footer from '../Footer/Footer';
 import s from '../Landing/Landing.module.css';
@@ -27,7 +27,9 @@ export default function Landing() {
   useEffect(() => {
     dispatch(getProducto());
   }, [dispatch]);
-
+  useEffect(() => {
+    dispatch(deleteState());
+  });
   // const sortProducts = allProductos.sort((a, b) =>
   //   a.id - b.id
   // )
