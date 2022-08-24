@@ -7,35 +7,37 @@ export default function Footer() {
 
   return (
     <div className={s.contenedorFooter}>
-      <div className={s.footerItems}>
-        <div className={s.contacto}>
-          <h2>Contacto</h2>
-          <ul>
-            <li>Tel: <a href="https://api.whatsapp.com/send?phone=+541170347165&text=%C2%A1Hola,%20tengo%20una%20consulta!" target="_blank">(011) 7034-7165</a></li>
-            <li>Email: standararidos@hotmail.com</li>
-          </ul>
+      <section id="Footer">
+        <div className={s.footerItems}>
+          <div className={s.contacto}>
+            <h2>Contacto</h2>
+            <ul>
+              <li>Tel: <a href="https://api.whatsapp.com/send?phone=+541170347165&text=%C2%A1Hola,%20tengo%20una%20consulta!" target="_blank">(011) 7034-7165</a></li>
+              <li>Email: standararidos@hotmail.com</li>
+            </ul>
+          </div>
+
+          <div className={s.redes}>
+            <h2>Seguinos en</h2>
+            <ul>
+
+              <li><a href="https://es-es.facebook.com/standararidos1/" target="_blank"><FaFacebook /></a></li>
+
+
+
+              <li><a href="https://www.instagram.com/standararidos/?hl=es" target="_blank"><FaInstagram /></a></li>
+
+            </ul>
+          </div>
+
+
         </div>
 
-        <div className={s.redes}>
-          <h2>Seguinos en</h2>
-          <ul>
+        <div className={s.infoFinal}>
 
-            <li><a href="https://es-es.facebook.com/standararidos1/" target="_blank"><FaFacebook /></a></li>
-
-
-
-            <li><a href="https://www.instagram.com/standararidos/?hl=es" target="_blank"><FaInstagram /></a></li>
-
-          </ul>
+          <p>Creado por: Lucas Cencig & Juan Muñoz</p>
         </div>
-
-
-      </div>
-
-      <div className={s.infoFinal}>
-
-        <p>Creado por: Lucas Cencig & Juan Muñoz</p>
-      </div>
+      </section>
     </div>
   )
 }

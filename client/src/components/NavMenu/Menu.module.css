@@ -63,6 +63,15 @@
   opacity: 0;
 }
 
+.contacto a {
+  color: #09010B;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @media (max-width: 475px) {
   .menu_container {
     height: 50px;
