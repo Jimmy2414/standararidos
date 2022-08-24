@@ -8,8 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import store from '../src/Redux/store/store';
 
-axios.defaults.baseURL =
-  'https://standararidos.herokuapp.com' || 'http://localhost:3001';
+axios.defaults.baseURL = 'https://standararidos.herokuapp.com';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
