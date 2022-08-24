@@ -1,8 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
+
 
 @import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
@@ -147,8 +148,8 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    text-align: justify;
-    flex-direction: column;
+    text-align: center;
+    flex-direction: row;
     /* padding: 5px; */
   }
 
