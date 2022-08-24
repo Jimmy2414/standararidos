@@ -225,7 +225,7 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   width: 99%;
   height: 100%;
   background-color: #e5e5e5;
@@ -492,6 +492,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
+    flex-direction: column;
     width: 90%;
     height: 100%;
     background-color: #e5e5e5;

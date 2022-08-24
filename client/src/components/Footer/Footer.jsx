@@ -33,11 +33,11 @@ export default function Footer() {
 
         </div>
 
-        <div className={s.infoFinal}>
-
-          <p>Creado por: Lucas Cencig & Juan Muñoz</p>
-        </div>
       </section>
+      <div className={s.infoFinal}>
+
+        <p>Creado por: Lucas Cencig & Juan Muñoz</p>
+      </div>
     </div>
   )
 }
