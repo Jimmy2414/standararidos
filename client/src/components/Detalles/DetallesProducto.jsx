@@ -61,7 +61,7 @@ export default function DetalleProducto(props) {
             <div className={s.info}>
               <h2 className={s.cardNombre}>{detalle.nombre}</h2>
 
-              {detalle.descripcion.length > 1 ? (
+              {detalle.descripcion ? (
                 <div className={s.cardDescripcionTotal}>
                   <p className={s.cardDescripcion}>
                     <b>Descripción</b> {detalle.descripcion}
