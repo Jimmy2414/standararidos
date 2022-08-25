@@ -85,7 +85,6 @@ export default function FileUpload() {
 
     if (
       producto.nombre.length > 0 &&
-      producto.descripcion.length > 10 &&
       typeof producto.categoria === 'string' &&
       producto.categoria.length > 0 &&
       producto.seccion.length > 0
@@ -163,7 +162,6 @@ export default function FileUpload() {
                 placeholder="Descripción del producto:"
                 onChange={handleChangeProduct}
               ></textarea>
-              {error.descripcion && <span>{error.descripcion}</span>}
             </div>
 
             <div>
