@@ -21,11 +21,10 @@ export default function FileUpload() {
     descripcion: '',
     seccion: '',
     categoria: '',
-
   });
   const [file, setFile] = useState('');
 
-  const [error, setError] = useState({})
+  const [error, setError] = useState({});
   console.log(producto);
   useEffect(() => {
     if (file) {
@@ -79,19 +78,18 @@ export default function FileUpload() {
 
   function handleChange(e) {
     setFile(e.target.files[0]);
-
   }
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (producto.nombre.length > 0
-      && producto.descripcion.length > 10
-      && typeof producto.categoria === "string"
-      && producto.categoria.length > 0
-      && producto.seccion.length > 0
+    if (
+      producto.nombre.length > 0 &&
+      producto.descripcion.length > 10 &&
+      typeof producto.categoria === 'string' &&
+      producto.categoria.length > 0 &&
+      producto.seccion.length > 0
     ) {
-
       setFile('');
       Swal.fire({
         title: 'Quieres guardar los cambios?',
@@ -108,30 +106,28 @@ export default function FileUpload() {
             imagen: URL,
           };
           dispatch(postProducto(totalProducto));
-          console.log(totalProducto)
-          Swal.fire('Enviado!', 'Ok.', 'success').then(window.location.reload());
+          console.log(totalProducto);
+          Swal.fire('Enviado!', 'Ok.', 'success');
         } else if (result.isDenied) {
           Swal.fire('Los cambios no se guardaron', '', 'info');
         }
-      })
+      });
+    } else {
+      alert('No se llenaron todos los campos');
     }
-    else {
-      alert("No se llenaron todos los campos")
-    };
   }
   function handleChangeProduct(e) {
     setProducto({ ...producto, [e.target.name]: e.target.value });
     setError(
       validations({
         ...producto,
-        [e.target.nombre]: e.target.value
+        [e.target.nombre]: e.target.value,
       })
-    )
-
+    );
   }
 
   function handleSelectSeccion(e) {
-    setProducto({ ...producto, seccion: e.target.value })
+    setProducto({ ...producto, seccion: e.target.value });
   }
 
   return (
@@ -140,7 +136,6 @@ export default function FileUpload() {
       <div className={s.contenedorGeneral}></div>
 
       <div className={s.accionesAdmin}>
-
         <div className={s.formContainer}>
           <h1 className={s.titSubir}>
             <i>Subir Producto</i>
@@ -171,11 +166,15 @@ export default function FileUpload() {
             <div>
               <label>Seccion a la que pertenezca el producto:</label>
               <select onChange={handleSelectSeccion}>
-                <option value="" >Sección</option>
-                <option value="Revestimiento Texturado">Revestimiento texturado</option>
+                <option value="">Sección</option>
+                <option value="Revestimiento Texturado">
+                  Revestimiento texturado
+                </option>
                 <option value="Látex Color">Látex color</option>
                 <option value="Membranas">Membranas</option>
-                <option value="Preparación de la superficie">Preparación de la superficie</option>
+                <option value="Preparación de la superficie">
+                  Preparación de la superficie
+                </option>
                 <option value="Auxiliares">Auxiliares</option>
               </select>
             </div>
@@ -187,16 +186,23 @@ export default function FileUpload() {
                 placeholder="Categoría"
                 onChange={handleChangeProduct}
               />
-              {error.categoria && <span className={s.error}>{error.categoria}</span>}
+              {error.categoria && (
+                <span className={s.error}>{error.categoria}</span>
+              )}
             </div>
             <div>
               <label>Subir imagen</label>
               <input type="file" name="imagen" onChange={handleChange} />
               <div className={s.carga}>
-                <progress className={s.barradecarga} value={progress} max="100" />
-                <div className={s.porcentaje}>{parseInt(progress) === -2 ? 0 : parseInt(progress)} %</div>
+                <progress
+                  className={s.barradecarga}
+                  value={progress}
+                  max="100"
+                />
+                <div className={s.porcentaje}>
+                  {parseInt(progress) === -2 ? 0 : parseInt(progress)} %
+                </div>
               </div>
-
             </div>
 
             <button type="submit">Subir</button>
