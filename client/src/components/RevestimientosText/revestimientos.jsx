@@ -31,7 +31,7 @@ export default function Revestimientos(props) {
   // const productoRevest = 
 
   const [curretPage, setCurrentPage] = useState(1);
-  const [productosPorPagina, setcountriesPorPagina] = useState(4);
+  const [productosPorPagina, setcountriesPorPagina] = useState(10);
   const indexProductLast = curretPage * productosPorPagina;
   const indexProductFirst = indexProductLast - productosPorPagina;
   const productoRevest = allProductos.filter(e => e.seccion === "Revestimiento Texturado").slice(

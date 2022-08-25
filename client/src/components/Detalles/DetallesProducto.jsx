@@ -61,11 +61,13 @@ export default function DetalleProducto(props) {
             <div className={s.info}>
               <h2 className={s.cardNombre}>{detalle.nombre}</h2>
 
-              <div className={s.cardDescripcionTotal}>
-                <p className={s.cardDescripcion}>
-                  <b>Descripción</b> {detalle.descripcion}
-                </p>
-              </div>
+              {detalle.descripcion ?
+                (<div className={s.cardDescripcionTotal}>
+                  <p className={s.cardDescripcion}>
+                    <b>Descripción</b> {detalle.descripcion}
+                  </p>
+                </div>) : (<div></div>)
+              }
 
               <div className={s.cardCategoriaTotal}>
                 <h3 className={s.cardCategoria}>
