@@ -53,25 +53,26 @@ export default function DetalleAdmin() {
         <div className={s.contenedorCard}>
           <img
             className={s.cardImg}
-            src={productod ? productod.imagen : 'notfound'}
+            src={productod ? productod.imagen : <p>not found</p>}
             alt="fotoProducto"
           />
 
           <div className={s.info}>
             <h2 className={s.cardNombre}>
-              {productod ? productod.nombre : 'sin nombre'}
+              {productod ? productod.nombre : <p>sin nombre</p>}
             </h2>
 
             <h3 className={s.cardCategoria}>
               <b>Categoría:</b>{' '}
-              {productod ? productod.categoria : 'sin categoria'}
+              {productod ? productod.categoria : <p>sin categoria</p>}
             </h3>
             <h3 className={s.cardSeccion}>
-              <b>Sección:</b> {productod ? productod.seccion : 'sin seccion'}
+              <b>Sección:</b>{' '}
+              {productod ? productod.seccion : <p>sin seccion</p>}
             </h3>
             <p className={s.cardDescripcion}>
               <b>Descripción:</b>{' '}
-              {productod ? productod.descripcion : 'sin descripcion'}
+              {productod ? productod.descripcion : <p>sin descripcion</p>}
             </p>
           </div>
         </div>
