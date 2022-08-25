@@ -61,7 +61,7 @@ export default function ModificarProductos() {
       if (productoFilter.length) {
         dispatch(filterProductoPorNombre(productoFilter));
       } else {
-        alert('Debe escribir el nombre de un producto.');
+        Swal.fire('Debe escribir el nombre de un producto.');
       }
     } catch (err) {
       throw new Error(err);
@@ -90,7 +90,8 @@ export default function ModificarProductos() {
   const EditProducto = () => {
     dispatch(modificarProducto(id, input))
       .then(res => dispatch(getProducto()))
-      .then(res => alert('producto Modificado'));
+      .then(res =>
+        Swal.fire('¡Producto modificado!'));
     window.location.reload();
     navigate('/upDate');
   };
@@ -125,7 +126,7 @@ export default function ModificarProductos() {
         });
         console.log(input);
       } else if (result.isDenied) {
-        Swal.fire('Changes are not saved', '', 'info');
+        Swal.fire('Los cambios no se guardaron.', '', 'info');
       }
     });
   };
