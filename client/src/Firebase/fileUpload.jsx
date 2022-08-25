@@ -108,6 +108,9 @@ export default function FileUpload() {
           dispatch(postProducto(totalProducto));
           console.log(totalProducto);
           Swal.fire('Enviado!', 'Ok.', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 500);
         } else if (result.isDenied) {
           Swal.fire('Los cambios no se guardaron', '', 'info');
         }
