@@ -56,8 +56,8 @@
 
 .carouselImg {
   margin: auto;
-  min-width: 100%;
   width: 100%;
+  min-width: 100%;
   overflow: hidden;
   margin-top: 0px;
   border: transparent 1px black;
@@ -69,7 +69,7 @@
   display: flex;
   position: relative;
   overflow: hidden;
-  width: 200%;
+  width: 100%;
   padding: 0;
   border: transparent 1px black;
   /* animation: cambio 3s infinite alternate; */
@@ -81,7 +81,7 @@
   width: 100%;
   height: 100%;
   border: transparent 1px black;
-  min-width: 800px;
+  /* min-width: 800px; */
 }
 
 .carouselImg li:nth-child(1) {
@@ -371,7 +371,7 @@
     display: flex;
     position: relative;
     overflow: hidden;
-    width: 200%;
+    width: 100%;
     padding: 0;
     border: transparent 1px black;
     /* animation: cambio 3s infinite alternate; */
@@ -414,7 +414,7 @@
     display: flex;
     position: relative;
     overflow: hidden;
-    width: 200%;
+    width: 100%;
     padding: 0;
     border: transparent 1px black;
     /* animation: cambio 3s infinite alternate; */
@@ -460,7 +460,7 @@
 
   .carouselImg {
     margin: auto;
-    min-width: 100%;
+    /* min-width: 100%; */
     width: 100%;
     overflow: hidden;
     margin-top: 0px;
@@ -473,7 +473,7 @@
     display: flex;
     position: relative;
     overflow: hidden;
-    width: 200%;
+    width: 100%;
     padding: 0;
     border: transparent 1px black;
     /* animation: cambio 3s infinite alternate; */
@@ -485,7 +485,7 @@
     width: 100%;
     height: 100%;
     border: transparent 1px black;
-    min-width: 800px;
+    /* min-width: 800px; */
   }
 
   .carouselImg li:nth-child(1) {
@@ -498,95 +498,7 @@
     border: transparent 1px black;
   }
 
-  /* .carouselImg li:nth-child(1)::before {
-    content: 'MANDANOS TU CONSULTA Y TE ASESORAMOS';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 50%;
-    color: #fff;
-    font-size: 20px;
-    position: relative;
-    top: 50%;
-    left: -10%;
-    background-color: #9810b384;
-    backdrop-filter: blur(5px);
-    border-radius: 110px;
-    padding: 5px;
-    font-family: var(--fuenteLetras);
-  }
 
-  .carouselImg li:nth-child(1)::after {
-    content: "¿NO SABES POR DONDE EMPEZAR?";
-    color: #fff;
-    font-size: 30px;
-    position: relative;
-    top: 80px;
-    left: -10%;
-    background-color: #9797977e;
-    border-radius: 100px;
-    padding: 10px;
-    backdrop-filter: blur(7px);
-    padding: 5px;
-  } */
-
-  /* .carouselImg li:nth-child(2) {
-    width: 100%;
-    height: 400px;
-    background-image: url('../../img/bannerDos.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: transparent 1px black;
-  } */
-
-  /* 
-  .carouselImg li:nth-child(2)::before {
-    content: '¿DONDE APLICAR REVESTIMIENTO TEXTURADO?';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 60%;
-    color: #fff;
-    font-size: 50px;
-    position: relative;
-    top: 65%;
-    left: 0%;
-    background-color: #9810B3;
-    border-radius: 110px;
-    padding: 5px;
-    font-family: var(--fuenteLetras);
-  } */
-
-  /* .carouselImg li:nth-child(2)::after {
-    content: "";
-  
-    color: #9810B3;
-    font-size: 50px;
-    position: relative;
-    top: 60px;
-    background-color: #979797;
-    padding: 5px;
-  } */
-
-
-  /* .carouselImg li:nth-child(3) {
-    width: 100%;
-    height: 500px;
-    background-image: url('../../img/bannerTres.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: transparent 1px black;
-  } */
-
-  .carouselImg img {
-    width: 100%;
-    height: 50%;
-    border-right: 2px solid black;
-  }
 
   @keyframes cambio {
     0% {
@@ -658,14 +570,14 @@
 
   .carouselImg {
     margin: auto;
-    /* min-width: 250px; */
+    min-width: 250px;
     /* width: 370px; */
     width: 100%;
     overflow: hidden;
     margin-top: 0px;
     border: transparent 1px black;
     z-index: -1;
-    /* background-color: #e5e5e5; */
+    background-color: #e5e5e5;
 
   }
 

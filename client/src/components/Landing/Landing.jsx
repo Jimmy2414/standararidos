@@ -62,7 +62,7 @@ export default function Landing() {
             <ul>
               <li></li>
               {/* <li></li> */}
-              <li></li>
+              {/* <li></li> */}
             </ul>
           </div>
 
