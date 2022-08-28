@@ -69,10 +69,10 @@
   display: flex;
   position: relative;
   overflow: hidden;
-  width: 300%;
+  width: 200%;
   padding: 0;
   border: transparent 1px black;
-  /* animation: cambio 10s infinite alternate; */
+  /* animation: cambio 3s infinite alternate; */
 }
 
 
@@ -86,27 +86,29 @@
 
 .carouselImg li:nth-child(1) {
   width: 100%;
-  height: 700px;
-  background-image: url('../../img/pexels-anni-roenkae-3219951.jpg');
+  height: 500px;
+  background-image: url('../../img/bannerprincipal.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border: transparent 1px black;
 }
 
-/* .carouselImg li:nth-child(1)::before {
+/* 
+.carouselImg li:nth-child(1)::before {
   content: 'MANDANOS TU CONSULTA Y TE ASESORAMOS';
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: 60%;
+  width: 50%;
   color: #fff;
   font-size: 50px;
   position: relative;
-  top: 65%;
-  left: 0%;
-  background-color: #9810B3;
+  top: 50%;
+  left: -10%;
+  background-color: #9810b384;
+  backdrop-filter: blur(5px);
   border-radius: 110px;
   padding: 5px;
   font-family: var(--fuenteLetras);
@@ -114,27 +116,27 @@
 
 .carouselImg li:nth-child(1)::after {
   content: "¿NO SABES POR DONDE EMPEZAR?";
-
   color: #fff;
   font-size: 50px;
   position: relative;
-  top: 60px;
+  top: 0px;
+  left: -10%;
   background-color: #9797977e;
   border-radius: 100px;
   padding: 10px;
   backdrop-filter: blur(7px);
   padding: 5px;
 } */
-
+/* 
 .carouselImg li:nth-child(2) {
   width: 100%;
-  height: 700px;
-  background-image: url('../../img/pexels-kelly-2928233.jpg');
+  height: 500px;
+  background-image: url('../../img/bannerDos.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border: transparent 1px black;
-}
+} */
 
 /* 
 .carouselImg li:nth-child(2)::before {
@@ -167,15 +169,15 @@
 } */
 
 
-.carouselImg li:nth-child(3) {
+/* .carouselImg li:nth-child(3) {
   width: 100%;
-  height: 700px;
+  height: 500px;
   background-image: url('../../img/bannerTres.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border: transparent 1px black;
-}
+} */
 
 .carouselImg img {
   width: 100%;
@@ -188,25 +190,18 @@
     margin-left: 0;
   }
 
-  24% {
-    margin-left: 0;
-  }
 
-  25% {
+  /* 50% {
     margin-left: -100%;
-  }
+  } */
 
-  50% {
-    margin-left: -100%;
-  }
 
-  51% {
-    margin-left: -200%;
-  }
 
   100% {
-    margin-left: -200%;
+    margin-left: -100%;
   }
+
+
 }
 
 
@@ -358,7 +353,279 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
 
+@media (max-width: 1280px) {
+  .carouselImg {
+    margin: auto;
+    min-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0px;
+    border: transparent 1px black;
+    z-index: -1;
+    background-color: #e5e5e5;
+  }
+
+  .carouselImg ul {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 200%;
+    padding: 0;
+    border: transparent 1px black;
+    /* animation: cambio 3s infinite alternate; */
+  }
+
+
+  .carouselImg li {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    border: transparent 1px black;
+    min-width: 800px;
+  }
+
+  .carouselImg li:nth-child(1) {
+    width: 100%;
+    height: 300px;
+    background-image: url('../../img/bannerprincipal.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: transparent 1px black;
+  }
+}
+
+
+@media (max-width: 1080px) {
+  .carouselImg {
+    margin: auto;
+    min-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0px;
+    border: transparent 1px black;
+    z-index: -1;
+    background-color: #e5e5e5;
+  }
+
+  .carouselImg ul {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 200%;
+    padding: 0;
+    border: transparent 1px black;
+    /* animation: cambio 3s infinite alternate; */
+  }
+
+
+  .carouselImg li {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    border: transparent 1px black;
+    min-width: 800px;
+  }
+
+  .carouselImg li:nth-child(1) {
+    width: 100%;
+    height: 300px;
+    background-image: url('../../img/bannerprincipal.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: transparent 1px black;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .textoArriba {
+    color: white;
+    background-color: #09010B;
+    width: 100%;
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .textoArriba p {
+    padding: 10px;
+  }
+
+  .carouselImg {
+    margin: auto;
+    min-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0px;
+    border: transparent 1px black;
+    z-index: -1;
+    background-color: #e5e5e5;
+  }
+
+  .carouselImg ul {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 200%;
+    padding: 0;
+    border: transparent 1px black;
+    /* animation: cambio 3s infinite alternate; */
+  }
+
+
+  .carouselImg li {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    border: transparent 1px black;
+    min-width: 800px;
+  }
+
+  .carouselImg li:nth-child(1) {
+    width: 100%;
+    height: 300px;
+    background-image: url('../../img/bannerprincipal.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: transparent 1px black;
+  }
+
+  /* .carouselImg li:nth-child(1)::before {
+    content: 'MANDANOS TU CONSULTA Y TE ASESORAMOS';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    top: 50%;
+    left: -10%;
+    background-color: #9810b384;
+    backdrop-filter: blur(5px);
+    border-radius: 110px;
+    padding: 5px;
+    font-family: var(--fuenteLetras);
+  }
+
+  .carouselImg li:nth-child(1)::after {
+    content: "¿NO SABES POR DONDE EMPEZAR?";
+    color: #fff;
+    font-size: 30px;
+    position: relative;
+    top: 80px;
+    left: -10%;
+    background-color: #9797977e;
+    border-radius: 100px;
+    padding: 10px;
+    backdrop-filter: blur(7px);
+    padding: 5px;
+  } */
+
+  /* .carouselImg li:nth-child(2) {
+    width: 100%;
+    height: 400px;
+    background-image: url('../../img/bannerDos.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: transparent 1px black;
+  } */
+
+  /* 
+  .carouselImg li:nth-child(2)::before {
+    content: '¿DONDE APLICAR REVESTIMIENTO TEXTURADO?';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 60%;
+    color: #fff;
+    font-size: 50px;
+    position: relative;
+    top: 65%;
+    left: 0%;
+    background-color: #9810B3;
+    border-radius: 110px;
+    padding: 5px;
+    font-family: var(--fuenteLetras);
+  } */
+
+  /* .carouselImg li:nth-child(2)::after {
+    content: "";
+  
+    color: #9810B3;
+    font-size: 50px;
+    position: relative;
+    top: 60px;
+    background-color: #979797;
+    padding: 5px;
+  } */
+
+
+  /* .carouselImg li:nth-child(3) {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/bannerTres.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: transparent 1px black;
+  } */
+
+  .carouselImg img {
+    width: 100%;
+    height: 50%;
+    border-right: 2px solid black;
+  }
+
+  @keyframes cambio {
+    0% {
+      margin-left: 0;
+    }
+
+
+    /* 50% {
+      margin-left: -100%;
+    } */
+
+
+
+    100% {
+      margin-left: -100%;
+    }
+
+
+  }
+
+  .seccionQuienesSomos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    width: 99%;
+    height: 100%;
+    background-color: #e5e5e5;
+    align-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+  }
+
+  .seccionQuienesSomos img {
+    width: 50%;
+  }
 
 }
 
@@ -391,13 +658,14 @@
 
   .carouselImg {
     margin: auto;
-    min-width: 250px;
-    width: 370px;
+    /* min-width: 250px; */
+    /* width: 370px; */
+    width: 100%;
     overflow: hidden;
     margin-top: 0px;
     border: transparent 1px black;
     z-index: -1;
-    background-color: #e5e5e5;
+    /* background-color: #e5e5e5; */
 
   }
 
@@ -405,34 +673,39 @@
     display: flex;
     position: relative;
     overflow: hidden;
-    width: 1125px;
+    /* width: 1125px; */
+    width: 100%;
     min-width: 375px;
     padding: 0;
     border: transparent 1px black;
-    animation: cambio 10s infinite alternate;
+    /* animation: cambio 10s infinite alternate; */
   }
 
   .carouselImg li {
     list-style: none;
-    width: 375px;
+    /* width: 375px; */
     min-width: 375px;
+    width: 100%;
     height: 100%;
     border: transparent 1px black;
     min-width: 800px;
   }
 
   .carouselImg li:nth-child(1) {
-    width: 375px;
+    /* width: 375px; */
+    width: 100%;
     min-width: 375px;
-    height: 300px;
-    background-image: url('../../img/bannerAux.jpg');
+    height: 200px;
+    background-image: url('../../img/bannerprincipal.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     border: transparent 1px black;
   }
 
-  .carouselImg li:nth-child(2) {
+
+
+  /* .carouselImg li:nth-child(2) {
     width: 375px;
     min-width: 375px;
     height: 300px;
@@ -485,7 +758,7 @@
     100% {
       margin-left: -750px;
     }
-  }
+  } */
 
   .seccionQuienesSomos {
     display: flex;
@@ -504,7 +777,7 @@
   }
 
   .seccionQuienesSomos img {
-    width: 90%;
+    width: 100%;
   }
 
 

@@ -60,6 +60,7 @@
   align-items: center;
   margin: auto;
   flex-wrap: wrap;
+  background-color: #e5e5e5;
 }
 
 .titulo h1 {
@@ -136,6 +137,8 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 800px) {}
 
 @media (max-width: 475px) {
   .textoArriba {

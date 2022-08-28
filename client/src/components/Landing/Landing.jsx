@@ -7,7 +7,7 @@ import { getProducto, deleteState } from '../../Redux/actions/actions';
 import NavMenu from '../NavMenu/Menu';
 import Footer from '../Footer/Footer';
 import s from '../Landing/Landing.module.css';
-import fotoNosotros from '../../img/fotonosotros1.jpg'
+import fotoNosotros from '../../img/quienessomos.png'
 import { NavLink } from 'react-router-dom';
 export default function Landing() {
   const [loading, setLoading] = useState(false);
@@ -61,7 +61,7 @@ export default function Landing() {
           <div className={s.carouselImg}>
             <ul>
               <li></li>
-              <li></li>
+              {/* <li></li> */}
               <li></li>
             </ul>
           </div>
