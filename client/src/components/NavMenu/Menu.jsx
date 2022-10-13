@@ -60,7 +60,9 @@ export default function NavMenu() {
               <li>Auxiliares</li>
             </NavLink>
 
-            <li className={s.contacto}><a href="#Footer">Contacto</a></li>
+            <NavLink to={'/contacto'}>
+              <li className={s.contacto}>Contacto</li>
+            </NavLink>
           </ul>
         </nav>
       </div>

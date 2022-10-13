@@ -29,6 +29,19 @@
   width: 20%;
 }
 
+.botonHomeClientes {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 20px;
+  border-top: solid 2px black;
+  border-left: solid 2px black;
+  border-right: solid 2px black;
+}
+
+
 .title {
   font-size: 40px;
   text-transform: uppercase;

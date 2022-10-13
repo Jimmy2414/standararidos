@@ -10,6 +10,7 @@ import LatexColor from './components/LatexColor/latex';
 import Membranas from './components/Membranas/membranas';
 import PreparacionSuperficie from './components/Preparacion de la superficie/PreparacionSuperficie';
 import Auxiliares from './components/Auxiliares/auxiliares';
+import Contacto from './components/contacto/Contacto';
 import Detalle from './components/Detalles/DetallesProducto';
 import ModificarProductos from './components/accionesAdmin/modificarCosas/modificar';
 import EliminarProducto from './components/accionesAdmin/eliminarCosas/eliminar';
@@ -40,6 +41,7 @@ function App() {
           exact
         />
         <Route path="/auxilires" element={<Auxiliares />} exact />
+        <Route path="/contacto" element={<Contacto />} exact />
         <Route path="/search/:id" element={<Detalle />} exact />
         <Route path="/delete" element={<EliminarProducto />} exact />
         <Route path="/admin/detalle/:id" element={<DetalleAdmin />} exact />

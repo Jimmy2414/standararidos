@@ -50,16 +50,24 @@ const LoginAdmin = () => {
     }
   }
 
+  const home = (e) => {
+    navigate('/')
+  }
 
   return (
     <div className={s.contenedorGeneral}>
       <div className={s.logo}>
         <img src={logo} alt="logo" />
+      </div>
 
+      <div className={s.botonHomeClientes}>
+        <button onClick={home}>
+          Ir a Home de clientes
+        </button>
       </div>
 
       <div className={s.title}>
-        <u>Inicia Sesion</u>
+        <p>Inicia Sesion</p>
       </div>
 
       <form className={s.form} onSubmit={handleSubmit}>

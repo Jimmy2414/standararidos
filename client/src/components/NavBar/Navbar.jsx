@@ -14,6 +14,10 @@ export default function NavBar() {
     }, 500)
   }
 
+  const home = (e) => {
+    navigate('/')
+  }
+
 
   return (
     <div className={s.contenedorGeneral}>
@@ -36,6 +40,10 @@ export default function NavBar() {
               <li>Eliminar producto</li>
             </NavLink>
 
+            <li onClick={home}>
+              Ir a Home de clientes
+            </li>
+
             <li onClick={logout} className={s.logout}>
               Cerrar Sesión
             </li>
@@ -45,6 +53,8 @@ export default function NavBar() {
 
 
       </div>
+
+
     </div>
   )
 }
