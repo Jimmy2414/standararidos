@@ -1,8 +1,19 @@
 import React from "react";
 import s from '../NavBar/Navbar.module.css'
 import { NavLink } from 'react-router-dom'
+import { useNavigate, Navigate } from 'react-router-dom';
 
 export default function NavBar() {
+
+  const navigate = useNavigate()
+
+  const logout = () => {
+    localStorage.clear('token')
+    setTimeout(() => {
+      navigate('/login')
+    }, 500)
+  }
+
 
   return (
     <div className={s.contenedorGeneral}>
@@ -24,8 +35,13 @@ export default function NavBar() {
             <NavLink to={'/delete'}>
               <li>Eliminar producto</li>
             </NavLink>
+
+            <li onClick={logout} className={s.logout}>
+              Cerrar Sesión
+            </li>
           </ul>
         </nav>
+
 
 
       </div>

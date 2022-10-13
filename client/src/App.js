@@ -2,6 +2,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Landing from './components/Landing/Landing';
 import Admin from './components/Admin/Admin';
+import LoginAdmin from './components/LoginAdmin/LoginAdmin';
 import Subir from './components/accionesAdmin/subirCosas/Subir';
 import FileUpload from './Firebase/fileUpload';
 import Revestimientos from './components/RevestimientosText/revestimientos';
@@ -21,6 +22,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<LoginAdmin />} />
         <Route path="/admin" element={<Admin />} exact />
         <Route path="/upLoad" element={<FileUpload />} exact />
         <Route path="/upDate" element={<ModificarProductos />} exact />

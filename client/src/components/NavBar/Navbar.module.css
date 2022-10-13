@@ -53,6 +53,21 @@
   border-top: 1px black solid;
 }
 
+.logout {
+  font-size: 16px;
+  color: red;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout:hover {
+  border-top: solid 1px red;
+  border-bottom: solid 1px red;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  color: red;
+}
+
 .contenedorGeneral navlink {
   color: white;
 }

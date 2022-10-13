@@ -111,7 +111,7 @@ input[type="file" i] {
   /* width: 1200px; */
   width: 90%;
   text-align: center;
-  height: 20px;
+  height: 55px;
   background-color: var(--colorBlanco);
   /* border-radius: 15px 0px 15px 0px; */
   font-family: var(--fuenteMenu);

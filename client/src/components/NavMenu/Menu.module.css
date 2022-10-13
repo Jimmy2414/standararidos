@@ -106,6 +106,7 @@ html {
     font-weight: 700;
     color: var(--colorNegro);
     text-transform: uppercase;
+
   }
 
   .navMenu ul li:hover {
