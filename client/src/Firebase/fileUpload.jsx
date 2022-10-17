@@ -171,11 +171,19 @@ export default function FileUpload() {
                 <option value="Revestimiento Texturado">
                   Revestimiento texturado
                 </option>
-                <option value="Látex Color">Látex color</option>
+
+                <option value="Látex Interior">Látex Interior</option>
+                <option value="Látex Interior Lavable">Látex Interior Lavable</option>
+                <option value="Látex Interior Satinado">Látex Interior Satinado</option>
+                <option value="Látex Interior Cielorraso">Látex Interior Cielorraso</option>
+                <option value="Látex Interior color">Látex Interior color</option>
+                <option value="Látex Exterior">Látex Exterior</option>
+                <option value="Látex Exterior Impermeabilizante">Látex Exterior Impermeabilizante</option>
+
                 <option value="Membranas">Membranas</option>
-                <option value="Preparación de la superficie">
-                  Preparación de la superficie
-                </option>
+                <option value="Fijadores">Fijadores</option>
+                <option value="Enduidos">Enduidos</option>
+                <option value="Accesorios">Accesorios</option>
                 <option value="Auxiliares">Auxiliares</option>
               </select>
             </div>

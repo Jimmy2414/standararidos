@@ -2,7 +2,7 @@ import React from 'react'
 import NavMenu from "../NavMenu/Menu";
 import Footer from '../Footer/Footer';
 import logo from '../../img/standarLogo.jpg'
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import s from '../contacto/Contacto.module.css'
 import Swal from 'sweetalert2';
 
@@ -64,7 +64,7 @@ const Contacto = () => {
       <div className={s.layout}>
 
         <h2 className={s.mainTitle}>
-          Contacto
+          CONTACTO
         </h2>
 
         <div className={s.containerDatos}>
@@ -81,13 +81,15 @@ const Contacto = () => {
           <div className={s.datos}>
             <h3>Teléfono </h3>
             <p>(011) 7034-7165</p>
+            <li className={s.wsp}><a href="https://api.whatsapp.com/send?phone=+541170347165&text=¡Hola, tengo una consulta!." target="_blank"><FaWhatsapp /></a></li>
           </div>
 
           <div className={s.datos}>
             <h3>Redes </h3>
             <ul>
-              <li><a href='https://es-es.facebook.com/standararidos1/' target="_blank"><FaFacebook /></a></li>
-              <li><a href='https://www.instagram.com/standararidos/?hl=es' target="_blank"><FaInstagram /></a></li>
+              <li className={s.fb}><a href='https://es-es.facebook.com/standararidos1/' target="_blank"><FaFacebook /></a></li>
+              <li className={s.ig}><a href='https://www.instagram.com/standararidos/?hl=es' target="_blank"><FaInstagram /></a></li>
+
             </ul>
           </div>
         </div>
@@ -122,7 +124,7 @@ const Contacto = () => {
       </div>
 
       <Footer />
-    </div>
+    </div >
   )
 }
 

@@ -79,7 +79,7 @@ export function modificarProducto(id, input) {
       });
       return dispatch({ type: 'MODIFICAR_PRODUCTO', payload: data });
     } catch (err) {
-      alert('no se puede');
+      alert('Hecho');
     }
   };
 }

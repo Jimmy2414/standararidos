@@ -66,6 +66,7 @@
 .titulo h1 {
   padding-top: 20px;
   font-family: var(--fuenteLetras);
+  text-transform: uppercase;
 }
 
 .bannerMembranas img {

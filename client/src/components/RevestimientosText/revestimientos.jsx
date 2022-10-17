@@ -13,6 +13,7 @@ import bannerRevest from '../../img/bannerRevest.jpg'
 import aRodillo from '../../img/arodillo.jpg'
 import aLlanna from '../../img/allana.jpg'
 import s from '../RevestimientosText/revestimientos.module.css'
+import sa from '../Auxiliares/auxiliares.module.css'
 
 import { Helmet } from 'react-helmet'
 
@@ -30,7 +31,9 @@ export default function Revestimientos(props) {
   const allProductos = useSelector(state => state.Productos);
   console.log(allProductos.map(e => e.descripcion));
 
-  // const productoRevest = 
+  const auxiliares = allProductos.filter(e => e.seccion === "Auxiliares")
+
+
 
   const [curretPage, setCurrentPage] = useState(1);
   const [productosPorPagina, setcountriesPorPagina] = useState(10);
@@ -70,7 +73,7 @@ export default function Revestimientos(props) {
   return (
     <div>
       <Helmet>
-        <title>Revestimientos Texturados | Standar Aridos  </title>
+        <title>Revestimientos Texturados | Standar Aridos</title>
 
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
@@ -89,6 +92,7 @@ export default function Revestimientos(props) {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
+
       </Helmet>
       {
 
@@ -119,12 +123,15 @@ export default function Revestimientos(props) {
               <NavMenu />
 
               <div className={s.layout}>
+
                 <div className={s.titulo}>
                   <h1>Revestimientos texturados</h1>
                 </div>
+
                 <div className={s.bannerRevest}>
                   <img src={bannerRevest} alt="banner-revestimientos-texturados" />
                 </div>
+
 
                 <div className={s.descripcionRevest}>
                   <p>Revestimiento compuesto a base de resinas acrílicas y cargas minerales, que aportan resistencia a los diversos agentes climáticos y gran impermeabilidad. Decora las superficies y las protege a lo largo del tiempo. Según la forma de aplicación, existen dos tipos, a llana y a rodillo. Es de uso interior y exterior.</p>
@@ -162,6 +169,35 @@ export default function Revestimientos(props) {
                 </div>
 
 
+                <h2>AUXILIARES</h2>
+                <div className={s.contenedorProductoAux}>
+
+                  <div className={s.contenedorProducto}>
+                    {auxiliares?.map(e => {
+
+                      return (
+                        <div key={e.id}>
+                          <NavLink to={`/search/${e.id}`}>
+                            <Productos
+                              id={e.id}
+                              imagen={e.imagen}
+                              nombre={e.nombre}
+                              descripcion={e.descripcion}
+                              categoria={e.categoria}
+                              seccion={e.seccion}
+                            />
+                          </NavLink>
+                        </div>
+                      );
+
+
+                    })}
+                  </div>
+                  <hr className={s.hr} />
+                </div>
+
+
+                <h2>REVESTIMIENTOS</h2>
                 <div className={s.contenedorProducto}>
                   {productoRevest?.map(e => {
 

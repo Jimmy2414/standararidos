@@ -1,50 +1,63 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import logo from '../../img/standarLogo.jpg';
-
-import Productos from '../Productos/Productos';
-import { getProducto, deleteState } from '../../Redux/actions/actions';
-import NavMenu from '../NavMenu/Menu';
-import Footer from '../Footer/Footer';
-import s from '../Landing/Landing.module.css';
-import fotoNosotros from '../../img/fotonosotros1.jpg'
-import { NavLink } from 'react-router-dom';
+import { getProducto } from "../../../Redux/actions/actions";
+import Productos from "../../Productos/Productos";
+import NavMenu from "../../NavMenu/Menu";
+import Footer from "../../Footer/Footer";
+import { useState } from "react";
+import s from '../../LatexColor/latex.module.css'
+import logo from '../../../img/standarLogo.jpg'
+import bannerLatex from '../../../img/bannerLatex.jpg'
+import Paginacion from "../../Paginado/paginado";
+import { NavLink } from 'react-router-dom'
 
 import { Helmet } from 'react-helmet'
 
-export default function Landing() {
+export default function LatexColor() {
+
   const [loading, setLoading] = useState(false);
-
-
-
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
-  }, []);
 
   const dispatch = useDispatch();
 
   const allProductos = useSelector(state => state.Productos);
   console.log(allProductos.map(e => e.descripcion));
 
+  // const latexColor = allProductos.filter(e => e.seccion === "Látex Color")
+
+  const [curretPage, setCurrentPage] = useState(1);
+  const [productosPorPagina, setcountriesPorPagina] = useState(10);
+  const indexProductLast = curretPage * productosPorPagina;
+  const indexProductFirst = indexProductLast - productosPorPagina;
+  const latexColor = allProductos.filter(e => e.seccion === "Látex Interior color").slice(
+    indexProductFirst,
+    indexProductLast
+  );
+
+  const paginado = pageNumber => {
+    let page = curretPage;
+    if (
+      pageNumber === 'siguiente' &&
+      curretPage < Math.ceil(allProductos.length / productosPorPagina)
+    ) {
+      page = curretPage + 1;
+      setCurrentPage(page);
+    } else if (pageNumber === 'anterior' && curretPage > 1) {
+      page = curretPage - 1;
+      setCurrentPage(page);
+    } else if (typeof pageNumber === 'number') {
+      setCurrentPage(pageNumber);
+    }
+  };
+
   useEffect(() => {
     dispatch(getProducto());
   }, [dispatch]);
-  useEffect(() => {
-    dispatch(deleteState());
-  });
-  // const sortProducts = allProductos.sort((a, b) =>
-  //   a.id - b.id
-  // )
-
 
   return (
     <div>
       <Helmet>
-        <title>Revestimiento texturado y Pinturas | Standar Aridos</title>
-        <meta name="description" content="Revestimiento texturado y pinturas. Todo lo que necesitas para renovar tu hogar. Látex, enduido plástico, fijador sellador y membrana en pasta. ​Envíos." />
+        <title>Pintura Látex - Interior Color | Standar Aridos</title>
+        <meta name="description" content="Pinturas a color, látex interior y exterior. Resultados en la primer mano, cubritivo y fácil de aplicar." />
         <meta name="keywords" content="revestimientos texturados, latex color, enduido, base, membranas, hogar, pinturas, envios, standar aridos" />
         <meta name="sitedomain" content="www.standararidos.com" />
         <meta name="organization" content="standar aridos" />
@@ -71,8 +84,6 @@ export default function Landing() {
         <meta itemprop="name" content="Revestimiento texturado y pinturas. Todo lo que necesitas para renovar tu hogar. Látex, enduido plástico, fijador sellador y membrana en pasta. ​Envíos." />
         <meta itemprop="image" content="img/standarLogo.jpg" />
 
-        <link rel="shortcut icon" href="img/favicon2.jpg" type="image/x-icon" />
-
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -91,64 +102,40 @@ export default function Landing() {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </Helmet>
+
       {loading ? (
         <div className={s.loaderfondo}>
-          <div className={s.loader}></div>
-        </div>
-      ) : (
-        <div className={s.contenedorLanding}>
+          <div className={s.loader}>
+          </div>
+        </div>) : (
+        <div>
+
           <div className={s.textoArriba}>
-            <p>
-              Pilcomayo 3764 - Villa Tesei (Hurlingham) - Provincia de Buenos
-              Aires
-            </p>
+            <p>Pilcomayo 3764 - Villa Tesei (Hurlingham) - Provincia de Buenos Aires</p>
             <p>Copyright · 2022 · Standar Aridos</p>
           </div>
+
 
           <div className={s.contenedorLogo}>
             <img src={logo} alt="Logo" />
             {/* <h1>STANDAR ARIDOS</h1> */}
           </div>
 
-          <div className={s.menu_landing}>
-            <NavMenu />
-          </div>
 
-          <div className={s.carouselImg}>
-            <ul>
-              <li></li>
-              {/* <li></li> */}
-              {/* <li></li> */}
-            </ul>
-          </div>
 
-          {/* <div className={s.textocambiante}>
-        <h3 className={s.renova}>¡renová</h3>
-        <ul>
-          <li>tus Espacios!</li>
-          <li>tu Hogar!</li>
-          <li>tu Vida!</li>
-        </ul>
-      </div> */}
-          <div className={s.seccionQuienesSomos}>
-            <img src={fotoNosotros} alt="" />
+
+          <NavMenu />
+
+          <div className={s.layout}>
             <div className={s.titulo}>
-              <span><p className={s.quienessomos}>STANDAR ARIDOS</p>  Somos una marca joven con el objetivo de desarrollar productos para todo aquel que quiera remodelar y acondicionar su hogar, a su manera. <br />
-                Nos dedicamos a fabricar y comercializar, productos para la construcción que sirvan para todo tipo de necesidades, y además brindar un aspecto decorativo característico al tanto de las tendencias emergentes. Ejemplo de ello, son los revestimientos texturados, un producto intrínseco a nuestra marca. <br />
-                Constantemente, buscamos mejorar nuestras fórmulas de manera que se adecúen aún más a las expectativas de nuestros clientes. <br />
-                Apuntamos a lograr, día a día, un producto de suma calidad y resistencia. </span>
+              <h1>Látex Interior Color</h1>
             </div>
-          </div>
+            <div className={s.bannerLatex}>
+              <img src={bannerLatex} alt="banner-latex" />
+            </div>
+            <div className={s.contenedorProducto}>
+              {latexColor?.map(e => {
 
-          <h3 className={s.title_destacados}>Productos Recientes</h3>
-          <p className={s.aclaracion}>
-            Clickea sobre el producto para ver el detalle
-          </p>
-          <div className={s.contenedorProductos}>
-            {allProductos
-              ?.reverse()
-              .slice(0, 6)
-              .map(e => {
                 return (
                   <div key={e.id}>
                     <NavLink to={`/search/${e.id}`}>
@@ -164,11 +151,17 @@ export default function Landing() {
                   </div>
                 );
               })}
+            </div>
           </div>
-
+          <Paginacion
+            curretPage={curretPage}
+            productosPorPagina={productosPorPagina}
+            allProductos={allProductos.length}
+            paginado={paginado}
+          />
           <Footer />
-        </div>
-      )}
+        </div>)}
+
     </div>
-  );
+  )
 }

@@ -7,6 +7,16 @@ import Subir from './components/accionesAdmin/subirCosas/Subir';
 import FileUpload from './Firebase/fileUpload';
 import Revestimientos from './components/RevestimientosText/revestimientos';
 import LatexColor from './components/LatexColor/latex';
+import LatexInterior from './components/LatexColor/TiposLatex/LatexInterior';
+import LatexInteriorLavable from './components/LatexColor/TiposLatex/LatexInteriorLavable';
+import LatexInteriorSatinado from './components/LatexColor/TiposLatex/LatexInteriorSatinado';
+import LatexInteriorCielorraso from './components/LatexColor/TiposLatex/LatexInteriorCielorraso';
+import LatexInteriorColor from './components/LatexColor/TiposLatex/LatexInteriorColor';
+import LatexExterior from './components/LatexColor/TiposLatex/LatexExterior';
+import LatexExteriorImpermeabilizante from './components/LatexColor/TiposLatex/LatexExteriorImpermeabilizante';
+import Fijadores from './components/TechosYSuperficies/Fijadores';
+import Enduidos from './components/TechosYSuperficies/Enduidos';
+import Accesorios from './components/TechosYSuperficies/Accesorios';
 import Membranas from './components/Membranas/membranas';
 import PreparacionSuperficie from './components/Preparacion de la superficie/PreparacionSuperficie';
 import Auxiliares from './components/Auxiliares/auxiliares';
@@ -33,8 +43,17 @@ function App() {
           element={<Revestimientos />}
           exact
         />
-        <Route path="/latex-color" element={<LatexColor />} exact />
+        <Route path="/latex-interior" element={<LatexInterior />} exact />
+        <Route path='/latex-interior-lavable' element={<LatexInteriorLavable />} exact />
+        <Route path='/latex-interior-satinado' element={<LatexInteriorSatinado />} exact />
+        <Route path='/latex-interior-cielorraso' element={<LatexInteriorCielorraso />} exact />
+        <Route path='/latex-interior-color' element={<LatexInteriorColor />} exact />
+        <Route path='/latex-exterior-impermeabilizante' element={<LatexExteriorImpermeabilizante />} exact />
+        <Route path='latex-exterior' element={<LatexExterior />} exact />
         <Route path="/membranas" element={<Membranas />} exact />
+        <Route path='fijadores' element={<Fijadores />} exact />
+        <Route path='/enduidos' element={<Enduidos />} exact />
+        <Route path='/accesorios' element={<Accesorios />} exact />
         <Route
           path="/preparacion-de-la-superficie"
           element={<PreparacionSuperficie />}

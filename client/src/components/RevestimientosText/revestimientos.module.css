@@ -22,6 +22,13 @@
   --fuenteTitPrincipal: 'Saira', sans-serif;
 }
 
+.hr {
+  margin-top: 15px;
+  height: 10px;
+  font-weight: 700;
+  background-color: #ffffff;
+}
+
 .layout {
   width: 100%;
   background-color: #e5e5e5;
@@ -56,6 +63,13 @@
 .contenedorLogo img {
   width: 30%;
   height: 20%;
+}
+
+.contenedorProductoAux {
+  width: 100%;
+  background-color: #e5e5e5;
+  margin-bottom: 25px;
+  /* border-bottom: ; */
 }
 
 .contenedorProducto {
