@@ -55,6 +55,46 @@
   border-top: 2px black solid;
 }
 
+.menuDesplegableRevest ul {
+  display: none;
+  min-width: 140px;
+  position: absolute;
+  background-color: white;
+  width: 50%;
+  top: 280px;
+  right: 0%;
+  transition: all 1s ease;
+  z-index: 100000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.menuDesplegableRevest:hover>ul {
+  display: block;
+  width: 10%;
+  right: 55%;
+  transition: all 1s ease;
+  z-index: 100000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  /* /* justify-content: center; */
+  align-items: flex-start;
+  margin: auto;
+  flex-direction: column;
+}
+
+.menuDesplegableRevest ul li {
+  border-bottom: solid 1px black;
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+  /* right: 48%; */
+  top: 0px;
+}
+
+.menuDesplegableRevest ul li:hover {
+  background-color: #e5e5e5;
+}
+
 .menuDesplegable ul {
   display: none;
   min-width: 140px;

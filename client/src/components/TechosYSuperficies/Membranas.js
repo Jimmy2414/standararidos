@@ -30,6 +30,7 @@ const Membranas = () => {
 
   const membranas = allProductos.filter(e => e.seccion === "Membranas")
 
+
   useEffect(() => {
     dispatch(getProducto());
   }, [dispatch]);

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import NavMenu from "../NavMenu/Menu";
 import Footer from '../Footer/Footer';
 import logo from '../../img/standarLogo.jpg'
@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import s from '../contacto/Contacto.module.css'
 import Swal from 'sweetalert2';
 
-const Contacto = () => {
+export const Contacto = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -128,4 +128,4 @@ const Contacto = () => {
   )
 }
 
-export default Contacto
+// export default Contacto

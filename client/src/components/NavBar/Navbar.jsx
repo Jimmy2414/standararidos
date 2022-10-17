@@ -40,6 +40,10 @@ export default function NavBar() {
               <li>Eliminar producto</li>
             </NavLink>
 
+            <NavLink to={'/ficha-tecnica'}>
+              <li>Fichas técnicas</li>
+            </NavLink>
+
             <li onClick={home}>
               Ir a Home de clientes
             </li>

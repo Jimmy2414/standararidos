@@ -1,0 +1,24 @@
+.contenedorFichasHechas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contenedorFichasHechas img {
+  width: 600px;
+  height: 600px;
+}
+
+.sinImagen {
+  width: 600px;
+  height: 600px;
+  border: solid 1px black;
+  background-color: gray;
+}

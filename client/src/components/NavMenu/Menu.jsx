@@ -37,9 +37,22 @@ export default function NavMenu() {
               <li>Home</li>
             </NavLink>
 
-            <NavLink to={'/revestimientos-texturados'}>
+            {/* <NavLink to={'/revestimientos-texturados'}>
               <li>Revestimientos Texturados</li>
-            </NavLink>
+            </NavLink> */}
+
+            <li className={s.menuDesplegableRevest}>
+              Revestimientos Texturados ▼
+              <ul>
+                <NavLink to={'/revestimiento-llana'}>
+                  <li>A Llana</li>
+                </NavLink>
+
+                <NavLink to={'/revestimiento-rodillo'}>
+                  <li>A Rodillo</li>
+                </NavLink>
+              </ul>
+            </li>
 
             {/* <NavLink to={'/latex-color'}>
               <li>Pinturas</li>

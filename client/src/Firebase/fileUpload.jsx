@@ -15,6 +15,7 @@ export default function FileUpload() {
   const dispatch = useDispatch();
   const URL = useSelector(state => state.URL);
   console.log(URL);
+  const [check, setCheck] = useState(false)
   const [progress, setProgress] = useState(0);
   const [producto, setProducto] = useState({
     nombre: '',
@@ -64,7 +65,7 @@ export default function FileUpload() {
             Swal.fire({
               position: 'center',
               icon: 'success',
-              title: 'File uploaded successfully',
+              title: 'Imagen subida correctamente',
               showConfirmButton: false,
               timer: 1500,
             });
@@ -132,6 +133,14 @@ export default function FileUpload() {
     setProducto({ ...producto, seccion: e.target.value });
   }
 
+  const checkbox = () => {
+    setCheck(true)
+  }
+
+  const closeCheck = () => {
+    setCheck(false)
+  }
+
   return (
     <div>
       <NavBar />
@@ -168,8 +177,11 @@ export default function FileUpload() {
               <label>Seccion a la que pertenezca el producto:</label>
               <select onChange={handleSelectSeccion}>
                 <option value="">Sección</option>
-                <option value="Revestimiento Texturado">
-                  Revestimiento texturado
+                <option value="Revestimiento Texturado llana">
+                  Revestimiento texturado a Llana
+                </option>
+                <option value="Revestimiento Texturado rodillo">
+                  Revestimiento texturado a Rodillo
                 </option>
 
                 <option value="Látex Interior">Látex Interior</option>
@@ -213,6 +225,24 @@ export default function FileUpload() {
                 </div>
               </div>
             </div>
+
+            <div>
+              <label>
+                ¿Incluye ficha tecnica?
+                <input onClick={checkbox} type="checkbox" />
+              </label>
+              {check ?
+                <div>
+                  <input type="file" />
+
+                  <label> Sin ficha técnica</label>
+                  <input type="checkbox" onClick={closeCheck} />
+                </div>
+                :
+                null
+              }
+            </div>
+
 
             <button type="submit">Subir</button>
           </form>

@@ -12,8 +12,17 @@ import bannerMembranas from '../../img/bannerMembranas.jpg'
 import { Helmet } from 'react-helmet'
 
 import s from '../Membranas/membranas.module.css'
+import arrowRight from '../../img/arrowRight.svg'
+import arrowDown from '../../img/arrowDown.svg'
 
 export default function Membranas() {
+
+  const [icon, setIcon] = useState(true)
+  function changeToCross(e) {
+    if (e.target) {
+      setIcon(!icon)
+    }
+  }
   const [loading, setLoading] = useState(false);
   // useEffect(() => {
   //   setLoading(true);
@@ -28,6 +37,7 @@ export default function Membranas() {
   console.log(allProductos.map(e => e.descripcion));
 
   const membranas = allProductos.filter(e => e.seccion === "Membranas")
+  const fichaTecnica = allProductos.filter(e => e.seccion === "ficha tecnica llana")
 
   useEffect(() => {
     dispatch(getProducto());
@@ -124,6 +134,21 @@ export default function Membranas() {
 
               <h3>Presentación</h3>
               <p>Baldes de 1, 4, 10 y 20 kg.</p>
+            </div>
+
+            {/* FICHA TECNICA */}
+            <label htmlFor="fichatecnica" className={s.labelFichaTecnica} onClick={changeToCross}>
+              {icon === true
+                ?
+                <h3>Ficha Tecnica<img className={s.arrow_faq} src={arrowRight} alt="arrow_faq" />  </h3>
+                :
+                <h3>Ficha Tecnica <img className={s.arrow_faq} src={arrowDown} alt="arrow_faq" /> </h3>}
+            </label>
+            <input type="checkbox" id="fichatecnica" className={s.checkbox_faq} />
+
+
+            <div className={s.faq_answered}>
+              <img src={'http://www.ejemplode.com/images/uploads/escritos/ficha-tecnica-nutrimental_1.jpg?1478222168874'} alt="ficha tecnica" />
             </div>
 
 

@@ -19,7 +19,7 @@ import arrowDown from '../../img/arrowDown.svg'
 
 import { Helmet } from 'react-helmet'
 
-export default function Revestimientos(props) {
+export default function Allana(props) {
 
   const [icon, setIcon] = useState(true)
   function changeToCross(e) {
@@ -49,10 +49,11 @@ export default function Revestimientos(props) {
   const [productosPorPagina, setcountriesPorPagina] = useState(10);
   const indexProductLast = curretPage * productosPorPagina;
   const indexProductFirst = indexProductLast - productosPorPagina;
-  const productoRevest = allProductos.filter(e => e.seccion === "Revestimiento Texturado").slice(
+  const productoRevest = allProductos.filter(e => e.seccion === "Revestimiento Texturado llana").slice(
     indexProductFirst,
     indexProductLast
   );
+  const fichaTecnica = allProductos.filter(e => e.seccion === "ficha tecnica llana")
 
   const paginado = pageNumber => {
     let page = curretPage;
@@ -83,7 +84,7 @@ export default function Revestimientos(props) {
   return (
     <div>
       <Helmet>
-        <title>Revestimientos Texturados | Standar Aridos</title>
+        <title>Revestimientos Texturados - Llana | Standar Aridos</title>
 
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
@@ -135,7 +136,7 @@ export default function Revestimientos(props) {
               <div className={s.layout}>
 
                 <div className={s.titulo}>
-                  <h1>Revestimientos texturados</h1>
+                  <h1>Revestimientos texturados a Llana</h1>
                 </div>
 
                 <div className={s.bannerRevest}>
@@ -148,7 +149,7 @@ export default function Revestimientos(props) {
                 </div>
 
                 <div className={s.layoutDos}>
-                  <div className={s.aRodillo}>
+                  {/* <div className={s.aRodillo}>
                     <img src={aRodillo} alt="a-rodillo" />
                     <div className={s.info}>
                       <h3>Revestimiento rodillado (a rodillo)</h3>
@@ -160,10 +161,10 @@ export default function Revestimientos(props) {
                       <h3>Recomendaciones</h3>
                       <p>No colocar con pronóstico de lluvia durante las próximas 72 horas. En revoques nuevos, dejar fraguar la superficie durante 45 días.</p>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className={s.aLlana}>
-                    <img src={aLlanna} alt="a-rodillo" />
+                    <img src={aLlanna} alt="a-llana" />
                     <div className={s.info}>
                       <h3>Revestimiento Rulato Travertino (con llana)</h3>
                       <p>Revestimiento de aplicación con llana metálica y plástica, que forma una capa de grosor medio o fino según el grano de la piedra. La textura media, brinda un efecto visual bien definido al hacer el rayado. Con textura fina, el dibujo es más sutil y la carga sobre la superficie más liviana. El revestimiento junto a la base, garantizan una total impermeabilidad, con mejor adherencia y visualmente uniforme en color.</p>

@@ -178,6 +178,66 @@
   margin-bottom: 2%;
 }
 
+.labelFichaTecnica h3 {
+  width: 99%;
+  height: 40px;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color: grey;
+  transform: rotate(0deg);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px 0px 10%;
+  /* border-bottom: 2px dashed black; */
+  text-align: justify;
+  cursor: pointer;
+}
+
+.checkbox_faq {
+  opacity: 0;
+}
+
+.checkbox_faq:checked+.faq_answered {
+  width: 90%;
+  height: 100%;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  transform: rotate(0deg);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  transition: all 0.5s ease;
+  padding: 8px;
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faq_answered {
+  opacity: 0;
+  transition: all 0.5s ease;
+  width: 90%;
+  height: 0;
+  overflow: hidden;
+}
+
+.faq_answered img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+  height: 100%;
+}
 
 /* LOADER */
 

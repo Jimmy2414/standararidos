@@ -1,11 +1,11 @@
-import React from "react";
+
 import logo from '../../img/standarLogo.jpg'
 import s from '../Admin/Admin.module.css'
 import Navbar from '../NavBar/Navbar'
 import { useNavigate, Navigate } from 'react-router-dom';
 
 
-export default function Admin() {
+export const Admin = () => {
 
   let token = localStorage.getItem('token')
 

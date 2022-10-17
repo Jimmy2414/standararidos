@@ -1,11 +1,13 @@
 // import { Route, Routes } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import Landing from './components/Landing/Landing';
-import Admin from './components/Admin/Admin';
+import { Admin, Contacto } from './components';
 import LoginAdmin from './components/LoginAdmin/LoginAdmin';
 import Subir from './components/accionesAdmin/subirCosas/Subir';
 import FileUpload from './Firebase/fileUpload';
 import Revestimientos from './components/RevestimientosText/revestimientos';
+import Allana from './components/RevestimientosText/aLlana';
+import Arodillo from './components/RevestimientosText/aRodillo';
 import LatexColor from './components/LatexColor/latex';
 import LatexInterior from './components/LatexColor/TiposLatex/LatexInterior';
 import LatexInteriorLavable from './components/LatexColor/TiposLatex/LatexInteriorLavable';
@@ -20,12 +22,13 @@ import Accesorios from './components/TechosYSuperficies/Accesorios';
 import Membranas from './components/Membranas/membranas';
 import PreparacionSuperficie from './components/Preparacion de la superficie/PreparacionSuperficie';
 import Auxiliares from './components/Auxiliares/auxiliares';
-import Contacto from './components/contacto/Contacto';
+// import Contacto from './components/contacto/Contacto';
 import Detalle from './components/Detalles/DetallesProducto';
 import ModificarProductos from './components/accionesAdmin/modificarCosas/modificar';
 import EliminarProducto from './components/accionesAdmin/eliminarCosas/eliminar';
 import EditarProducto from './components/accionesAdmin/modificarCosas/editar';
 import DetalleAdmin from './components/detalleAdmin/detalleAdmin';
+import Fichatecnica from './components/accionesAdmin/fichasTecnicas/fichatecnica';
 import './App.css';
 
 function App() {
@@ -43,6 +46,8 @@ function App() {
           element={<Revestimientos />}
           exact
         />
+        <Route path='/revestimiento-llana' element={<Allana />} exact />
+        <Route path='/revestimiento-rodillo' element={<Arodillo />} exact />
         <Route path="/latex-interior" element={<LatexInterior />} exact />
         <Route path='/latex-interior-lavable' element={<LatexInteriorLavable />} exact />
         <Route path='/latex-interior-satinado' element={<LatexInteriorSatinado />} exact />
@@ -63,6 +68,7 @@ function App() {
         <Route path="/contacto" element={<Contacto />} exact />
         <Route path="/search/:id" element={<Detalle />} exact />
         <Route path="/delete" element={<EliminarProducto />} exact />
+        <Route path='/ficha-tecnica' element={<Fichatecnica />} exact />
         <Route path="/admin/detalle/:id" element={<DetalleAdmin />} exact />
       </Routes>
     </div>
