@@ -1,5 +1,6 @@
 'use Strict';
 const { Productos } = require('../db.js');
+const { FichaTecnica } = require('../db.js');
 const { Op } = require('sequelize');
 
 async function getProductByName(req, res) {
@@ -21,8 +22,14 @@ async function getProductosByID(req, res) {
   res.send(productosID);
   console.log(id);
 }
+
+async function getFichaTecnica(req, res) {
+  const fichasTecnicasTotal = await FichaTecnica.findAll();
+  res.send(fichasTecnicasTotal);
+}
 module.exports = {
   getProductos,
   getProductByName,
   getProductosByID,
+  getFichaTecnica,
 };
