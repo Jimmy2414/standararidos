@@ -24,7 +24,7 @@ export const Admin = () => {
           <div className={s.accionesAdmin}>
             <div className={s.ayuda}>
               <h2>ACCIONES DE ADMINISTRADOR:</h2>
-              <p>Estas son las opciones que tiene el administrador para poder realizar cualquier tipo de acción: "Subir productos", "Modificar productos" y "Eliminar productos". <br />
+              <p>Estas son las opciones que tiene el administrador para poder realizar cualquier tipo de acción: "Subir productos", "Modificar productos" y "Eliminar productos", "Subir ficha técnica", "Eliminar ficha técnica". <br />
                 A continuación, se le detallara paso a paso como usar cada una de las acciones.
               </p>
 
@@ -59,6 +59,30 @@ export const Admin = () => {
               </ol>
               <h5>¡ADVERTENCIA!</h5>
               <p>Una vez eliminado el producto desaparecerá permanentemente de la base de datos. </p>
+
+
+              <h3>Subir Ficha Técnica:</h3>
+              <ol>
+                <li>5-Subir la imagen de la ficha técnica (Acepta archivos: JPG, JPEG, PNG)</li>
+                <li>3-Elegir la sección a la cual pertenece la ficha técnica</li>
+              </ol>
+              <p>Se cargará  en la base de datos y al finalizar dará una alerta diciendo que se subio correctamente.</p>
+              <p>Presionar el boton "SUBIR FICHA TÉCNICA" para finalizar. (Tendra 2 opciones, "GUARDAR" o "CANCELAR")</p>
+
+
+
+              <h3>Eliminar Ficha Técnica:</h3>
+              <ol>
+                <li>3-Presionar en el boton "ELIMINAR" debajo de la ficha técnica. (Al presionarlo, se abrirá un modal con 2 opciones "BORRAR" o "CANCELAR")</li>
+              </ol>
+              <h5>¡ADVERTENCIA!</h5>
+              <p>Una vez eliminada desaparecerá permanentemente de la base de datos. </p>
+
+
+              <h6>ACLARACIÓN:</h6>
+              <p>Al eliminar una ficha técnica, podra ver que aparece una foto con el mensaje "sin foto", pero
+                podrá subir otra foto en su correspondiente seccion y se actualizara con la nueva ficha técnica que suba.
+              </p>
             </div>
           </div>
         </div>

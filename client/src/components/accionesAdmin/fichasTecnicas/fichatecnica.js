@@ -3,22 +3,28 @@ import { storage } from '../../../Firebase/firebase';
 import Swal from 'sweetalert2'
 import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
 import { useDispatch, useSelector } from 'react-redux';
-import { postFichaTecnica, getUrl } from '../../../Redux/actions/actions';
+import { postFichaTecnica, getUrl, getFichaTecnica } from '../../../Redux/actions/actions';
 // import validations from './validations';
 
 import NavBar from '../../NavBar/Navbar'
 
 
 import s from '../fichasTecnicas/fichatecnica.module.css'
+
+
 const Fichatecnica = () => {
   const dispatch = useDispatch();
   const URL = useSelector(state => state.URL);
+  const [loading, setLoading] = useState(true)
   const [progress, setProgress] = useState(0);
   const [fichaTecnica, setFichaTecnica] = useState({
     seccion: '',
   });
   console.log(fichaTecnica);
   const [file, setFile] = useState('');
+
+  const allFichasTecnicas = useSelector(state => state.FichaTecnica)
+  console.log(allFichasTecnicas)
 
   useEffect(() => {
     if (file) {
@@ -70,6 +76,15 @@ const Fichatecnica = () => {
     }
   }, [file]);
 
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
+
+  //   dispatch(getFichaTecnica());
+
+  // }, [dispatch])
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -88,12 +103,12 @@ const Fichatecnica = () => {
             ...fichaTecnica,
             imagen: URL,
           };
-          dispatch(postFichaTecnica(totalFichaTecnica));
           console.log(totalFichaTecnica);
           Swal.fire('Creado!', 'Ok.', 'success');
-          // setTimeout(() => {
-          //   window.location.reload();
-          // }, 500);
+          setTimeout(() => {
+            dispatch(postFichaTecnica(totalFichaTecnica));
+            // window.location.reload();
+          }, 500);
         } else if (result.isDenied) {
           Swal.fire('Los cambios no se guardaron', '', 'info');
         }
@@ -139,6 +154,14 @@ const Fichatecnica = () => {
 
 
       <hr />
+
+      {allFichasTecnicas?.map(e => {
+        return (
+          <div key={e.id}>
+            <p>{e.seccion}</p>
+          </div>
+        )
+      })}
       <div className={s.contenedorFichasHechas}>
         <div>
           <h2>Revestimiento texturado - A Llana</h2>

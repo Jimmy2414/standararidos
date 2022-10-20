@@ -1,5 +1,6 @@
 import { async } from '@firebase/util';
 import axios from 'axios';
+
 export function postProducto(payload) {
   console.log(payload);
   return async function () {
@@ -15,16 +16,26 @@ export function postProducto(payload) {
 
 export function postFichaTecnica(payload) {
   console.log(payload);
+  // return async function () {
+
+  //   const res = await axios.post('/post/ficha', payload);
+  //   console.log(res)
+  //   return res.data
+  // }
   return async function () {
     try {
       const response = await axios.post('/post/ficha', payload);
-      return response
+      console.log(response)
+      return response;
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   };
+
 }
 
+// catch(error => {
+//   console.log(error.response)
 export function getProducto() {
   return function (dispatch) {
     axios.get('/get').then(res => {
