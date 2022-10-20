@@ -3,6 +3,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
+const cors = require('cors')
 
 require('./db.js');
 
@@ -25,7 +26,29 @@ server.use((req, res, next) => {
   next();
 });
 
+
+server.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, 	X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-	Method');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, 	DELETE');
+  res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+  next();
+});
 server.use('/', routes);
+server.use(cors())
+
+// var whitelist = ['http://localhost:3000']
+
+// var corsOptions = {
+//   origin: function(origin, callback){
+//     if(whitelist.indexOf(origin) !== -1){
+//       callback(null, true)
+//     }
+//     else{
+//       callback(new Error('no  permitido por CORS'))
+//     }
+//   }
+// }
 
 // Error catching endware.
 server.use((err, req, res, next) => {
