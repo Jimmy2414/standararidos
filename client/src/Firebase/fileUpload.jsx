@@ -226,7 +226,7 @@ export default function FileUpload() {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <label>
                 ¿Incluye ficha tecnica?
                 <input onClick={checkbox} type="checkbox" />
@@ -241,7 +241,7 @@ export default function FileUpload() {
                 :
                 null
               }
-            </div>
+            </div> */}
 
 
             <button type="submit">Subir</button>

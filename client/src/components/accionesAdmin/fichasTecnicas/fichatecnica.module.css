@@ -1,9 +1,22 @@
+.inputFichas {
+  width: 50%;
+}
+
+.selectorFichas {
+  width: 50%;
+}
+
+.barradecarga {
+  width: 90%;
+}
+
 .contenedorFichasHechas {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: auto;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 hr {
@@ -20,5 +33,4 @@ hr {
   width: 600px;
   height: 600px;
   border: solid 1px black;
-  background-color: gray;
 }

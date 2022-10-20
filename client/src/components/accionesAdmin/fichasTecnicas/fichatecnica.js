@@ -3,7 +3,7 @@ import { storage } from '../../../Firebase/firebase';
 import Swal from 'sweetalert2'
 import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
 import { useDispatch, useSelector } from 'react-redux';
-import { postProducto, getUrl } from '../../../Redux/actions/actions';
+import { postFichaTecnica, getUrl } from '../../../Redux/actions/actions';
 // import validations from './validations';
 
 import NavBar from '../../NavBar/Navbar'
@@ -14,10 +14,10 @@ const Fichatecnica = () => {
   const dispatch = useDispatch();
   const URL = useSelector(state => state.URL);
   const [progress, setProgress] = useState(0);
-  const [producto, setProducto] = useState({
+  const [fichaTecnica, setFichaTecnica] = useState({
     seccion: '',
   });
-  console.log(producto);
+  console.log(fichaTecnica);
   const [file, setFile] = useState('');
 
   useEffect(() => {
@@ -72,17 +72,40 @@ const Fichatecnica = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("todo joya")
-    // window.location.reload()
-    Swal.fire('Enviado!', 'Ok.', 'success');
-    setTimeout(() => {
-      window.location.reload();
-    }, 500);
+
+    if (fichaTecnica.seccion.length > 0) {
+      setFile('');
+      Swal.fire({
+        title: 'Quieres guardar la ficha tecnica?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Guardar',
+        cancelButtonText: 'Cancelar',
+        denyButtonText: 'No guardar',
+      }).then(result => {
+        if (result.isConfirmed) {
+          const totalFichaTecnica = {
+            ...fichaTecnica,
+            imagen: URL,
+          };
+          dispatch(postFichaTecnica(totalFichaTecnica));
+          console.log(totalFichaTecnica);
+          Swal.fire('Creado!', 'Ok.', 'success');
+          // setTimeout(() => {
+          //   window.location.reload();
+          // }, 500);
+        } else if (result.isDenied) {
+          Swal.fire('Los cambios no se guardaron', '', 'info');
+        }
+      });
+    } else {
+      alert('No se llenaron todos los campos');
+    }
   }
 
 
   function handleSelectSeccion(e) {
-    setProducto({ ...producto, seccion: e.target.value });
+    setFichaTecnica({ ...fichaTecnica, seccion: e.target.value });
   }
 
   function handleChange(e) {
@@ -93,9 +116,9 @@ const Fichatecnica = () => {
       <NavBar />
       <h2>Fichas Técnicas</h2>
       <form onSubmit={handleSubmit}>
-        <input onChange={handleChange} type="file" placeholder="Sube imagen de la ficha técnica" />
+        <input className={s.inputFichas} onChange={handleChange} type="file" placeholder="Sube imagen de la ficha técnica" />
         <progress
-          // className={s.barradecarga}
+          className={s.barradecarga}
           value={progress}
           max="100"
         />
@@ -105,7 +128,7 @@ const Fichatecnica = () => {
 
 
         <label>¿A qué seccion se va a agregar la ficha técnica?</label>
-        <select onChange={handleSelectSeccion}>
+        <select className={s.selectorFichas} onChange={handleSelectSeccion}>
           <option value="">Sección</option>
           <option value="ficha tecnica llana">Revestimiento texturado a LLANA</option>
           <option value="ficha tecnica rodillo">Revestimiento texturado a RODILLO</option>
@@ -121,9 +144,9 @@ const Fichatecnica = () => {
           <h2>Revestimiento texturado - A Llana</h2>
           <div>
             {
-              <img src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
+              <img className={s.sinImagen} src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
                 ?
-                <img src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
+                <img className={s.sinImagen} src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
                 :
                 <img src='' alt='' />
             }
@@ -135,9 +158,9 @@ const Fichatecnica = () => {
           <h2>Revestimiento texturado - A Rodillo</h2>
           <div>
             {
-              <img src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
+              <img className={s.sinImagen} src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
                 ?
-                <img src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
+                <img className={s.sinImagen} src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
                 :
                 <img src='' alt='' />
             }
@@ -149,9 +172,9 @@ const Fichatecnica = () => {
           <h2>Membrana en pasta</h2>
           <div>
             {
-              <img src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
+              <img className={s.sinImagen} src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
                 ?
-                <img src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
+                <img className={s.sinImagen} src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
                 :
                 <img src='' alt='' />
             }

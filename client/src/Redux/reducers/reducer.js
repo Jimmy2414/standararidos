@@ -5,6 +5,7 @@ const initialState = {
   URL: '',
   ProductoBefore: [],
   productoFiltro: [],
+  FichaTecnica: [],
 };
 
 export const reducerroot = (state = initialState, { type, payload }) => {
@@ -14,14 +15,14 @@ export const reducerroot = (state = initialState, { type, payload }) => {
         ...state,
         Productos: payload,
       };
-    case 'POST_URL':
+
+    case 'GET_FICHA_TECNICA':
       return {
         ...state,
-        URL: payload,
-      };
-    // CASE DEFAULT
-    default:
-      return state;
+        FichaTecnica: payload,
+      }
+
+
 
     //BUSCAR
     case 'SEARCH_SEARCH':
@@ -56,5 +57,24 @@ export const reducerroot = (state = initialState, { type, payload }) => {
         ...state,
         detalleProducto: [],
       };
+
+    case 'DELETE_FICHA_TECNICA':
+      return {
+        ...state,
+        FichaTecnica: []
+      }
+
+
+    //POST URL
+    case 'POST_URL':
+      return {
+        ...state,
+        URL: payload,
+      };
+
+    // CASE DEFAULT
+    default:
+      return state;
+
   }
 };

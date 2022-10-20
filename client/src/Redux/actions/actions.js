@@ -1,3 +1,4 @@
+import { async } from '@firebase/util';
 import axios from 'axios';
 export function postProducto(payload) {
   console.log(payload);
@@ -12,12 +13,32 @@ export function postProducto(payload) {
   };
 }
 
+export function postFichaTecnica(payload) {
+  console.log(payload);
+  return async function () {
+    try {
+      const response = await axios.post('/post/ficha', payload);
+      return response
+    } catch (e) {
+      console.log(e)
+    }
+  };
+}
+
 export function getProducto() {
   return function (dispatch) {
     axios.get('/get').then(res => {
       return dispatch({ type: 'GET_PRODUCTOS_ALL', payload: res.data });
     });
   };
+}
+
+export function getFichaTecnica() {
+  return function (dispatch) {
+    axios.get('/get/fichas').then(res => {
+      return dispatch({ type: 'GET_FICHA_TECNICA', payload: res.data });
+    })
+  }
 }
 
 export function detalleProducto(id) {
@@ -91,6 +112,13 @@ export function deleteProducto(id) {
     await axios.delete(`/del/${id}`);
     return dispatch({ type: 'DELETE_PRODUCTO' });
   };
+}
+
+export function deleteFichaTecnica(id) {
+  return async dispatch => {
+    await axios.delete(`/del/ficha/${id}`);
+    return dispatch({ type: 'DELETE_FICHA_TECNICA' });
+  }
 }
 
 export function deleteState() {
