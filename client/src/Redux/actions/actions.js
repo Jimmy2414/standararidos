@@ -16,12 +16,6 @@ export function postProducto(payload) {
 
 export function postFichaTecnica(payload) {
   console.log(payload);
-  // return async function () {
-
-  //   const res = await axios.post('/post/ficha', payload);
-  //   console.log(res)
-  //   return res.data
-  // }
   return async function () {
     try {
       const response = await axios.post('/post/ficha', payload);
