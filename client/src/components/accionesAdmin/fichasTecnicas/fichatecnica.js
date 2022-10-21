@@ -181,9 +181,9 @@ const Fichatecnica = () => {
           <h2>Revestimiento texturado - A Rodillo</h2>
           <div>
             {
-              <img className={s.sinImagen} src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
+              <img className={s.sinImagen} src='https://i.postimg.cc/CxHWvLFF/ficha.jpg' />
                 ?
-                <img className={s.sinImagen} src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
+                <img className={s.sinImagen} src='https://i.postimg.cc/CxHWvLFF/ficha.jpg' />
                 :
                 <img src='' alt='' />
             }

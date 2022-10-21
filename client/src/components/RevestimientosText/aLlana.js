@@ -189,7 +189,7 @@ export default function Allana(props) {
 
 
                   <div className={s.faq_answered}>
-                    <img src={'http://www.ejemplode.com/images/uploads/escritos/ficha-tecnica-nutrimental_1.jpg?1478222168874'} alt="ficha tecnica" />
+                    <img src={'https://i.postimg.cc/CxHWvLFF/ficha.jpg'} alt="ficha tecnica" />
                   </div>
 
 
