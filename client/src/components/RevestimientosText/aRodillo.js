@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { getProducto } from '../../Redux/actions/actions';
+import { getProducto, getFichaTecnica } from '../../Redux/actions/actions';
 import Productos from "../Productos/Productos";
 import NavMenu from "../NavMenu/Menu";
 import { NavLink } from 'react-router-dom'
@@ -43,6 +43,7 @@ export default function Arodillo(props) {
 
   const auxiliares = allProductos.filter(e => e.seccion === "Auxiliares")
 
+  const allFichasTecnicas = useSelector(state => state.FichaTecnica)
 
 
   const [curretPage, setCurrentPage] = useState(1);
@@ -54,6 +55,8 @@ export default function Arodillo(props) {
     indexProductLast
   );
   const fichaTecnica = allProductos.filter(e => e.seccion === "ficha tecnica rodillo")
+
+  const fichTecnicaRodillo = allFichasTecnicas.filter(e => e.seccion === "ficha tecnica rodillo")
 
   const paginado = pageNumber => {
     let page = curretPage;
@@ -80,6 +83,10 @@ export default function Arodillo(props) {
   useEffect(() => {
     dispatch(getProducto());
   }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getFichaTecnica())
+  }, [dispatch])
 
   return (
     <div>
@@ -189,7 +196,15 @@ export default function Arodillo(props) {
 
 
                   <div className={s.faq_answered}>
-                    <img src={'http://www.ejemplode.com/images/uploads/escritos/ficha-tecnica-nutrimental_1.jpg?1478222168874'} alt="ficha tecnica" />
+                    {
+                      fichTecnicaRodillo?.map(e => {
+                        return (
+                          <div key={e.id}>
+                            <img src={e.imagen} />
+                          </div>
+                        )
+                      })
+                    }
                   </div>
 
 

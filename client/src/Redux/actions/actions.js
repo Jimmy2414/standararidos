@@ -18,7 +18,7 @@ export function postFichaTecnica(payload) {
   console.log(payload);
   return async function () {
     try {
-      const response = await axios.post('/post/ficha', payload);
+      const response = await axios.post('http://localhost:3001/post/ficha', payload);
       console.log(response)
       return response;
     } catch (e) {
@@ -40,7 +40,7 @@ export function getProducto() {
 
 export function getFichaTecnica() {
   return function (dispatch) {
-    axios.get('/get/fichas').then(res => {
+    axios.get('http://localhost:3001/get/fichas').then(res => {
       return dispatch({ type: 'GET_FICHA_TECNICA', payload: res.data });
     })
   }
@@ -121,7 +121,7 @@ export function deleteProducto(id) {
 
 export function deleteFichaTecnica(id) {
   return async dispatch => {
-    await axios.delete(`/del/ficha/${id}`);
+    await axios.delete(`http://localhost:3001/del/ficha/${id}`);
     return dispatch({ type: 'DELETE_FICHA_TECNICA' });
   }
 }

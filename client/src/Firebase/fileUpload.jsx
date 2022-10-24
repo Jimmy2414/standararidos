@@ -116,7 +116,11 @@ export default function FileUpload() {
         }
       });
     } else {
-      alert('No se llenaron todos los campos');
+      Swal.fire({
+        title: '¡No se llenaron todos los campos!',
+        icon: 'error',
+        button: 'Ok.'
+      })
     }
   }
   function handleChangeProduct(e) {

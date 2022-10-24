@@ -34,15 +34,3 @@ hr {
   height: 600px;
   border: solid 1px black;
 }
-
-.ficha {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-
-.ficha button {
-  margin-top: 10px;
-}

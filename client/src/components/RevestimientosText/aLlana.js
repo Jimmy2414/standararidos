@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { getProducto } from '../../Redux/actions/actions';
+import { getFichaTecnica, getProducto } from '../../Redux/actions/actions';
 import Productos from "../Productos/Productos";
 import NavMenu from "../NavMenu/Menu";
 import { NavLink } from 'react-router-dom'
@@ -41,7 +41,11 @@ export default function Allana(props) {
   const allProductos = useSelector(state => state.Productos);
   console.log(allProductos.map(e => e.descripcion));
 
+  const allFichasTecnicas = useSelector(state => state.FichaTecnica)
+
+
   const auxiliares = allProductos.filter(e => e.seccion === "Auxiliares")
+
 
 
 
@@ -53,7 +57,7 @@ export default function Allana(props) {
     indexProductFirst,
     indexProductLast
   );
-  const fichaTecnica = allProductos.filter(e => e.seccion === "ficha tecnica llana")
+  const fichTecnicallana = allFichasTecnicas.filter(e => e.seccion === "ficha tecnica llana")
 
   const paginado = pageNumber => {
     let page = curretPage;
@@ -80,6 +84,10 @@ export default function Allana(props) {
   useEffect(() => {
     dispatch(getProducto());
   }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getFichaTecnica())
+  }, [dispatch])
 
   return (
     <div>
@@ -189,7 +197,15 @@ export default function Allana(props) {
 
 
                   <div className={s.faq_answered}>
-                    <img src={'https://i.postimg.cc/CxHWvLFF/ficha.jpg'} alt="ficha tecnica" />
+                    {
+                      fichTecnicallana.map(e => {
+                        return (
+                          <div key={e.id}>
+                            <img src={e.imagen} />
+                          </div>
+                        )
+                      })
+                    }
                   </div>
 
 

@@ -3,13 +3,14 @@ import { storage } from '../../../Firebase/firebase';
 import Swal from 'sweetalert2'
 import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
 import { useDispatch, useSelector } from 'react-redux';
-import { postFichaTecnica, getUrl, getFichaTecnica } from '../../../Redux/actions/actions';
+import { postFichaTecnica, getUrl, getFichaTecnica, deleteFichaTecnica } from '../../../Redux/actions/actions';
 // import validations from './validations';
 
 import NavBar from '../../NavBar/Navbar'
 
 
 import s from '../fichasTecnicas/fichatecnica.module.css'
+import { NavLink } from 'react-router-dom';
 
 
 const Fichatecnica = () => {
@@ -76,14 +77,12 @@ const Fichatecnica = () => {
     }
   }, [file]);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 2000);
+  useEffect(() => {
 
-  //   dispatch(getFichaTecnica());
+    dispatch(getFichaTecnica());
 
-  // }, [dispatch])
+
+  }, [dispatch])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -104,17 +103,21 @@ const Fichatecnica = () => {
             imagen: URL,
           };
           console.log(totalFichaTecnica);
-          Swal.fire('Creado!', 'Ok.', 'success');
+          // Swal.fire('Creado!', 'Ok.', 'success');
+          dispatch(postFichaTecnica(totalFichaTecnica));
           setTimeout(() => {
-            dispatch(postFichaTecnica(totalFichaTecnica));
-            // window.location.reload();
+            window.location.reload()
           }, 500);
         } else if (result.isDenied) {
           Swal.fire('Los cambios no se guardaron', '', 'info');
         }
       });
     } else {
-      alert('No se llenaron todos los campos');
+      Swal.fire({
+        title: '¡No se llenaron todos los campos!',
+        icon: 'error',
+        button: 'Ok.'
+      })
     }
   }
 
@@ -126,6 +129,42 @@ const Fichatecnica = () => {
   function handleChange(e) {
     setFile(e.target.files[0]);
   }
+
+  function deleteFichaTecnicaFn(e) {
+    Swal.fire({
+      title: '¿Estas segura/o de eliminar este producto?',
+      text: "¡No podrás revertir esto!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      cancelButtonText: "Cancelar",
+      confirmButtonText: 'BORRAR'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        dispatch(deleteFichaTecnica(e))
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Producto Eliminado",
+          showConfirmButton: false
+        }
+        )
+        setTimeout(() => {
+          window.location.reload()
+        }, 1000)
+      }
+    })
+
+
+  }
+
+
+  const fichTecnicallana = allFichasTecnicas.filter(e => e.seccion === "ficha tecnica llana")
+  const fichTecnicaRodillo = allFichasTecnicas.filter(e => e.seccion === "ficha tecnica rodillo")
+  const fichTecnicaMembrana = allFichasTecnicas.filter(e => e.seccion === "ficha tecnica membrana")
+
+
   return (
     <div>
       <NavBar />
@@ -152,59 +191,63 @@ const Fichatecnica = () => {
         <button>Subir Ficha Técnica</button>
       </form>
 
-
       <hr />
 
-      {allFichasTecnicas?.map(e => {
-        return (
-          <div key={e.id}>
-            <p>{e.seccion}</p>
-          </div>
-        )
-      })}
       <div className={s.contenedorFichasHechas}>
         <div>
           <h2>Revestimiento texturado - A Llana</h2>
-          <div>
+          {fichTecnicallana?.map(e => {
+            console.log(fichTecnicallana[0].imagen)
             {
-              <img className={s.sinImagen} src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
-                ?
-                <img className={s.sinImagen} src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
-                :
-                <img src='' alt='' />
+              return (
+                <div className={s.ficha} key={e.id}>
+
+                  <img src={e.imagen} />
+
+                  <button onClick={() => deleteFichaTecnicaFn(e.id)}>Eliminar</button>
+                </div>
+              )
             }
-          </div>
-          <button>Eliminar</button>
+          })}
+
         </div>
 
         <div>
           <h2>Revestimiento texturado - A Rodillo</h2>
-          <div>
+          {fichTecnicaRodillo?.map(e => {
             {
-              <img className={s.sinImagen} src='https://i.postimg.cc/CxHWvLFF/ficha.jpg' />
-                ?
-                <img className={s.sinImagen} src='https://i.postimg.cc/CxHWvLFF/ficha.jpg' />
-                :
-                <img src='' alt='' />
+              return (
+                <div className={s.ficha} key={e.id}>
+
+                  <img src={e.imagen} />
+
+                  <button onClick={() => deleteFichaTecnicaFn(e.id)}>Eliminar</button>
+                </div>
+              )
             }
-          </div>
-          <button>Eliminar</button>
+          })}
         </div>
 
         <div>
           <h2>Membrana en pasta</h2>
-          <div>
+          {fichTecnicaMembrana?.map(e => {
             {
-              <img className={s.sinImagen} src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
-                ?
-                <img className={s.sinImagen} src='https://baltrion.es/wp-content/uploads/sin-IMAGEN.jpg' />
-                :
-                <img src='' alt='' />
+              return (
+                <div className={s.ficha} key={e.id}>
+
+                  <img src={e.imagen} />
+
+                  <button onClick={() => deleteFichaTecnicaFn(e.id)}>Eliminar</button>
+                </div>
+              )
             }
-          </div>
-          <button>Eliminar</button>
+
+          })}
+
         </div>
       </div>
+
+
     </div>
   )
 }

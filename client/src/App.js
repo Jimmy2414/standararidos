@@ -29,6 +29,7 @@ import EliminarProducto from './components/accionesAdmin/eliminarCosas/eliminar'
 import EditarProducto from './components/accionesAdmin/modificarCosas/editar';
 import DetalleAdmin from './components/detalleAdmin/detalleAdmin';
 import Fichatecnica from './components/accionesAdmin/fichasTecnicas/fichatecnica';
+
 import './App.css';
 
 function App() {

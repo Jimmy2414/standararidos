@@ -197,6 +197,460 @@ html {
   scroll-behavior: smooth;
 }
 
+
+@media (max-width: 1700px) {
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .menuDesplegableRevest ul {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 250px;
+    left: 30%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .menuDesplegableRevest:hover>ul {
+    display: block;
+    width: 10%;
+    right: 55%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .menuDesplegableRevest ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+  }
+
+  .menuDesplegableRevest ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+  .menuDesplegable ul {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 250px;
+    left: 42%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+  }
+
+  .menuDesplegable:hover>ul {
+    display: block;
+    width: 20%;
+    right: 40%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+
+  }
+
+  .menuDesplegable ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+
+  }
+
+  .menuDesplegable ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+  .menuDesplegableDos ul {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 250px;
+    left: 52%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .menuDesplegableDos:hover>ul {
+    display: block;
+    width: 20%;
+    right: 30%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+
+  }
+
+  .menuDesplegableDos ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+
+  }
+
+  .menuDesplegableDos ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+
+}
+
+@media (max-width: 1500px) {
+  .menuDesplegableRevest ul {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 230px;
+    left: 30%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .menuDesplegableRevest:hover>ul {
+    display: block;
+    width: 10%;
+    right: 55%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .menuDesplegableRevest ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+  }
+
+  .menuDesplegableRevest ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+  .menuDesplegable ul {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 230px;
+    left: 42%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+  }
+
+  .menuDesplegable:hover>ul {
+    display: block;
+    width: 20%;
+    right: 40%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+
+  }
+
+  .menuDesplegable ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+
+  }
+
+  .menuDesplegable ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+  .menuDesplegableDos ul {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 230px;
+    left: 52%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .menuDesplegableDos:hover>ul {
+    display: block;
+    width: 20%;
+    right: 30%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+
+  }
+
+  .menuDesplegableDos ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+
+  }
+
+  .menuDesplegableDos ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+}
+
+@media (max-width: 1280px) {
+  .navMenu {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: auto;
+    flex-direction: row;
+    background-color: white;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    justify-content: space-around;
+    margin-bottom: 2%;
+
+  }
+
+  .navMenu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .navMenu ul li {
+    list-style: none;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--colorNegro);
+    text-transform: uppercase;
+
+  }
+
+  .navMenu ul li:hover {
+    border-top: 1px black solid;
+    color: var(--colorNegro);
+    font-weight: 700;
+  }
+
+  .navMenu ul li:active {
+    border-top: 2px black solid;
+  }
+
+  .button_menu {
+    display: none;
+  }
+
+  .button_menu_input {
+    opacity: 0;
+  }
+
+  .contacto a {
+    color: #09010B;
+
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .menuDesplegableRevest ul {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 200px;
+    left: 30%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .menuDesplegableRevest:hover>ul {
+    display: block;
+    width: 10%;
+    right: 55%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .menuDesplegableRevest ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+  }
+
+  .menuDesplegableRevest ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+  .menuDesplegable ul {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 200px;
+    left: 42%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+  }
+
+  .menuDesplegable:hover>ul {
+    display: block;
+    width: 20%;
+    right: 40%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+
+  }
+
+  .menuDesplegable ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+
+  }
+
+  .menuDesplegable ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+  .menuDesplegableDos ul {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 200px;
+    left: 52%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .menuDesplegableDos:hover>ul {
+    display: block;
+    width: 20%;
+    right: 30%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+
+  }
+
+  .menuDesplegableDos ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+
+  }
+
+  .menuDesplegableDos ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+
+}
+
 @media (max-width: 1080px) {
 
   .navMenu {
@@ -260,6 +714,133 @@ html {
   html {
     scroll-behavior: smooth;
   }
+
+  .menuDesplegableRevest ul {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 180px;
+    left: 23%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .menuDesplegableRevest:hover>ul {
+    display: block;
+    width: 10%;
+    right: 55%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .menuDesplegableRevest ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+  }
+
+  .menuDesplegableRevest ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+  .menuDesplegable ul {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 180px;
+    left: 42%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+  }
+
+  .menuDesplegable:hover>ul {
+    display: block;
+    width: 20%;
+    right: 40%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+
+  }
+
+  .menuDesplegable ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+
+  }
+
+  .menuDesplegable ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+  .menuDesplegableDos ul {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    top: 180px;
+    left: 55%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .menuDesplegableDos:hover>ul {
+    display: block;
+    width: 20%;
+    right: 30%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+
+  }
+
+  .menuDesplegableDos ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+
+  }
+
+  .menuDesplegableDos ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+
 }
 
 /* @media (max-width: 0px) {
@@ -419,6 +1000,131 @@ html {
     font-weight: 700;
   }
 
+  .menuDesplegableRevest ul {
+    display: none;
+    min-width: 140px;
+    position: relative;
+    background-color: white;
+    width: 50%;
+    top: 0px;
+    left: 00%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .menuDesplegableRevest:hover>ul {
+    display: block;
+    width: 10%;
+    right: 55%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .menuDesplegableRevest ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+  }
+
+  .menuDesplegableRevest ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+  .menuDesplegable ul {
+    display: none;
+    min-width: 140px;
+    position: relative;
+    background-color: white;
+    width: 50%;
+    top: 0px;
+    left: 00%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+  }
+
+  .menuDesplegable:hover>ul {
+    display: block;
+    width: 20%;
+    right: 40%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+
+  }
+
+  .menuDesplegable ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+
+  }
+
+  .menuDesplegable ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+  .menuDesplegableDos ul {
+    display: none;
+    min-width: 140px;
+    position: relative;
+    /* background-color: white; */
+    width: 50%;
+    top: 0;
+    left: 00%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .menuDesplegableDos:hover>ul {
+    display: block;
+    width: 20%;
+    right: 30%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+
+  }
+
+  .menuDesplegableDos ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+
+  }
+
+  .menuDesplegableDos ul li:hover {
+    background-color: #e5e5e5;
+  }
+
 }
 
 @media (max-width: 475px) {
@@ -513,4 +1219,130 @@ html {
     color: var(--colorNegro);
     font-weight: 700;
   }
+
+  .menuDesplegableRevest ul {
+    display: none;
+    min-width: 140px;
+    position: relative;
+    background-color: white;
+    width: 50%;
+    top: 0px;
+    left: 00%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .menuDesplegableRevest:hover>ul {
+    display: block;
+    width: 10%;
+    right: 55%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .menuDesplegableRevest ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+  }
+
+  .menuDesplegableRevest ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+  .menuDesplegable ul {
+    display: none;
+    min-width: 140px;
+    position: relative;
+    background-color: white;
+    width: 50%;
+    top: 0px;
+    left: 00%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+  }
+
+  .menuDesplegable:hover>ul {
+    display: block;
+    width: 20%;
+    right: 40%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+
+  }
+
+  .menuDesplegable ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+
+  }
+
+  .menuDesplegable ul li:hover {
+    background-color: #e5e5e5;
+  }
+
+  .menuDesplegableDos ul {
+    display: none;
+    min-width: 140px;
+    position: relative;
+    /* background-color: white; */
+    width: 50%;
+    top: 0;
+    left: 00%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .menuDesplegableDos:hover>ul {
+    display: block;
+    width: 20%;
+    right: 30%;
+    transition: all 1s ease;
+    z-index: 100000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    /* /* justify-content: center; */
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+
+  }
+
+  .menuDesplegableDos ul li {
+    border-bottom: solid 1px black;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /* right: 48%; */
+    top: 0px;
+
+  }
+
+  .menuDesplegableDos ul li:hover {
+    background-color: #e5e5e5;
+  }
+
 }

@@ -37,9 +37,6 @@ export default function NavMenu() {
               <li>Home</li>
             </NavLink>
 
-            {/* <NavLink to={'/revestimientos-texturados'}>
-              <li>Revestimientos Texturados</li>
-            </NavLink> */}
 
             <li className={s.menuDesplegableRevest}>
               Revestimientos Texturados ▼
