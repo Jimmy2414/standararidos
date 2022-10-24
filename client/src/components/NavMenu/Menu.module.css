@@ -1112,6 +1112,7 @@ html {
     z-index: 3;
     transform: translateX(0%);
     transition: all 1s ease;
+    text-align: justify;
   }
 
   .navMenu {
@@ -1131,6 +1132,7 @@ html {
     z-index: 3;
     transform: translateX(-100%);
     transition: all 1s ease;
+    text-align: justify;
   }
 
   .navMenu ul {
@@ -1140,6 +1142,7 @@ html {
     margin: auto;
     flex-direction: column;
     width: 100%;
+    text-align: justify;
   }
 
   .navMenu ul li {

@@ -220,6 +220,7 @@
   overflow: hidden;
   opacity: 1;
   transform: translateY(0);
+  margin: auto;
 }
 
 .faq_answered {
@@ -596,6 +597,47 @@
 
   .loader:after {
     border: 10px solid #979797;
+  }
+
+  .checkbox_faq {
+    opacity: 0;
+  }
+
+  .checkbox_faq:checked+.faq_answered {
+    width: 98%;
+    height: 100%;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    transform: rotate(0deg);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    transition: all 0.5s ease;
+    padding: 8px;
+    overflow: hidden;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .faq_answered {
+    opacity: 0;
+    transition: all 0.5s ease;
+    width: 90%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .faq_answered img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    height: 100%;
   }
 
   @keyframes spin {
