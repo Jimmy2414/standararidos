@@ -8,7 +8,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 import store from '../src/Redux/store/store';
 
-axios.defaults.baseURL = 'https://standararidoss.herokuapp.com';
+axios.defaults.baseURL = 'http://localhost:3001' || 'https://standararidoss.herokuapp.com';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +19,6 @@ root.render(
         <App />
       </React.StrictMode>
     </BrowserRouter>
-    ,
   </Provider>,
   document.getElementById('root')
 );
