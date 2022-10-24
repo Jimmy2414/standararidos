@@ -41,8 +41,27 @@ hr {
   justify-content: center;
   align-items: center;
   margin: auto;
+  padding-bottom: 2rem;
+}
+
+.ficha img {
+  width: 600px;
+  height: 600px;
 }
 
 .ficha button {
   margin-top: 10px;
+}
+
+@media (max-width: 475px) {
+  .botonSubir {
+    width: 80%;
+    font-size: 15px;
+  }
+
+  .ficha img {
+    width: 90%;
+    height: 90%;
+  }
+
 }

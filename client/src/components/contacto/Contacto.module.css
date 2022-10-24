@@ -103,6 +103,8 @@
   width: 100%;
 }
 
+
+
 .fb {
   width: 50px;
   height: 40px;
@@ -161,4 +163,14 @@
   transform: translateY(-3px);
   transition: all 0.3s ease;
   background-color: #25d365b4;
+}
+
+.inputsContacto {
+  width: 100%;
+}
+
+@media (max-width: 475px) {
+  .inputsContacto {
+    width: 50%;
+  }
 }

@@ -107,19 +107,21 @@ export const Contacto = () => {
           </h2>
 
           <p className={s.textRequired}>* Campo requerido</p>
-          <label>
-            <input type="text" name='nombre' placeholder='Nombre: *' />
-          </label>
+          <div className={s.formInputs}>
+            <label >
+              <input className={s.inputsContacto} type="text" name='nombre' placeholder='Nombre: *' />
+            </label>
 
-          <label>
-            <input type="email" name='email' placeholder='Email: *' />
-          </label>
+            <label>
+              <input className={s.inputsContacto} type="email" name='email' placeholder='Email: *' />
+            </label>
 
-          <label>
-            <textarea name='mensaje' placeholder='Mensaje: *' ></textarea>
-          </label>
+            <label>
+              <textarea className={s.inputsContacto} name='mensaje' placeholder='Mensaje: *' ></textarea>
+            </label>
 
-          <button type='submit'>Enviar</button>
+            <button type='submit'>Enviar</button>
+          </div>
         </form>
       </div>
 

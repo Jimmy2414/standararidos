@@ -217,3 +217,9 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 475px) {
+  .contenedorBuscador h2 {
+    font-size: 25px;
+  }
+}

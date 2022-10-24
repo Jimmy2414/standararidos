@@ -71,3 +71,119 @@
 .contenedorGeneral navlink {
   color: white;
 }
+
+@media (max-width: 1080px) {
+  .contenedorGeneral {
+    width: 100%;
+    height: 35%;
+  }
+
+  .contenedorGeneral nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: row;
+  }
+
+  .contenedorGeneral nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    list-style: none;
+    padding: 3px;
+    color: #09010B;
+    font-size: 15px;
+    font-family: var(--fuenteMenu);
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .contenedorGeneral {
+    width: 100%;
+    height: 35%;
+  }
+
+  .contenedorGeneral nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: row;
+  }
+
+  .contenedorGeneral nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    list-style: none;
+    padding: 10px;
+    color: #09010B;
+    font-size: 12px;
+    font-family: var(--fuenteMenu);
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 845px) {
+  .contenedorGeneral {
+    width: 100%;
+    height: 35%;
+  }
+
+  .contenedorGeneral nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .contenedorGeneral nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    list-style: none;
+    padding: 10px;
+    color: #09010B;
+    font-size: 12px;
+    font-family: var(--fuenteMenu);
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 475px) {
+  .contenedorGeneral {
+    width: 100%;
+    height: 35%;
+  }
+
+  .contenedorGeneral nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .contenedorGeneral nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    list-style: none;
+    padding: 10px;
+    color: #09010B;
+    font-size: 12px;
+    font-family: var(--fuenteMenu);
+    font-weight: 700;
+    text-decoration: none;
+  }
+}

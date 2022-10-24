@@ -30,7 +30,7 @@
 }
 
 .botonHomeClientes {
-  width: 10%;
+  width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +39,7 @@
   border-top: solid 2px black;
   border-left: solid 2px black;
   border-right: solid 2px black;
+  border-bottom: solid 2px black;
 }
 
 
@@ -68,4 +69,232 @@
   background-color: white;
   box-shadow: none;
   width: 50%;
+}
+
+@media (max-width: 1380px) {
+
+  .contenedorGeneral .logo img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 20%;
+  }
+
+  .botonHomeClientes {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    border-top: solid 2px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+  }
+
+
+  .title {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    font-weight: 700;
+    font-family: var(--fuenteLetras);
+  }
+
+  .form {
+    width: 90%;
+    height: 90%;
+    border: solid 2px black;
+    background-color: gainsboro;
+  }
+
+  .labelEmail,
+  .labelPass {
+    font-size: 18px;
+  }
+
+  .inputEmail,
+  .inputPass {
+    height: 20px;
+    background-color: white;
+    box-shadow: none;
+    width: 50%;
+  }
+}
+
+@media (max-width: 1080px) {
+
+  .contenedorGeneral .logo img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 20%;
+  }
+
+  .botonHomeClientes {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    border-top: solid 2px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+  }
+
+
+  .title {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    font-weight: 700;
+    font-family: var(--fuenteLetras);
+  }
+
+  .form {
+    width: 90%;
+    height: 90%;
+    border: solid 2px black;
+    background-color: gainsboro;
+  }
+
+  .labelEmail,
+  .labelPass {
+    font-size: 18px;
+  }
+
+  .inputEmail,
+  .inputPass {
+    height: 20px;
+    background-color: white;
+    box-shadow: none;
+    width: 50%;
+  }
+}
+
+@media (max-width: 845px) {
+
+  .contenedorGeneral .logo img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 20%;
+  }
+
+  .botonHomeClientes {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    border-top: solid 2px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+  }
+
+
+  .title {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    font-weight: 700;
+    font-family: var(--fuenteLetras);
+  }
+
+  .form {
+    width: 90%;
+    height: 90%;
+    border: solid 2px black;
+    background-color: gainsboro;
+  }
+
+  .labelEmail,
+  .labelPass {
+    font-size: 18px;
+  }
+
+  .inputEmail,
+  .inputPass {
+    height: 20px;
+    background-color: white;
+    box-shadow: none;
+    width: 50%;
+  }
+}
+
+@media (max-width: 475px) {
+
+  .contenedorGeneral .logo img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 20%;
+  }
+
+  .botonHomeClientes {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    border-top: solid 2px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+  }
+
+
+  .title {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    font-weight: 700;
+    font-family: var(--fuenteLetras);
+  }
+
+  .form {
+    width: 90%;
+    height: 90%;
+    border: solid 2px black;
+    background-color: gainsboro;
+  }
+
+  .labelEmail,
+  .labelPass {
+    font-size: 18px;
+  }
+
+  .inputEmail,
+  .inputPass {
+    height: 20px;
+    background-color: white;
+    box-shadow: none;
+    width: 50%;
+  }
 }

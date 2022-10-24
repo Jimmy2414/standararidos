@@ -188,7 +188,7 @@ const Fichatecnica = () => {
           <option value="ficha tecnica rodillo">Revestimiento texturado a RODILLO</option>
           <option value="ficha tecnica membrana">Membrana en pasta</option>
         </select>
-        <button>Subir Ficha Técnica</button>
+        <button className={s.botonSubir}>Subir Ficha Técnica</button>
       </form>
 
       <hr />

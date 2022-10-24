@@ -68,3 +68,36 @@
   color: green;
   font-size: 18px;
 }
+
+@media (max-width: 1080px) {
+  .contenedorGeneral .seccionAdmin img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(165, 165, 165);
+    width: 600px;
+  }
+}
+
+@media (max-width: 805px) {
+  .contenedorGeneral .seccionAdmin img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(165, 165, 165);
+    width: 500px;
+  }
+}
+
+@media (max-width: 475px) {
+  .contenedorGeneral .seccionAdmin img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(165, 165, 165);
+    width: 300px;
+  }
+}
