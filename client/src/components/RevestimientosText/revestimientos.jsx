@@ -29,21 +29,11 @@ export default function Revestimientos(props) {
   }
 
   const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 100);
-  // }, []);
-
   const dispatch = useDispatch();
 
   const allProductos = useSelector(state => state.Productos);
-  console.log(allProductos.map(e => e.descripcion));
 
   const auxiliares = allProductos.filter(e => e.seccion === "Auxiliares")
-
-
 
   const [curretPage, setCurrentPage] = useState(1);
   const [productosPorPagina, setcountriesPorPagina] = useState(10);
@@ -56,12 +46,6 @@ export default function Revestimientos(props) {
 
   const paginado = pageNumber => {
     let page = curretPage;
-    // if (pageNumber === 'inicio') {
-    //   setCurrentPage(1);
-    // } 
-    //  if (pageNumber === 'final') {
-    //   setCurrentPage(Math.ceil(allProductos.length / productosPorPagina));
-    // } 
     if (
       pageNumber === 'siguiente' &&
       curretPage < Math.ceil(allProductos.length / productosPorPagina)
@@ -125,7 +109,6 @@ export default function Revestimientos(props) {
 
                 <div className={s.contenedorLogo}>
                   <img src={logo} alt="Logo" />
-                  {/* <h1>STANDAR ARIDOS</h1> */}
                 </div>
               </div>
 

@@ -16,19 +16,10 @@ import { Helmet } from 'react-helmet'
 export default function LatexColor() {
 
   const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 100);
-  // }, []);
 
   const dispatch = useDispatch();
 
   const allProductos = useSelector(state => state.Productos);
-  console.log(allProductos.map(e => e.descripcion));
-
-  // const latexColor = allProductos.filter(e => e.seccion === "Látex Color")
 
   const [curretPage, setCurrentPage] = useState(1);
   const [productosPorPagina, setcountriesPorPagina] = useState(10);
@@ -41,12 +32,6 @@ export default function LatexColor() {
 
   const paginado = pageNumber => {
     let page = curretPage;
-    // if (pageNumber === 'inicio') {
-    //   setCurrentPage(1);
-    // } 
-    //  if (pageNumber === 'final') {
-    //   setCurrentPage(Math.ceil(allProductos.length / productosPorPagina));
-    // } 
     if (
       pageNumber === 'siguiente' &&
       curretPage < Math.ceil(allProductos.length / productosPorPagina)

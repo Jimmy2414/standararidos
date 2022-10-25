@@ -23,6 +23,7 @@ export default function EditarProducto() {
     categoria: '',
     seccion: '',
   });
+
   // FUNCIONES MODAL
   const handleChangeData = e => {
     e.preventDefault();

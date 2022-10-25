@@ -16,20 +16,12 @@ import s from '../Membranas/membranas.module.css'
 const Membranas = () => {
 
   const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 100);
-  // }, []);
 
   const dispatch = useDispatch();
 
   const allProductos = useSelector(state => state.Productos);
-  console.log(allProductos.map(e => e.descripcion));
 
   const membranas = allProductos.filter(e => e.seccion === "Membranas")
-
 
   useEffect(() => {
     dispatch(getProducto());
@@ -94,7 +86,6 @@ const Membranas = () => {
 
       <div className={s.contenedorLogo}>
         <img src={logo} alt="Logo" />
-        {/* <h1>STANDAR ARIDOS</h1> */}
       </div>
 
       <NavMenu />
@@ -140,8 +131,6 @@ const Membranas = () => {
                 </NavLink>
               </div>
             );
-
-
           })}
         </div>
       </div>

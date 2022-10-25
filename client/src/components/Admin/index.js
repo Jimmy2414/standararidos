@@ -10,7 +10,8 @@ export const Admin = () => {
   let token = localStorage.getItem('token')
 
   return (
-    <>{!token && <Navigate to="/login" />}
+    <div>
+      {!token && <Navigate to="/login" />}
       <div className={s.contenedorGeneral}>
         <div className={s.navAdmin}>
           <Navbar />
@@ -87,6 +88,6 @@ export const Admin = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

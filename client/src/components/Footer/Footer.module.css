@@ -18,30 +18,21 @@
   align-items: center;
   margin: auto;
   flex-direction: column;
-  /* background-color: #09010B; */
   background-color: #000000;
   color: white;
   margin-bottom: -20%;
 }
 
 .footerItems {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 150px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-
   gap: 155px;
   margin-bottom: 10px;
 }
 
 .titulo {
-  /* background-image: linear-gradient(#9810B3, #09010B);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -58,7 +49,6 @@
   text-align: center;
   margin: auto;
   width: 70%;
-
 }
 
 .quienessomos {
@@ -120,7 +110,6 @@ li {
   align-items: flex-start;
   margin: auto;
   flex-direction: column;
-
 }
 
 .inicio li {
@@ -154,13 +143,11 @@ li {
   margin: auto;
   flex-direction: row;
   margin-top: 10px;
-
 }
 
 .redes li {
   font-size: 30px;
   padding: 10px;
-
 }
 
 .redes li:hover {
@@ -181,7 +168,6 @@ li {
   height: 50px;
   color: rgb(170, 170, 170);
   background-color: rgb(64, 64, 64);
-  /* font-size: 12px; */
 }
 
 .infoFinal p {
@@ -212,7 +198,6 @@ li {
     align-items: center;
     margin: auto;
     flex-direction: column;
-    /* background-color: #09010B; */
     background-color: #000000;
     color: white;
     margin-bottom: -20%;
@@ -220,10 +205,6 @@ li {
 
 
   .titulo {
-    /* background-image: linear-gradient(#9810B3, #09010B);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -237,7 +218,6 @@ li {
   }
 
   .titulo span {
-    /* padding: 10px; */
     text-align: justify;
     margin: auto;
     width: 70%;
@@ -260,14 +240,11 @@ li {
     align-items: flex-start;
     margin: auto;
     flex-direction: row;
-
-
   }
 
   .redes li {
     font-size: 30px;
     padding: 10px;
-
   }
 
   .redes li:hover {

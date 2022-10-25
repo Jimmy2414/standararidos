@@ -27,7 +27,6 @@ export default function Landing() {
   const dispatch = useDispatch();
 
   const allProductos = useSelector(state => state.Productos);
-  console.log(allProductos.map(e => e.descripcion));
 
   useEffect(() => {
     dispatch(getProducto());
@@ -35,10 +34,6 @@ export default function Landing() {
   useEffect(() => {
     dispatch(deleteState());
   });
-  // const sortProducts = allProductos.sort((a, b) =>
-  //   a.id - b.id
-  // )
-
 
   return (
     <div>
@@ -107,7 +102,6 @@ export default function Landing() {
 
           <div className={s.contenedorLogo}>
             <img src={logo} alt="Logo" />
-            {/* <h1>STANDAR ARIDOS</h1> */}
           </div>
 
           <div className={s.menu_landing}>
@@ -117,19 +111,9 @@ export default function Landing() {
           <div className={s.carouselImg}>
             <ul>
               <li></li>
-              {/* <li></li> */}
-              {/* <li></li> */}
             </ul>
           </div>
 
-          {/* <div className={s.textocambiante}>
-        <h3 className={s.renova}>¡renová</h3>
-        <ul>
-          <li>tus Espacios!</li>
-          <li>tu Hogar!</li>
-          <li>tu Vida!</li>
-        </ul>
-      </div> */}
           <div className={s.seccionQuienesSomos}>
             <img src={fotoNosotros} alt="" />
             <div className={s.titulo}>

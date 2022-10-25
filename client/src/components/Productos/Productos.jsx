@@ -13,8 +13,6 @@ export default function Productos({
 }) {
   return (
     <div className={s.contenedorProducto}>
-      {/* <NavLink to={'/search/' + id}> */}
-
       <div className={s.card} key={id}>
         <img
           className={s.cardImg}
@@ -26,13 +24,7 @@ export default function Productos({
         />
 
         <h2 className={s.cardNombre}>{nombre}</h2>
-        {/* 
-          <h3 className={s.cardCategoria}><u>Categoría</u>: {categoria}</h3>
-          <h3 className={s.cardSeccion}><u>Sección</u>: {seccion}</h3>
-          <p className={s.cardDescripcion}><u>Descripción</u>: {descripcion.split(' ').slice(0, 20).join(' ') + ' ...'}</p> */}
       </div>
-
-      {/* </NavLink> */}
     </div>
   );
 }

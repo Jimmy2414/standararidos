@@ -21,13 +21,12 @@ export default function ModificarProductos() {
 
   const allProductos = useSelector(state => state.Productos);
 
-  console.log(allProductos.map(e => e.id));
 
   const [putModal, setInputModal] = useState(false);
 
   let { id } = useParams();
   idp = id;
-  console.log(idp);
+
 
   const [input, setInput] = useState({
     nombre: '',
@@ -85,7 +84,7 @@ export default function ModificarProductos() {
       ...input,
       [e.target.name]: e.target.value,
     });
-    console.log(input);
+
   };
   const EditProducto = () => {
     dispatch(modificarProducto(id, input))
@@ -102,7 +101,7 @@ export default function ModificarProductos() {
   };
 
   const abrir = () => {
-    console.log(idp);
+
     setTimeout(() => {
       dispatch(productoBefore(idp));
     }, 1000);
@@ -124,7 +123,7 @@ export default function ModificarProductos() {
           categoria: BeforeProduct.categoria,
           seccion: BeforeProduct.seccion,
         });
-        console.log(input);
+
       } else if (result.isDenied) {
         Swal.fire('Los cambios no se guardaron.', '', 'info');
       }

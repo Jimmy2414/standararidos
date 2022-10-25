@@ -82,7 +82,6 @@
   background-color: #09010B;
   width: 99vw;
   height: 100vh;
-
 }
 
 .loader {
@@ -98,7 +97,6 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  /* margin-top: 25%; */
 }
 
 .loader:before,
@@ -154,7 +152,6 @@
     margin: auto;
     text-align: center;
     flex-direction: row;
-    /* padding: 5px; */
   }
 
 
@@ -174,7 +171,6 @@
     background-color: #09010B;
     width: 99vw;
     height: 100vh;
-
   }
 
   .loader {
@@ -190,7 +186,6 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    /* margin-top: 25%; */
   }
 
   .loader:before,
@@ -229,7 +224,5 @@
       -o-transform: rotate(360deg);
       transform: rotate(360deg);
     }
-
-
   }
 }

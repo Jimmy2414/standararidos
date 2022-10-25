@@ -61,12 +61,6 @@ export default function Allana(props) {
 
   const paginado = pageNumber => {
     let page = curretPage;
-    // if (pageNumber === 'inicio') {
-    //   setCurrentPage(1);
-    // } 
-    //  if (pageNumber === 'final') {
-    //   setCurrentPage(Math.ceil(allProductos.length / productosPorPagina));
-    // } 
     if (
       pageNumber === 'siguiente' &&
       curretPage < Math.ceil(allProductos.length / productosPorPagina)
@@ -134,7 +128,6 @@ export default function Allana(props) {
 
                 <div className={s.contenedorLogo}>
                   <img src={logo} alt="Logo" />
-                  {/* <h1>STANDAR ARIDOS</h1> */}
                 </div>
               </div>
 
@@ -157,20 +150,6 @@ export default function Allana(props) {
                 </div>
 
                 <div className={s.layoutDos}>
-                  {/* <div className={s.aRodillo}>
-                    <img src={aRodillo} alt="a-rodillo" />
-                    <div className={s.info}>
-                      <h3>Revestimiento rodillado (a rodillo)</h3>
-                      <p>Revestimiento de contextura espesa y maleable, que se aplica con rodillo, el cual dependiendo del largo brinda una textura pronunciada, o más planchada, con uno de pelo corto. Otorga gran uniformidad, creando una película protectora en la superficie. Presentado en baldes de 15 y 30 kg.</p>
-
-                      <h3>Rendimiento</h3>
-                      <p>2,2 a 2,5 kg de producto cubren 1 mt². Dependiendo del estado de la superficie y la forma de aplicación.</p>
-
-                      <h3>Recomendaciones</h3>
-                      <p>No colocar con pronóstico de lluvia durante las próximas 72 horas. En revoques nuevos, dejar fraguar la superficie durante 45 días.</p>
-                    </div>
-                  </div> */}
-
                   <div className={s.aLlana}>
                     <img src={aLlanna} alt="a-llana" />
                     <div className={s.info}>
@@ -207,11 +186,7 @@ export default function Allana(props) {
                       })
                     }
                   </div>
-
-
-
                 </div>
-
 
                 <h2>AUXILIARES</h2>
                 <div className={s.contenedorProductoAux}>
@@ -233,13 +208,10 @@ export default function Allana(props) {
                           </NavLink>
                         </div>
                       );
-
-
                     })}
                   </div>
                   <hr className={s.hr} />
                 </div>
-
 
                 <h2>REVESTIMIENTOS</h2>
                 <div className={s.contenedorProducto}>
@@ -259,8 +231,6 @@ export default function Allana(props) {
                         </NavLink>
                       </div>
                     );
-
-
                   })}
                 </div>
 

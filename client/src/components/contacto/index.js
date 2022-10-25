@@ -92,7 +92,6 @@ export const Contacto = () => {
             <ul>
               <li className={s.fb}><a href='https://es-es.facebook.com/standararidos1/' target="_blank"><FaFacebook /></a></li>
               <li className={s.ig}><a href='https://www.instagram.com/standararidos/?hl=es' target="_blank"><FaInstagram /></a></li>
-
             </ul>
           </div>
         </div>

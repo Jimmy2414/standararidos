@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
 import { useDispatch, useSelector } from 'react-redux';
 import { postFichaTecnica, getUrl, getFichaTecnica, deleteFichaTecnica } from '../../../Redux/actions/actions';
-// import validations from './validations';
+
 
 import NavBar from '../../NavBar/Navbar'
 
@@ -21,11 +21,11 @@ const Fichatecnica = () => {
   const [fichaTecnica, setFichaTecnica] = useState({
     seccion: '',
   });
-  console.log(fichaTecnica);
+
   const [file, setFile] = useState('');
 
   const allFichasTecnicas = useSelector(state => state.FichaTecnica)
-  console.log(allFichasTecnicas)
+
 
   useEffect(() => {
     if (file) {
@@ -78,10 +78,7 @@ const Fichatecnica = () => {
   }, [file]);
 
   useEffect(() => {
-
     dispatch(getFichaTecnica());
-
-
   }, [dispatch])
 
   const handleSubmit = (e) => {
@@ -102,7 +99,6 @@ const Fichatecnica = () => {
             ...fichaTecnica,
             imagen: URL,
           };
-          console.log(totalFichaTecnica);
           // Swal.fire('Creado!', 'Ok.', 'success');
           dispatch(postFichaTecnica(totalFichaTecnica));
           setTimeout(() => {
@@ -197,7 +193,6 @@ const Fichatecnica = () => {
         <div>
           <h2>Revestimiento texturado - A Llana</h2>
           {fichTecnicallana?.map(e => {
-            console.log(fichTecnicallana[0].imagen)
             {
               return (
                 <div className={s.ficha} key={e.id}>

@@ -13,7 +13,6 @@
 
 .navMenu {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   margin: auto;
   flex-direction: row;
@@ -24,7 +23,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   justify-content: space-around;
   margin-bottom: 2%;
-
 }
 
 .navMenu ul {
@@ -76,7 +74,6 @@
   z-index: 100000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   text-align: center;
-  /* /* justify-content: center; */
   align-items: flex-start;
   margin: auto;
   flex-direction: column;
@@ -87,7 +84,6 @@
   position: relative;
   cursor: pointer;
   padding: 5px;
-  /* right: 48%; */
   top: 0px;
 }
 
@@ -106,7 +102,6 @@
   transition: all 1s ease;
   z-index: 100000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-
 }
 
 .menuDesplegable:hover>ul {
@@ -117,11 +112,9 @@
   z-index: 100000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   text-align: center;
-  /* /* justify-content: center; */
   align-items: flex-start;
   margin: auto;
   flex-direction: column;
-
 }
 
 .menuDesplegable ul li {
@@ -129,9 +122,7 @@
   position: relative;
   cursor: pointer;
   padding: 5px;
-  /* right: 48%; */
   top: 0px;
-
 }
 
 .menuDesplegable ul li:hover {
@@ -159,11 +150,9 @@
   z-index: 100000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   text-align: center;
-  /* /* justify-content: center; */
   align-items: flex-start;
   margin: auto;
   flex-direction: column;
-
 }
 
 .menuDesplegableDos ul li {
@@ -171,9 +160,7 @@
   position: relative;
   cursor: pointer;
   padding: 5px;
-  /* right: 48%; */
   top: 0px;
-
 }
 
 .menuDesplegableDos ul li:hover {
@@ -190,7 +177,6 @@
 
 .contacto a {
   color: #09010B;
-
 }
 
 html {
@@ -225,7 +211,6 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
@@ -236,7 +221,6 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
   }
 
@@ -255,7 +239,6 @@ html {
     transition: all 1s ease;
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-
   }
 
   .menuDesplegable:hover>ul {
@@ -266,11 +249,9 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
-
   }
 
   .menuDesplegable ul li {
@@ -278,9 +259,7 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
-
   }
 
   .menuDesplegable ul li:hover {
@@ -308,11 +287,9 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
-
   }
 
   .menuDesplegableDos ul li {
@@ -320,16 +297,12 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
-
   }
 
   .menuDesplegableDos ul li:hover {
     background-color: #e5e5e5;
   }
-
-
 }
 
 @media (max-width: 1500px) {
@@ -354,7 +327,6 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
@@ -365,7 +337,6 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
   }
 
@@ -384,7 +355,6 @@ html {
     transition: all 1s ease;
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-
   }
 
   .menuDesplegable:hover>ul {
@@ -395,11 +365,9 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
-
   }
 
   .menuDesplegable ul li {
@@ -407,9 +375,7 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
-
   }
 
   .menuDesplegable ul li:hover {
@@ -437,11 +403,9 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
-
   }
 
   .menuDesplegableDos ul li {
@@ -449,21 +413,17 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
-
   }
 
   .menuDesplegableDos ul li:hover {
     background-color: #e5e5e5;
   }
-
 }
 
 @media (max-width: 1280px) {
   .navMenu {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     margin: auto;
     flex-direction: row;
@@ -474,7 +434,6 @@ html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     justify-content: space-around;
     margin-bottom: 2%;
-
   }
 
   .navMenu ul {
@@ -493,7 +452,6 @@ html {
     font-weight: 700;
     color: var(--colorNegro);
     text-transform: uppercase;
-
   }
 
   .navMenu ul li:hover {
@@ -516,7 +474,6 @@ html {
 
   .contacto a {
     color: #09010B;
-
   }
 
   html {
@@ -544,7 +501,6 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
@@ -555,7 +511,6 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
   }
 
@@ -574,7 +529,6 @@ html {
     transition: all 1s ease;
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-
   }
 
   .menuDesplegable:hover>ul {
@@ -585,11 +539,9 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
-
   }
 
   .menuDesplegable ul li {
@@ -597,9 +549,7 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
-
   }
 
   .menuDesplegable ul li:hover {
@@ -627,11 +577,9 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
-
   }
 
   .menuDesplegableDos ul li {
@@ -639,23 +587,18 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
-
   }
 
   .menuDesplegableDos ul li:hover {
     background-color: #e5e5e5;
   }
-
-
 }
 
 @media (max-width: 1080px) {
 
   .navMenu {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     margin: auto;
     flex-direction: row;
@@ -666,7 +609,6 @@ html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     justify-content: space-around;
     margin-bottom: 2%;
-
   }
 
   .navMenu ul {
@@ -685,7 +627,6 @@ html {
     font-weight: 700;
     color: var(--colorNegro);
     text-transform: uppercase;
-
   }
 
   .navMenu ul li:hover {
@@ -708,7 +649,6 @@ html {
 
   .contacto a {
     color: #09010B;
-
   }
 
   html {
@@ -736,7 +676,6 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
@@ -747,7 +686,6 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
   }
 
@@ -766,7 +704,6 @@ html {
     transition: all 1s ease;
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-
   }
 
   .menuDesplegable:hover>ul {
@@ -777,11 +714,9 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
-
   }
 
   .menuDesplegable ul li {
@@ -789,9 +724,7 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
-
   }
 
   .menuDesplegable ul li:hover {
@@ -819,11 +752,9 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
-
   }
 
   .menuDesplegableDos ul li {
@@ -831,16 +762,12 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
-
   }
 
   .menuDesplegableDos ul li:hover {
     background-color: #e5e5e5;
   }
-
-
 }
 
 
@@ -854,9 +781,6 @@ html {
   }
 
   .button_menu {
-    /* position: absolute;
-    left: 50%;
-    top: 13%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -869,8 +793,6 @@ html {
     z-index: 5;
   }
 
-
-
   .button_menu_input {
     opacity: 0;
   }
@@ -880,8 +802,6 @@ html {
     flex-direction: column;
     align-items: center;
     margin: auto;
-    /* padding: 10px 10px 20px; */
-    /* gap: 16px; */
     position: absolute;
     width: 100%;
     height: 50%;
@@ -899,8 +819,6 @@ html {
     flex-direction: column;
     align-items: center;
     margin: auto;
-    /* padding: 10px 10px 20px; */
-    /* gap: 16px; */
     position: absolute;
     width: 100%;
     height: 50%;
@@ -958,7 +876,6 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
@@ -969,7 +886,6 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
   }
 
@@ -988,7 +904,6 @@ html {
     transition: all 1s ease;
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-
   }
 
   .menuDesplegable:hover>ul {
@@ -999,11 +914,9 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
-
   }
 
   .menuDesplegable ul li {
@@ -1011,9 +924,7 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
-
   }
 
   .menuDesplegable ul li:hover {
@@ -1024,7 +935,6 @@ html {
     display: none;
     min-width: 140px;
     position: relative;
-    /* background-color: white; */
     width: 50%;
     top: 0;
     left: 00%;
@@ -1041,11 +951,9 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
-
   }
 
   .menuDesplegableDos ul li {
@@ -1053,15 +961,12 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
-
   }
 
   .menuDesplegableDos ul li:hover {
     background-color: #e5e5e5;
   }
-
 }
 
 @media (max-width: 475px) {
@@ -1074,9 +979,6 @@ html {
   }
 
   .button_menu {
-    /* position: absolute;
-    left: 50%;
-    top: 13%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1089,8 +991,6 @@ html {
     z-index: 5;
   }
 
-
-
   .button_menu_input {
     opacity: 0;
   }
@@ -1100,8 +1000,6 @@ html {
     flex-direction: column;
     align-items: center;
     margin: auto;
-    /* padding: 10px 10px 20px; */
-    /* gap: 16px; */
     position: absolute;
     width: 100%;
     height: 50%;
@@ -1120,8 +1018,6 @@ html {
     flex-direction: column;
     align-items: center;
     margin: auto;
-    /* padding: 10px 10px 20px; */
-    /* gap: 16px; */
     position: absolute;
     width: 100%;
     height: 50%;
@@ -1182,7 +1078,6 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
@@ -1198,7 +1093,6 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
     font-size: 12px;
   }
@@ -1218,7 +1112,6 @@ html {
     transition: all 1s ease;
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-
   }
 
   .menuDesplegable:hover>ul {
@@ -1229,11 +1122,9 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
-
   }
 
   .menuDesplegable ul li {
@@ -1241,9 +1132,7 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
-
   }
 
   .menuDesplegable ul li:hover {
@@ -1254,7 +1143,6 @@ html {
     display: none;
     min-width: 140px;
     position: absolute;
-    /* background-color: white; */
     width: 50%;
     top: 280px;
     left: 5%;
@@ -1271,11 +1159,9 @@ html {
     z-index: 100000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     text-align: center;
-    /* /* justify-content: center; */
     align-items: flex-start;
     margin: auto;
     flex-direction: column;
-
   }
 
   .menuDesplegableDos ul li {
@@ -1283,13 +1169,10 @@ html {
     position: relative;
     cursor: pointer;
     padding: 5px;
-    /* right: 48%; */
     top: 0px;
-
   }
 
   .menuDesplegableDos ul li:hover {
     background-color: #e5e5e5;
   }
-
 }

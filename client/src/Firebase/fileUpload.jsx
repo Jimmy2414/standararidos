@@ -14,7 +14,6 @@ import s from '../components/accionesAdmin/subirCosas/Subir.module.css';
 export default function FileUpload() {
   const dispatch = useDispatch();
   const URL = useSelector(state => state.URL);
-  console.log(URL);
   const [check, setCheck] = useState(false)
   const [progress, setProgress] = useState(0);
   const [producto, setProducto] = useState({
@@ -26,7 +25,6 @@ export default function FileUpload() {
   const [file, setFile] = useState('');
 
   const [error, setError] = useState({});
-  console.log(producto);
   useEffect(() => {
     if (file) {
       const storageRef = ref(storage, '/StandarAridos/' + file.name);
@@ -106,7 +104,6 @@ export default function FileUpload() {
             imagen: URL,
           };
           dispatch(postProducto(totalProducto));
-          console.log(totalProducto);
           Swal.fire('Enviado!', 'Ok.', 'success');
           setTimeout(() => {
             window.location.reload();
@@ -230,33 +227,10 @@ export default function FileUpload() {
               </div>
             </div>
 
-            {/* <div>
-              <label>
-                ¿Incluye ficha tecnica?
-                <input onClick={checkbox} type="checkbox" />
-              </label>
-              {check ?
-                <div>
-                  <input type="file" />
-
-                  <label> Sin ficha técnica</label>
-                  <input type="checkbox" onClick={closeCheck} />
-                </div>
-                :
-                null
-              }
-            </div> */}
-
-
             <button type="submit">Subir</button>
           </form>
         </div>
       </div>
-      {/* <form onSubmit={handleSubmit}>
-        <input type="file" onChange={handleChange} />
-
-        <button type='submit' >enviar</button>
-      </form> */}
     </div>
   );
 }

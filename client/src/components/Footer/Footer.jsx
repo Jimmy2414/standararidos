@@ -20,17 +20,10 @@ export default function Footer() {
           <div className={s.redes}>
             <h2>Seguinos en</h2>
             <ul>
-
               <li><a href="https://es-es.facebook.com/standararidos1/" target="_blank"><FaFacebook /></a></li>
-
-
-
               <li><a href="https://www.instagram.com/standararidos/?hl=es" target="_blank"><FaInstagram /></a></li>
-
             </ul>
           </div>
-
-
         </div>
 
       </section>

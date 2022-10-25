@@ -18,7 +18,6 @@ const LatexInteriorCielorraso = () => {
   const dispatch = useDispatch();
 
   const allProductos = useSelector(state => state.Productos);
-  console.log(allProductos.map(e => e.descripcion));
 
   const [curretPage, setCurrentPage] = useState(1);
   const [productosPorPagina, setcountriesPorPagina] = useState(10);

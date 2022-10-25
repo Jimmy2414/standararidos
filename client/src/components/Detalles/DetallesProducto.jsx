@@ -20,7 +20,7 @@ export default function DetalleProducto(props) {
   }, []);
   const dispatch = useDispatch();
   const { id } = useParams();
-  // const id = props.match.params.id
+
 
   useEffect(() => {
     dispatch(detalleProducto(id));
@@ -28,7 +28,6 @@ export default function DetalleProducto(props) {
 
   var detalle = useSelector(state => state.detalleProducto);
 
-  console.log(detalle);
 
   return (
     <div className={s.conetenedorDetalle}>

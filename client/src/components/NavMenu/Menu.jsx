@@ -8,7 +8,6 @@ import { useState } from "react";
 export default function NavMenu() {
 
   const [icon, setIcon] = useState(true)
-  console.log(icon)
   function changeToCross(e) {
     if (e.target) {
       setIcon(!icon)
@@ -51,10 +50,6 @@ export default function NavMenu() {
               </ul>
             </li>
 
-            {/* <NavLink to={'/latex-color'}>
-              <li>Pinturas</li>
-            </NavLink> */}
-
             <li className={s.menuDesplegable}>
               Pinturas ▼
               <ul>
@@ -88,10 +83,6 @@ export default function NavMenu() {
               </ul>
             </li>
 
-            {/* <NavLink to={'/membranas'}>
-              <li>Membranas</li>
-            </NavLink> */}
-
             <li className={s.menuDesplegableDos}>Techos y Superficies ▼
               <ul>
                 <NavLink to={'/fijadores'}>
@@ -111,15 +102,6 @@ export default function NavMenu() {
                 </NavLink>
               </ul>
             </li>
-
-
-            {/* <NavLink to={'/preparacion-de-la-superficie'}>
-              <li>Preparación de la superficie</li>
-            </NavLink>
-
-            <NavLink to={'/auxilires'}>
-              <li>Auxiliares</li>
-            </NavLink> */}
 
             <NavLink to={'/contacto'}>
               <li className={s.contacto}>Contacto</li>

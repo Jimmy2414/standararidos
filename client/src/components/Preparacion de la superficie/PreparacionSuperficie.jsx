@@ -15,17 +15,10 @@ import { Helmet } from 'react-helmet'
 export default function PreparacionSuperficie() {
 
   const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 100);
-  // }, []);
 
   const dispatch = useDispatch();
 
   const allProductos = useSelector(state => state.Productos);
-  console.log(allProductos.map(e => e.descripcion));
 
   const prepSuper = allProductos.filter(e => e.seccion === "Preparación de la superficie")
 
@@ -95,7 +88,6 @@ export default function PreparacionSuperficie() {
 
           <div className={s.contenedorLogo}>
             <img src={logo} alt="Logo" />
-            {/* <h1>STANDAR ARIDOS</h1> */}
           </div>
 
           <NavMenu />
@@ -124,14 +116,11 @@ export default function PreparacionSuperficie() {
                     </NavLink>
                   </div>
                 );
-
-
               })}
             </div>
           </div>
           <Footer />
         </div>)}
-
     </div>
   )
 }

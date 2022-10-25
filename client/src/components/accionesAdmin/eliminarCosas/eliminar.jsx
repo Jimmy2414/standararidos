@@ -13,7 +13,7 @@ export default function EliminarProducto() {
 
 
   const allProductos = useSelector(state => state.Productos);
-  console.log(allProductos.map(e => e.descripcion));
+
 
   const [loading, setLoading] = useState(false);
   useEffect(() => {

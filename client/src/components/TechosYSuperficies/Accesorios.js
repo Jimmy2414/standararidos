@@ -15,17 +15,10 @@ import s from '../Membranas/membranas.module.css'
 
 const Accesorios = () => {
   const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 100);
-  // }, []);
 
   const dispatch = useDispatch();
 
   const allProductos = useSelector(state => state.Productos);
-  console.log(allProductos.map(e => e.descripcion));
 
   const membranas = allProductos.filter(e => e.seccion === "Accesorios")
 
@@ -92,7 +85,6 @@ const Accesorios = () => {
 
       <div className={s.contenedorLogo}>
         <img src={logo} alt="Logo" />
-        {/* <h1>STANDAR ARIDOS</h1> */}
       </div>
 
       <NavMenu />
@@ -138,8 +130,6 @@ const Accesorios = () => {
                 </NavLink>
               </div>
             );
-
-
           })}
         </div>
       </div>

@@ -24,23 +24,14 @@ export default function Membranas() {
     }
   }
   const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 100);
-  // }, []);
 
   const dispatch = useDispatch();
 
   const allProductos = useSelector(state => state.Productos);
-  console.log(allProductos.map(e => e.descripcion));
-
 
   const allFichasTecnicas = useSelector(state => state.FichaTecnica)
 
   const membranas = allProductos.filter(e => e.seccion === "Membranas")
-  // const fichaTecnica = allProductos.filter(e => e.seccion === "ficha tecnica llana")
   const fichTecnicaMembrana = allFichasTecnicas.filter(e => e.seccion === "ficha tecnica membrana")
 
   useEffect(() => {
@@ -116,7 +107,6 @@ export default function Membranas() {
 
           <div className={s.contenedorLogo}>
             <img src={logo} alt="Logo" />
-            {/* <h1>STANDAR ARIDOS</h1> */}
           </div>
 
           <NavMenu />
@@ -183,14 +173,11 @@ export default function Membranas() {
                     </NavLink>
                   </div>
                 );
-
-
               })}
             </div>
           </div>
           <Footer />
         </div>)}
-
     </div>
   )
 }

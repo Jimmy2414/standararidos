@@ -6,7 +6,6 @@ export function postProducto(payload) {
   return async function () {
     try {
       const response = await axios.post('http://localhost:3001/post', payload);
-      // const response = await axios.post('/post', payload);
       return response;
     } catch (e) {
       console.log(e);
@@ -28,8 +27,6 @@ export function postFichaTecnica(payload) {
 
 }
 
-// catch(error => {
-//   console.log(error.response)
 export function getProducto() {
   return function (dispatch) {
     axios.get('http://localhost:3001/get').then(res => {
@@ -47,11 +44,6 @@ export function getFichaTecnica() {
 }
 
 export function detalleProducto(id) {
-  // return function (dispatch) {
-  //   axios.get(`/producto/${id}`).then(res => {
-  //     return dispatch({ type: 'DETALLE_PRODUCTO', payload: res.data });
-  //   });
-  // };
   return async dispatch => {
     try {
       let { data } = await axios.get(`http://localhost:3001/get/search?id=${id}`);
@@ -62,12 +54,6 @@ export function detalleProducto(id) {
   };
 }
 export function productoBefore(productId) {
-  // return function (dispatch) {
-  //   axios.get(`/get/${id}`).then(res => {
-  //     return dispatch({ type: 'Detalle_Before', payload: res.data });
-  //   });
-  // };
-
   return async dispatch => {
     try {
       let { data } = await axios.get(`http://localhost:3001/get/search?id=${productId}`);

@@ -14,7 +14,6 @@
   margin-top: 5%;
   font-family: var(--fuenteLetras);
   font-weight: 700;
-
 }
 
 .form {
@@ -120,7 +119,6 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  /* margin-top: 25%; */
 }
 
 .loader:before,

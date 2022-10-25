@@ -38,7 +38,6 @@
 .inputEdit {
   width: 90%;
   margin-top: 20px;
-
 }
 
 .botonesEdit {
@@ -114,7 +113,6 @@
   margin-top: 5%;
   font-family: var(--fuenteLetras);
   font-weight: 700;
-
 }
 
 .inputS {
@@ -148,12 +146,10 @@
   align-items: center;
   margin: auto;
   flex-wrap: wrap;
-
 }
 
 .btnModificar {
   font-size: 20px;
-  /* margin-top: -25px; */
 }
 
 

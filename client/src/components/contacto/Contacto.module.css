@@ -55,7 +55,6 @@
   justify-content: center;
   flex-direction: row;
   margin-top: 2%;
-
 }
 
 .datos li {
@@ -102,8 +101,6 @@
   font-size: 18px;
   width: 100%;
 }
-
-
 
 .fb {
   width: 50px;

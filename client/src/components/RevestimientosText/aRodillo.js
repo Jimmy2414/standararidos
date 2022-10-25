@@ -60,12 +60,6 @@ export default function Arodillo(props) {
 
   const paginado = pageNumber => {
     let page = curretPage;
-    // if (pageNumber === 'inicio') {
-    //   setCurrentPage(1);
-    // } 
-    //  if (pageNumber === 'final') {
-    //   setCurrentPage(Math.ceil(allProductos.length / productosPorPagina));
-    // } 
     if (
       pageNumber === 'siguiente' &&
       curretPage < Math.ceil(allProductos.length / productosPorPagina)
@@ -133,7 +127,6 @@ export default function Arodillo(props) {
 
                 <div className={s.contenedorLogo}>
                   <img src={logo} alt="Logo" />
-                  {/* <h1>STANDAR ARIDOS</h1> */}
                 </div>
               </div>
 
@@ -170,20 +163,6 @@ export default function Arodillo(props) {
                     </div>
                   </div>
 
-                  {/* <div className={s.aLlana}>
-                    <img src={aLlanna} alt="a-rodillo" />
-                    <div className={s.info}>
-                      <h3>Revestimiento Rulato Travertino (con llana)</h3>
-                      <p>Revestimiento de aplicación con llana metálica y plástica, que forma una capa de grosor medio o fino según el grano de la piedra. La textura media, brinda un efecto visual bien definido al hacer el rayado. Con textura fina, el dibujo es más sutil y la carga sobre la superficie más liviana. El revestimiento junto a la base, garantizan una total impermeabilidad, con mejor adherencia y visualmente uniforme en color.</p>
-
-                      <h3>Rendimiento</h3>
-                      <p>2,2 a 2,5 kg de producto cubren 1 mt². Dependiendo del estado de la superficie y la forma de aplicación.</p>
-
-                      <h3>Recomendaciones</h3>
-                      <p>No colocar con pronóstico de lluvia durante las próximas 72 horas. En revoques nuevos, dejar fraguar la superficie durante 45 días.</p>
-                    </div>
-                  </div> */}
-
                   {/* FICHA TECNICA */}
                   <label htmlFor="fichatecnica" className={s.labelFichaTecnica} onClick={changeToCross}>
                     {icon === true
@@ -193,7 +172,6 @@ export default function Arodillo(props) {
                       <h3>Ficha Tecnica <img className={s.arrow_faq} src={arrowDown} alt="arrow_faq" /> </h3>}
                   </label>
                   <input type="checkbox" id="fichatecnica" className={s.checkbox_faq} />
-
 
                   <div className={s.faq_answered}>
                     {
@@ -207,11 +185,7 @@ export default function Arodillo(props) {
                     }
                   </div>
 
-
-
                 </div>
-
-
                 <h2>AUXILIARES</h2>
                 <div className={s.contenedorProductoAux}>
 
@@ -232,13 +206,10 @@ export default function Arodillo(props) {
                           </NavLink>
                         </div>
                       );
-
-
                     })}
                   </div>
                   <hr className={s.hr} />
                 </div>
-
 
                 <h2>REVESTIMIENTOS</h2>
                 <div className={s.contenedorProducto}>
@@ -258,8 +229,6 @@ export default function Arodillo(props) {
                         </NavLink>
                       </div>
                     );
-
-
                   })}
                 </div>
 

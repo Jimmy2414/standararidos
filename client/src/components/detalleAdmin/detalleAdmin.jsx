@@ -21,13 +21,10 @@ export default function DetalleAdmin() {
   }, []);
   const detalleProdu = useSelector(state => state.Productos);
 
-  console.log(detalleProdu);
 
   function buscar() {
     setId2(id);
-
     let detalle = detalleProdu.find(e => e.id === id2 * 1);
-    console.log(detalle);
     setProductod(detalle);
   }
 

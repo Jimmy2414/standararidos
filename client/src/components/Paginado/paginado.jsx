@@ -23,22 +23,16 @@ export default function Paginacion({ countriesPorPagina, allCountries, paginado,
 
     <nav >
       <ul className={s.botonPagina}>
-        {/* <button onClick={() => paginado('inicio')}>Inicio</button> */}
         <button onClick={() => paginado('anterior')}>anterior</button>
-
         {
           pageNumbers && pageNumbers.map(n => (
-
             <li key={n} >
               <button onClick={() => paginado(n)} >{n}</button>
             </li>
-
           ))
         }
         <button onClick={() => paginado('siguiente')}>siguiente</button>
-        {/* <button onClick={() => paginado('final')}>Final</button> */}
       </ul>
     </nav>
-
   )
 }

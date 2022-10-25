@@ -37,12 +37,6 @@
   height: 100%;
   background-color: #e5e5e5;
   padding: 8px;
-  /* background-color: white;
-  padding: 40px;
-  display: flex;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
-  transform: scale(0);
-  animation: scale 0.3s ease forwards; */
 }
 
 @keyframes scale {
@@ -75,14 +69,6 @@
 }
 
 .contenedorCard {
-  /* width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
-  flex-direction: column;
-  margin-top: 50px; */
   display: flex;
   justify-content: space-around;
   align-items: center;

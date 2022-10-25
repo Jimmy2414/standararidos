@@ -36,7 +36,6 @@
 
 .layoutDos {
   background-color: #fff;
-
 }
 
 .textoArriba {
@@ -69,7 +68,6 @@
   width: 100%;
   background-color: #e5e5e5;
   margin-bottom: 25px;
-  /* border-bottom: ; */
 }
 
 .contenedorProducto {
@@ -95,12 +93,10 @@
 
 .descripcionRevest {
   width: 80%;
-  /* height: 0px; */
   text-align: justify;
   margin: auto;
   font-size: 18px;
   font-family: var(--fuenteLetras);
-
 }
 
 .aRodillo {
@@ -111,7 +107,6 @@
   flex-direction: row;
   width: 80%;
   margin-top: 5%;
-  /* background-color: #fff; */
   font-family: var(--fuenteLetras);
 }
 
@@ -150,7 +145,6 @@
   width: 80%;
   margin-top: 5%;
   font-family: var(--fuenteLetras);
-  /* background-color: #fff; */
 }
 
 .aLlana img {
@@ -193,7 +187,6 @@
   order: 0;
   flex-grow: 0;
   margin: 0px 0px 0px 10%;
-  /* border-bottom: 2px dashed black; */
   text-align: justify;
   cursor: pointer;
 }
@@ -246,7 +239,6 @@
   background-color: #09010B;
   width: 99vw;
   height: 100vh;
-
 }
 
 .loader {
@@ -262,7 +254,6 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  /* margin-top: 25%; */
 }
 
 .loader:before,
@@ -312,7 +303,6 @@
     flex-direction: row;
     width: 90%;
     margin-top: 5%;
-    /* background-color: #fff; */
     font-family: var(--fuenteLetras);
   }
 
@@ -333,7 +323,6 @@
     flex-direction: row-reverse;
     width: 90%;
     margin-top: 5%;
-    /* background-color: #fff; */
     font-family: var(--fuenteLetras);
   }
 
@@ -357,7 +346,6 @@
     flex-direction: row;
     width: 90%;
     margin-top: 5%;
-    /* background-color: #fff; */
     font-family: var(--fuenteLetras);
   }
 
@@ -378,7 +366,6 @@
     flex-direction: row-reverse;
     width: 90%;
     margin-top: 5%;
-    /* background-color: #fff; */
     font-family: var(--fuenteLetras);
   }
 
@@ -390,7 +377,6 @@
     margin-bottom: 2%;
     margin-right: 2%;
   }
-
 }
 
 @media (max-width: 1080px) {
@@ -402,7 +388,6 @@
     flex-direction: column;
     width: 90%;
     margin-top: 5%;
-    /* background-color: #fff; */
     font-family: var(--fuenteLetras);
   }
 
@@ -423,7 +408,6 @@
     flex-direction: column;
     width: 90%;
     margin-top: 5%;
-    /* background-color: #fff; */
     font-family: var(--fuenteLetras);
   }
 
@@ -435,7 +419,6 @@
     margin-bottom: 2%;
     margin-right: 2%;
   }
-
 }
 
 @media (max-width: 720px) {
@@ -447,7 +430,6 @@
     flex-direction: column;
     width: 90%;
     margin-top: 5%;
-    /* background-color: #fff; */
     font-family: var(--fuenteLetras);
   }
 
@@ -468,7 +450,6 @@
     flex-direction: column;
     width: 90%;
     margin-top: 5%;
-    /* background-color: #fff; */
     font-family: var(--fuenteLetras);
   }
 
@@ -480,7 +461,6 @@
     margin-bottom: 2%;
     margin-right: 2%;
   }
-
 }
 
 @media (max-width: 475px) {
@@ -496,7 +476,6 @@
     margin: auto;
     text-align: center;
     flex-direction: row;
-    /* padding: 5px; */
   }
 
   .aRodillo {
@@ -507,7 +486,6 @@
     flex-direction: column;
     width: 80%;
     margin-top: 5%;
-    /* background-color: #fff; */
     font-family: var(--fuenteLetras);
   }
 
@@ -528,7 +506,6 @@
     flex-direction: column;
     width: 80%;
     margin-top: 5%;
-    /* background-color: #fff; */
     font-family: var(--fuenteLetras);
   }
 
@@ -540,7 +517,6 @@
     margin-bottom: 2%;
     margin-right: 2%;
   }
-
 
   .contenedorLogo {
     width: 100%;
@@ -558,7 +534,6 @@
     background-color: #09010B;
     width: 99vw;
     height: 100vh;
-
   }
 
   .loader {
@@ -574,7 +549,6 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    /* margin-top: 25%; */
   }
 
   .loader:before,
@@ -654,7 +628,5 @@
       -o-transform: rotate(360deg);
       transform: rotate(360deg);
     }
-
-
   }
 }
