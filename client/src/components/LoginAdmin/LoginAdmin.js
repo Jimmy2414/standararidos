@@ -15,6 +15,7 @@ const LoginAdmin = () => {
 
     const email = e.target.email.value;
     const password = e.target.password.value;
+    // const tokenDat = '654asehbasjgeokjasejkhg28734'
 
     if (email === '' || password === '') {
       Swal.fire({

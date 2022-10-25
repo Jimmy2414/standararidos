@@ -186,6 +186,44 @@
   text-align: center;
 }
 
+.interes {
+  margin-top: 2%;
+}
+
+.interes p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.wsp {
+  width: 70px;
+  height: 70px;
+  border: solid 1px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  background-color: #25d366;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 100%;
+}
+
+.wsp:hover {
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+  background-color: #25d365b4;
+}
+
+.wspA {
+  color: white;
+  margin-top: 2%;
+  font-size: 28px;
+}
+
 
 @media (max-width: 475px) {
   .textoArriba {

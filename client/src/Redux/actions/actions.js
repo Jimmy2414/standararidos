@@ -5,8 +5,8 @@ export function postProducto(payload) {
   console.log(payload);
   return async function () {
     try {
-      const response = await axios.post('/post', payload);
-
+      const response = await axios.post('http://localhost:3001/post', payload);
+      // const response = await axios.post('/post', payload);
       return response;
     } catch (e) {
       console.log(e);
@@ -32,7 +32,7 @@ export function postFichaTecnica(payload) {
 //   console.log(error.response)
 export function getProducto() {
   return function (dispatch) {
-    axios.get('/get').then(res => {
+    axios.get('http://localhost:3001/get').then(res => {
       return dispatch({ type: 'GET_PRODUCTOS_ALL', payload: res.data });
     });
   };
@@ -54,7 +54,7 @@ export function detalleProducto(id) {
   // };
   return async dispatch => {
     try {
-      let { data } = await axios.get(`/get/search?id=${id}`);
+      let { data } = await axios.get(`http://localhost:3001/get/search?id=${id}`);
       return dispatch({ type: 'DETALLE_PRODUCTO', payload: data });
     } catch (err) {
       alert('error de detalle before');
@@ -70,7 +70,7 @@ export function productoBefore(productId) {
 
   return async dispatch => {
     try {
-      let { data } = await axios.get(`/get/search?id=${productId}`);
+      let { data } = await axios.get(`http://localhost:3001/get/search?id=${productId}`);
       return dispatch({ type: 'Detalle_Before', payload: data });
     } catch (err) {
       alert('error de detalle before');
@@ -87,7 +87,7 @@ export function getUrl(url) {
 
 export function filterProductoPorNombre(nombre) {
   return async dispatch => {
-    let { data } = await axios.get(`/get/search/${nombre}`);
+    let { data } = await axios.get(`http://localhost:3001/get/search/${nombre}`);
     return dispatch({ type: 'SEARCH_SEARCH', payload: data });
   };
 }
@@ -98,7 +98,7 @@ export function modificarProducto(id, input) {
   console.log(id);
   return async dispatch => {
     try {
-      let { data } = await axios.put(`/put/${id}`, {
+      let { data } = await axios.put(`http://localhost:3001/put/${id}`, {
         nombre: input.nombre,
         descripcion: input.descripcion,
         categoria: input.categoria,
@@ -114,7 +114,7 @@ export function modificarProducto(id, input) {
 
 export function deleteProducto(id) {
   return async dispatch => {
-    await axios.delete(`/del/${id}`);
+    await axios.delete(`http://localhost:3001/del/${id}`);
     return dispatch({ type: 'DELETE_PRODUCTO' });
   };
 }

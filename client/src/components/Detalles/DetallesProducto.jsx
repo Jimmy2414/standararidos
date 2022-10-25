@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../img/standarLogo.jpg';
 import NavMenu from '../NavMenu/Menu';
 import Footer from '../Footer/Footer';
+import { FaWhatsapp } from "react-icons/fa";
 import s from '../Detalles/DetallesProducto.module.css';
 
 export default function DetalleProducto(props) {
@@ -82,9 +83,14 @@ export default function DetalleProducto(props) {
             </div>
           </div>
         )}
+        <div className={s.interes}>
+          <p>¿Te interesa este producto?</p>
+          <p>Envianos un mensaje para saber su disponibilidad o consultar lo que necesites...</p>
+          <p className={s.wsp}><a className={s.wspA} href="https://api.whatsapp.com/send?phone=+541170347165&text=¡Hola, tengo una consulta!." target="_blank"><FaWhatsapp /></a></p>
+        </div>
       </div>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

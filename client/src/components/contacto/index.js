@@ -43,6 +43,9 @@ export const Contacto = () => {
   }
 
 
+
+
+
   return (
     <div className={s.contenedorGeneral}>
 
@@ -101,7 +104,7 @@ export const Contacto = () => {
           </p>
         </div>
 
-        <form className={s.form} onSubmit={handleSubmit}>
+        <form className={s.form} method='POST' action="https://formsubmit.co/standararidos@hotmail.com" onSubmit={handleSubmit} >
           <h2 className={s.formTitle}>
             ¡Contactate con nosotros!
           </h2>
