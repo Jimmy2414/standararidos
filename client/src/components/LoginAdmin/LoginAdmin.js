@@ -13,10 +13,21 @@ const LoginAdmin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    function generateToken(len) {
+      let randomToken = '';
+      let tokenWord = 'abcdefghijklmnopqrstuvwxz1234567890|!#$%&/?¿+-';
+      for (let i = 0; i < len; i++) {
+        randomToken += tokenWord.charAt(Math.floor(Math.random() * tokenWord.length))
+      }
+      return randomToken
+    }
+    generateToken(100)
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const token = generateToken(100)
 
-    if (email === '' || password === '') {
+
+    if (email === '' || password === '' || token === '') {
       Swal.fire({
         position: 'center',
         icon: 'error',
@@ -44,7 +55,8 @@ const LoginAdmin = () => {
         showConfirmButton: false,
         timer: 1500,
       });
-      const tokenData = email
+
+      const tokenData = token
       localStorage.setItem('token', tokenData)
       navigate('/admin')
     }
