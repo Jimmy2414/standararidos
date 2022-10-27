@@ -116,7 +116,8 @@ export default function Membranas() {
               <h1>Membranas</h1>
             </div>
             <div className={s.bannerMembranas}>
-              <img src={bannerMembranas} alt="banner-latex" />
+              {/* <img src={bannerMembranas} alt="banner-latex" /> */}
+              <div className={s.bannerFondoMembrana}></div>
             </div>
 
             <div className={s.info}>

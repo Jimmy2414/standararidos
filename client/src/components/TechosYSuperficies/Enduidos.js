@@ -95,7 +95,8 @@ const Enduidos = () => {
           <h1>Enduidos</h1>
         </div>
         <div className={s.bannerMembranas}>
-          <img src={bannerMembranas} alt="banner-latex" />
+          {/* <img src={bannerMembranas} alt="banner-latex" /> */}
+          <div className={s.bannerFondoEnduidos}></div>
         </div>
 
         <div className={s.info}>

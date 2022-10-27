@@ -67,10 +67,53 @@
   text-transform: uppercase;
 }
 
-.bannerMembranas img {
+/* .bannerMembranas img {
   width: 80%;
   margin-top: 30px;
   min-width: 250px;
+} */
+.bannerFondoMembrana {
+  background-image: url('../../img/bannerMembranas.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.bannerFondoAccesorios {
+  background-image: url('../../img/bannerAccesorios.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.bannerFondoEnduidos {
+  background-image: url('../../img/bannerEnduidos.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.bannerFondoFijadores {
+  background-image: url('../../img/bannerFijadores.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
 }
 
 .info {
@@ -90,6 +133,11 @@
   font-size: 16px;
   font-family: var(--fuenteLetras);
   margin-bottom: 2%;
+}
+
+.arrow_faq {
+  position: relative;
+  top: 5px;
 }
 
 .labelFichaTecnica h3 {
@@ -241,6 +289,26 @@
     height: 10%;
   }
 
+  .labelFichaTecnica h3 {
+    width: 80%;
+    height: 40px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: grey;
+    transform: rotate(0deg);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px 0px 10%;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
   .checkbox_faq {
     opacity: 0;
   }
@@ -343,5 +411,49 @@
       -o-transform: rotate(360deg);
       transform: rotate(360deg);
     }
+  }
+
+  .bannerFondoMembrana {
+    background-image: url('../../img/bannerMembranas.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoAccesorios {
+    background-image: url('../../img/bannerAccesorios.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoEnduidos {
+    background-image: url('../../img/bannerEnduidos.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoFijadores {
+    background-image: url('../../img/bannerFijadores.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
   }
 }

@@ -69,12 +69,99 @@
   text-transform: uppercase;
 }
 
-.bannerLatex img {
+/* .bannerLatex img {
   width: 80%;
   margin-top: 30px;
   min-width: 250px;
+} */
+
+.bannerFondo {
+  background-image: url('../../img/bannerLatex.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
 }
 
+.bannerFondoLatexInterior {
+  background-image: url('../../img/bannerLatexInterior.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.bannerFondoLatexInteriorColor {
+  background-image: url('../../img/bannerLatexInteriorColor.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.bannerFondoLatexInteriorLavable {
+  background-image: url('../../img/bannerLatexInteriorLavable.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.bannerFondoLatexInteriorSatinado {
+  background-image: url('../../img/bannerLatexInteriorSatinado.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.bannerFondoLatexInteriorCielorraso {
+  background-image: url('../../img/bannerLatexInteriorCielorraso.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.bannerFondoLatexExterior {
+  background-image: url('../../img/bannerLatexExterior.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.bannerFondoLatexExteriorImpermeabilizante {
+  background-image: url('../../img/bannerLatexExteriorImpermeabilizante.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
 
 /* LOADER */
 
@@ -137,7 +224,95 @@
   }
 }
 
-@media (max-width: 800px) {}
+@media (max-width: 800px) {
+  .bannerFondo {
+    background-image: url('../../img/bannerLatex.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexInterior {
+    background-image: url('../../img/bannerLatexInterior.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexInteriorColor {
+    background-image: url('../../img/bannerLatexInteriorColor.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexInteriorLavable {
+    background-image: url('../../img/bannerLatexInteriorLavable.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexInteriorSatinado {
+    background-image: url('../../img/bannerLatexInteriorSatinado.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexInteriorCielorraso {
+    background-image: url('../../img/bannerLatexInteriorCielorraso.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexExterior {
+    background-image: url('../../img/bannerLatexExterior.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexExteriorImpermeabilizante {
+    background-image: url('../../img/bannerLatexExteriorImpermeabilizante.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
 
 @media (max-width: 475px) {
   .textoArriba {
@@ -225,4 +400,93 @@
       transform: rotate(360deg);
     }
   }
+
+  .bannerFondo {
+    background-image: url('../../img/bannerLatex.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexInterior {
+    background-image: url('../../img/bannerLatexInterior.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexInteriorColor {
+    background-image: url('../../img/bannerLatexInteriorColor.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexInteriorLavable {
+    background-image: url('../../img/bannerLatexInteriorLavable.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexInteriorSatinado {
+    background-image: url('../../img/bannerLatexInteriorSatinado.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexInteriorCielorraso {
+    background-image: url('../../img/bannerLatexInteriorCielorraso.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexExterior {
+    background-image: url('../../img/bannerLatexExterior.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .bannerFondoLatexExteriorImpermeabilizante {
+    background-image: url('../../img/bannerLatexExteriorImpermeabilizante.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
 }

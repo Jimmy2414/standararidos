@@ -117,7 +117,8 @@ const LatexInteriorCielorraso = () => {
           <h1>Látex Interior Cielorraso</h1>
         </div>
         <div className={s.bannerLatex}>
-          <img src={bannerLatex} alt="banner-latex" />
+          {/* <img src={bannerLatex} alt="banner-latex" /> */}
+          <div className={s.bannerFondoLatexInteriorCielorraso}></div>
         </div>
         <div className={s.contenedorProducto}>
           {latexColor?.map(e => {

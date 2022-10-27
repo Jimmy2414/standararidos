@@ -95,7 +95,8 @@ const Fijadores = () => {
           <h1>Fijadores</h1>
         </div>
         <div className={s.bannerMembranas}>
-          <img src={bannerMembranas} alt="banner-latex" />
+          {/* <img src={bannerMembranas} alt="banner-latex" /> */}
+          <div className={s.bannerFondoFijadores}></div>
         </div>
 
         <div className={s.info}>

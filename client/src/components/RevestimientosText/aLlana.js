@@ -9,7 +9,7 @@ import { useState } from "react";
 import Paginacion from "../Paginado/paginado";
 
 import logo from '../../img/standarLogo.jpg'
-import bannerRevest from '../../img/bannerRevest.jpg'
+import bannerRevest from '../../img/bannerALlana.jpg'
 import aRodillo from '../../img/arodillo.jpg'
 import aLlanna from '../../img/allana.jpg'
 import s from '../RevestimientosText/revestimientos.module.css'
@@ -137,11 +137,12 @@ export default function Allana(props) {
               <div className={s.layout}>
 
                 <div className={s.titulo}>
-                  <h1>Revestimientos texturados a Llana</h1>
+                  <h1>REVESTIMIENTOS TEXTURADOS A LLANA</h1>
                 </div>
 
                 <div className={s.bannerRevest}>
-                  <img src={bannerRevest} alt="banner-revestimientos-texturados" />
+                  {/* <img src={bannerRevest} alt="banner-revestimientos-texturados" /> */}
+                  <div className={s.bannerFondo}></div>
                 </div>
 
 
@@ -151,7 +152,7 @@ export default function Allana(props) {
 
                 <div className={s.layoutDos}>
                   <div className={s.aLlana}>
-                    <img src={aLlanna} alt="a-llana" />
+                    <img src={aRodillo} alt="a-rodillo" />
                     <div className={s.info}>
                       <h3>Revestimiento Rulato Travertino (con llana)</h3>
                       <p>Revestimiento de aplicación con llana metálica y plástica, que forma una capa de grosor medio o fino según el grano de la piedra. La textura media, brinda un efecto visual bien definido al hacer el rayado. Con textura fina, el dibujo es más sutil y la carga sobre la superficie más liviana. El revestimiento junto a la base, garantizan una total impermeabilidad, con mejor adherencia y visualmente uniforme en color.</p>

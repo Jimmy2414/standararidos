@@ -136,11 +136,12 @@ export default function Arodillo(props) {
               <div className={s.layout}>
 
                 <div className={s.titulo}>
-                  <h1>Revestimientos texturados a Rodillo</h1>
+                  <h1>REVESTIMIENTOS TEXTURADOS A RODILLO</h1>
                 </div>
 
                 <div className={s.bannerRevest}>
-                  <img src={bannerRevest} alt="banner-revestimientos-texturados" />
+                  {/* <img src={bannerRevest} alt="banner-revestimientos-texturados" /> */}
+                  <div className={s.bannerFondo}></div>
                 </div>
 
 
