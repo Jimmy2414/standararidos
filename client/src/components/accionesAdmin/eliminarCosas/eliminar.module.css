@@ -5,7 +5,8 @@
   margin: auto;
   width: 100%;
   flex-direction: column;
-  background-color: #d0aeae;
+  /* background-color: #d0aeae; */
+  background: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #ffb2b2 calc(40% + 1px), #ffb2b2 60%, #ff5e5e calc(60% + 1px), #ff5e5e 72%, #ff3e3e calc(72% + 1px), #ff3e3e 100%);
   color: #09010B;
 }
 
@@ -39,7 +40,9 @@
 }
 
 .form {
-  background-color: #d0aeae;
+  /* background-color: #d0aeae; */
+  background: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #ffb2b2 calc(40% + 1px), #ffb2b2 60%, #ff5e5e calc(60% + 1px), #ff5e5e 72%, #ff3e3e calc(72% + 1px), #ff3e3e 100%);
+
   color: #09010B;
   border: none;
   display: flex;

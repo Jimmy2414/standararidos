@@ -1,3 +1,8 @@
+.form {
+  width: 100%;
+  background: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #c5ffb2 calc(40% + 1px), #c3ffb2 60%, #86ff5e calc(60% + 1px), #7eff5e 72%, #5eff3e calc(72% + 1px), #65ff3e 100%);
+}
+
 .inputFichas {
   width: 50%;
 }

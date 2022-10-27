@@ -81,8 +81,8 @@ export const Admin = () => {
 
 
               <h6>ACLARACIÓN:</h6>
-              <p>Al eliminar una ficha técnica, podra ver que aparece una foto con el mensaje "sin foto", pero
-                podrá subir otra foto en su correspondiente seccion y se actualizara con la nueva ficha técnica que suba.
+              <p>Al eliminar una ficha técnica, podra ver que aparece unicamente el título de la ficha técnica, pero
+                podrá subir otra foto en su correspondiente sección y se actualizará con la nueva ficha técnica que suba.
               </p>
             </div>
           </div>

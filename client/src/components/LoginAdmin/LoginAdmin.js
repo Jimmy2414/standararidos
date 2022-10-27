@@ -93,7 +93,7 @@ const LoginAdmin = () => {
           <input className={s.inputPass} type="password" name='password' />
         </label>
 
-        <button type='submit'>Ingresar</button>
+        <button className={s.buttonIngresar} type='submit'>Ingresar</button>
       </form>
     </div>
   )

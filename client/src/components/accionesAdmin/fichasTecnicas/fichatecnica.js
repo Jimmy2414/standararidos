@@ -165,7 +165,7 @@ const Fichatecnica = () => {
     <div>
       <NavBar />
       <h2>Fichas Técnicas</h2>
-      <form onSubmit={handleSubmit}>
+      <form className={s.form} onSubmit={handleSubmit}>
         <input className={s.inputFichas} onChange={handleChange} type="file" placeholder="Sube imagen de la ficha técnica" />
         <progress
           className={s.barradecarga}
