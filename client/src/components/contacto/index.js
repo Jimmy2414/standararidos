@@ -8,6 +8,79 @@ import Swal from 'sweetalert2';
 
 export const Contacto = () => {
 
+  const handleName = (e) => {
+    e.preventDefault()
+
+    const nombre = e.target.nombre.value;
+    const email = e.target.email.value;
+    const mensaje = e.target.mensaje.value
+
+    if (nombre === "") {
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Los campos no pueden estar vacios.',
+        showConfirmButton: true,
+      });
+      return
+    }
+  }
+
+  const handleEmail = (e) => {
+    e.preventDefault()
+
+    const nombre = e.target.nombre.value;
+    const email = e.target.email.value;
+    const mensaje = e.target.mensaje.value
+
+    const regexEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    if (email === "") {
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Los campos no pueden estar vacios.',
+        showConfirmButton: true,
+      });
+      return
+    }
+    if (email !== "" && !regexEmail.test(email)) {
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'El formato de email es invalido.',
+        showConfirmButton: true,
+      });
+      return
+    }
+  }
+
+  const handleMessage = (e) => {
+    e.preventDefault()
+
+    const nombre = e.target.nombre.value;
+    const email = e.target.email.value;
+    const mensaje = e.target.mensaje.value
+
+    if (mensaje === "") {
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Los campos no pueden estar vacios.',
+        showConfirmButton: true,
+      });
+      return
+    }
+    if (mensaje.length <= 20) {
+      Swal.fire({
+        position: 'center',
+        icon: 'info',
+        title: 'Por favor, escribe un poco mas en el mensaje',
+        showConfirmButton: true,
+      });
+    }
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -39,11 +112,20 @@ export const Contacto = () => {
         title: '¡Mensaje enviado!',
         showConfirmButton: true,
       });
+      console.log(nombre, email, mensaje)
     }
   }
 
 
+  const alertSuccess = function (e) {
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: '¡Mensaje enviado!',
+      showConfirmButton: true,
+    });
 
+  }
 
 
   return (
@@ -103,7 +185,8 @@ export const Contacto = () => {
           </p>
         </div>
 
-        <form className={s.form} method='POST' action="https://formsubmit.co/standararidos@hotmail.com" onSubmit={handleSubmit} >
+
+        <form className={s.form} action="https://formsubmit.co/d8500e2d1c09704a9b642a3f9563fb7c" method='POST' onSubmit={alertSuccess} >
           <h2 className={s.formTitle}>
             ¡Contactate con nosotros!
           </h2>
@@ -111,20 +194,25 @@ export const Contacto = () => {
           <p className={s.textRequired}>* Campo requerido</p>
           <div className={s.formInputs}>
             <label >
-              <input className={s.inputsContacto} type="text" name='nombre' placeholder='Nombre: *' />
+              <input onClick={handleName} className={s.inputsContacto} type="text" name='nombre' placeholder='Nombre: *' required />
             </label>
 
             <label>
-              <input className={s.inputsContacto} type="email" name='email' placeholder='Email: *' />
+              <input className={s.inputsContacto} type="email" name='email' placeholder='Email: *' required />
             </label>
 
             <label>
-              <textarea className={s.inputsContacto} name='mensaje' placeholder='Mensaje: *' ></textarea>
+              <textarea onSubmit={handleMessage} className={s.inputsContacto} name='mensaje' placeholder='Mensaje: *' required></textarea>
             </label>
 
-            <button type='submit'>Enviar</button>
+
+            <button type="submit" value="send" placeholder="Enviar Mail.">ENVIAR</button>
+            {/* onSubmit={handleSubmit} */}
+            <input type="hidden" name="_captcha" value="false" />
           </div>
+          {/* <button  type="submit">Enviar</button> */}
         </form>
+
       </div>
 
       <Footer />

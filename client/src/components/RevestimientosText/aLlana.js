@@ -169,9 +169,9 @@ export default function Allana(props) {
                   <label htmlFor="fichatecnica" className={s.labelFichaTecnica} onClick={changeToCross}>
                     {icon === true
                       ?
-                      <h3>Ficha Tecnica<img className={s.arrow_faq} src={arrowRight} alt="arrow_faq" />  </h3>
+                      <h3>Ficha Técnica<img className={s.arrow_faq} src={arrowRight} alt="arrow_faq" />  </h3>
                       :
-                      <h3>Ficha Tecnica <img className={s.arrow_faq} src={arrowDown} alt="arrow_faq" /> </h3>}
+                      <h3>Ficha Técnica <img className={s.arrow_faq} src={arrowDown} alt="arrow_faq" /> </h3>}
                   </label>
                   <input type="checkbox" id="fichatecnica" className={s.checkbox_faq} />
 
