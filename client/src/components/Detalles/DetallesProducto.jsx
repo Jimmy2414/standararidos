@@ -28,6 +28,9 @@ export default function DetalleProducto(props) {
 
   var detalle = useSelector(state => state.detalleProducto);
 
+  const back = () => {
+    window.history.back()
+  }
 
   return (
     <div className={s.conetenedorDetalle}>
@@ -44,9 +47,9 @@ export default function DetalleProducto(props) {
       <NavMenu />
       <div className={s.contenedorProducto}>
         <div className={s.btnVolver}>
-          <NavLink to={'/'}>
-            <button>Volver a home</button>
-          </NavLink>
+
+          <button onClick={() => back()}>Volver atras</button>
+
         </div>
         {loading ? (
           <h2>Cargando...</h2>

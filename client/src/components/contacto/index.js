@@ -193,15 +193,15 @@ export const Contacto = () => {
 
           <p className={s.textRequired}>* Campo requerido</p>
           <div className={s.formInputs}>
-            <label >
+            <label htmlFor="nombre">
               <input onClick={handleName} className={s.inputsContacto} type="text" name='nombre' placeholder='Nombre: *' required />
             </label>
 
-            <label>
+            <label htmlFor="email">
               <input className={s.inputsContacto} type="email" name='email' placeholder='Email: *' required />
             </label>
 
-            <label>
+            <label htmlFor="mensaje">
               <textarea onSubmit={handleMessage} className={s.inputsContacto} name='mensaje' placeholder='Mensaje: *' required></textarea>
             </label>
 
