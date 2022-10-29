@@ -136,9 +136,7 @@ export default function Allana(props) {
 
               <div className={s.layout}>
 
-                <div className={s.titulo}>
-                  <h1>REVESTIMIENTOS TEXTURADOS A LLANA</h1>
-                </div>
+
 
                 <div className={s.bannerRevest}>
                   {/* <img src={bannerRevest} alt="banner-revestimientos-texturados" /> */}
@@ -146,14 +144,19 @@ export default function Allana(props) {
                 </div>
 
 
-                <div className={s.descripcionRevest}>
-                  <p>Revestimiento compuesto a base de resinas acrílicas y cargas minerales, que aportan resistencia a los diversos agentes climáticos y gran impermeabilidad. Decora las superficies y las protege a lo largo del tiempo. Según la forma de aplicación, existen dos tipos, a llana y a rodillo. Es de uso interior y exterior.</p>
-                </div>
+
 
                 <div className={s.layoutDos}>
+                  <div className={s.titulo}>
+                    <h1>REVESTIMIENTO TEXTURADO A LLANA</h1>
+                  </div>
+                  <div className={s.descripcionRevest}>
+                    <p>Revestimiento compuesto a base de resinas acrílicas y cargas minerales, que aportan resistencia a los diversos agentes climáticos y gran impermeabilidad. Decora las superficies y las protege a lo largo del tiempo. Según la forma de aplicación, existen dos tipos, a llana y a rodillo. Es de uso interior y exterior.</p>
+                  </div>
                   <div className={s.aLlana}>
                     <img src={aRodillo} alt="a-rodillo" />
                     <div className={s.info}>
+
                       <h3>Revestimiento Rulato Travertino (con llana)</h3>
                       <p>Revestimiento de aplicación con llana metálica y plástica, que forma una capa de grosor medio o fino según el grano de la piedra. La textura media, brinda un efecto visual bien definido al hacer el rayado. Con textura fina, el dibujo es más sutil y la carga sobre la superficie más liviana. El revestimiento junto a la base, garantizan una total impermeabilidad, con mejor adherencia y visualmente uniforme en color.</p>
 

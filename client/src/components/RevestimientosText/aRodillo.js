@@ -135,9 +135,7 @@ export default function Arodillo(props) {
 
               <div className={s.layout}>
 
-                <div className={s.titulo}>
-                  <h1>REVESTIMIENTOS TEXTURADOS A RODILLO</h1>
-                </div>
+
 
                 <div className={s.bannerRevest}>
                   {/* <img src={bannerRevest} alt="banner-revestimientos-texturados" /> */}
@@ -145,11 +143,15 @@ export default function Arodillo(props) {
                 </div>
 
 
-                <div className={s.descripcionRevest}>
-                  <p>Revestimiento compuesto a base de resinas acrílicas y cargas minerales, que aportan resistencia a los diversos agentes climáticos y gran impermeabilidad. Decora las superficies y las protege a lo largo del tiempo. Según la forma de aplicación, existen dos tipos, a llana y a rodillo. Es de uso interior y exterior.</p>
-                </div>
+
 
                 <div className={s.layoutDos}>
+                  <div className={s.titulo}>
+                    <h1>REVESTIMIENTO TEXTURADO A RODILLO</h1>
+                  </div>
+                  <div className={s.descripcionRevest}>
+                    <p>Revestimiento compuesto a base de resinas acrílicas y cargas minerales, que aportan resistencia a los diversos agentes climáticos y gran impermeabilidad. Decora las superficies y las protege a lo largo del tiempo. Según la forma de aplicación, existen dos tipos, a llana y a rodillo. Es de uso interior y exterior.</p>
+                  </div>
                   <div className={s.aRodillo}>
                     <img src={aRodillo} alt="a-rodillo" />
                     <div className={s.info}>

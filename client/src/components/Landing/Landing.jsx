@@ -7,7 +7,7 @@ import { getProducto, deleteState } from '../../Redux/actions/actions';
 import NavMenu from '../NavMenu/Menu';
 import Footer from '../Footer/Footer';
 import s from '../Landing/Landing.module.css';
-import fotoNosotros from '../../img/fotonosotros1.jpg'
+import fotoNosotros from '../../img/fotoQuieneSomosNueva.jpg'
 import { NavLink } from 'react-router-dom';
 
 import { Helmet } from 'react-helmet'
@@ -124,7 +124,7 @@ export default function Landing() {
             </div>
           </div>
 
-          <h3 className={s.title_destacados}>Productos Recientes</h3>
+          <h3 className={s.title_destacados}>Productos</h3>
           <p className={s.aclaracion}>
             Clickea sobre el producto para ver el detalle
           </p>

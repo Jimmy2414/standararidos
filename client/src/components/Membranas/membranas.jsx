@@ -112,14 +112,14 @@ export default function Membranas() {
           <NavMenu />
 
           <div className={s.layout}>
-            <div className={s.titulo}>
-              <h1>Membranas</h1>
-            </div>
+
             <div className={s.bannerMembranas}>
               {/* <img src={bannerMembranas} alt="banner-latex" /> */}
               <div className={s.bannerFondoMembrana}></div>
             </div>
-
+            <div className={s.titulo}>
+              <h1>Membranas</h1>
+            </div>
             <div className={s.info}>
               <h3>Nivel de tránsito</h3>
               <p>Bajo.

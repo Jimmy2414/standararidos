@@ -155,7 +155,8 @@ export const Contacto = () => {
         <div className={s.containerDatos}>
           <div className={s.datos}>
             <h3>Dirección </h3>
-            <p>Pilcomayo 3764 - Villa Tesei (Hurlingham) - Provincia de Buenos Aires</p>
+            <p>Pilcomayo 3764 - Villa Tesei (Hurlingham)</p>
+            <p>Provincia de Buenos Aires</p>
           </div>
 
           <div className={s.datos}>
@@ -170,7 +171,7 @@ export const Contacto = () => {
           </div>
 
           <div className={s.datos}>
-            <h3>Redes </h3>
+            {/* <h3>Redes </h3> */}
             <ul>
               <li className={s.fb}><a href='https://es-es.facebook.com/standararidos1/' target="_blank"><FaFacebook /></a></li>
               <li className={s.ig}><a href='https://www.instagram.com/standararidos/?hl=es' target="_blank"><FaInstagram /></a></li>
@@ -202,11 +203,11 @@ export const Contacto = () => {
             </label>
 
             <label htmlFor="mensaje">
-              <textarea onSubmit={handleMessage} className={s.inputsContacto} name='mensaje' placeholder='Mensaje: *' required></textarea>
+              <textarea onSubmit={handleMessage} className={s.inputTextarea} name='mensaje' placeholder='Mensaje: *' required></textarea>
             </label>
 
 
-            <button type="submit" value="send" placeholder="Enviar Mail.">ENVIAR</button>
+            <button className={s.buttonSend} type="submit" value="send" placeholder="Enviar Mail.">ENVIAR</button>
             {/* onSubmit={handleSubmit} */}
             <input type="hidden" name="_captcha" value="false" />
           </div>

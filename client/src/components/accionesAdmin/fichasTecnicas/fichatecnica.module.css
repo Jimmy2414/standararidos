@@ -1,18 +1,55 @@
 .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
   width: 100%;
-  background: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #c5ffb2 calc(40% + 1px), #c3ffb2 60%, #86ff5e calc(60% + 1px), #7eff5e 72%, #5eff3e calc(72% + 1px), #65ff3e 100%);
+  /* background: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #c5ffb2 calc(40% + 1px), #c3ffb2 60%, #86ff5e calc(60% + 1px), #7eff5e 72%, #5eff3e calc(72% + 1px), #65ff3e 100%); */
+  background-color: #e5e5e5;
 }
 
-.inputFichas {
-  width: 50%;
+.inputFichas[type="file" i] {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  min-width: 300px;
+  width: 30%;
+  text-align: center;
+  margin-top: 20px;
+  height: 40px;
+  background-color: var(--colorBlanco);
+  font-family: var(--fuenteMenu);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #e5e5e5;
+  color: #09010B;
+  box-shadow: inset rgb(168, 168, 168) 2px 2px 10px 2px;
+  padding: 8px;
 }
 
 .selectorFichas {
-  width: 50%;
+  width: 20%;
+  height: 30px;
+  font-weight: 700;
 }
 
 .barradecarga {
-  width: 90%;
+  margin-top: 5px;
+  width: 20%;
+}
+
+.labelSeccion {
+  margin-top: 10px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.botonSubir {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .contenedorFichasHechas {
@@ -59,6 +96,39 @@ hr {
 }
 
 @media (max-width: 475px) {
+
+  .inputFichas[type="file" i] {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-width: 300px;
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
+    height: 40px;
+    background-color: var(--colorBlanco);
+    font-family: var(--fuenteMenu);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #e5e5e5;
+    color: #09010B;
+    box-shadow: inset rgb(168, 168, 168) 2px 2px 10px 2px;
+    padding: 8px;
+  }
+
+  .barradecarga {
+    margin-top: 5px;
+    width: 80%;
+  }
+
+  .selectorFichas {
+    width: 80%;
+    height: 30px;
+    font-weight: 700;
+  }
+
   .botonSubir {
     width: 80%;
     font-size: 15px;

@@ -177,7 +177,7 @@ const Fichatecnica = () => {
         </div>
 
 
-        <label>¿A qué seccion se va a agregar la ficha técnica?</label>
+        <label className={s.labelSeccion}>¿A qué seccion se va a agregar la ficha técnica?</label>
         <select className={s.selectorFichas} onChange={handleSelectSeccion}>
           <option value="">Sección</option>
           <option value="ficha tecnica llana">Revestimiento texturado a LLANA</option>

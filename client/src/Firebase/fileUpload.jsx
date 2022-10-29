@@ -152,7 +152,7 @@ export default function FileUpload() {
           <h1 className={s.titSubir}>
             <i>Subir Producto</i>
           </h1>
-          <form onSubmit={handleSubmit}>
+          <form className={s.form} onSubmit={handleSubmit}>
             <div>
               <input
                 type="text"

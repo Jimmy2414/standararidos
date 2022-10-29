@@ -125,12 +125,13 @@ export default function LatexColor() {
           <NavMenu />
 
           <div className={s.layout}>
-            <div className={s.titulo}>
-              <h1>Látex Interior Color</h1>
-            </div>
+
             <div className={s.bannerLatex}>
               {/* <img src={bannerLatex} alt="banner-latex" /> */}
               <div className={s.bannerFondoLatexInteriorColor}></div>
+            </div>
+            <div className={s.titulo}>
+              <h1>Látex Interior Color</h1>
             </div>
             <div className={s.contenedorProducto}>
               {latexColor?.map(e => {

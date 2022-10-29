@@ -112,12 +112,13 @@ const LatexExterior = () => {
       <NavMenu />
 
       <div className={s.layout}>
-        <div className={s.titulo}>
-          <h1>Látex Exterior</h1>
-        </div>
+
         <div className={s.bannerLatex}>
           {/* <img src={bannerLatex} alt="banner-latex" /> */}
           <div className={s.bannerFondoLatexExterior}></div>
+        </div>
+        <div className={s.titulo}>
+          <h1>Látex Exterior</h1>
         </div>
         <div className={s.contenedorProducto}>
           {latexColor?.map(e => {

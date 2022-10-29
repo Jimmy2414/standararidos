@@ -113,12 +113,13 @@ const LatexInterior = () => {
       <NavMenu />
 
       <div className={s.layout}>
-        <div className={s.titulo}>
-          <h1>Látex Interior</h1>
-        </div>
+
         <div className={s.bannerLatex}>
           {/* <img src={bannerLatex} alt="banner-latex" /> */}
           <div className={s.bannerFondoLatexInterior}></div>
+        </div>
+        <div className={s.titulo}>
+          <h1>Látex Interior</h1>
         </div>
         <div className={s.contenedorProducto}>
           {latexColor?.map(e => {

@@ -98,7 +98,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 80%;
+  width: 100%;
   height: 400px;
   margin: auto;
   margin-top: 20px;
@@ -110,6 +110,8 @@
   margin: auto;
   font-size: 18px;
   font-family: var(--fuenteLetras);
+  margin-top: 0%;
+  padding-top: 2%;
 }
 
 .aRodillo {
@@ -193,7 +195,7 @@
 .labelFichaTecnica h3 {
   width: 80%;
   height: 40px;
-  font-family: 'Source Sans Pro';
+  font-family: var(--fuenteLetras);
   font-style: normal;
   font-weight: 700;
   font-size: 30px;

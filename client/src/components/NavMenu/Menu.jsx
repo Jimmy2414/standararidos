@@ -17,7 +17,7 @@ export default function NavMenu() {
   return (
     <div className={s.menu_container}>
 
-      <label for="menu" className={s.button_menu} onClick={changeToCross}>
+      <label htmlFor="menu" className={s.button_menu} onClick={changeToCross}>
         {
           icon === true
             ?
@@ -38,7 +38,7 @@ export default function NavMenu() {
 
 
             <li className={s.menuDesplegableRevest}>
-              Revestimientos Texturados ▼
+              Revestimiento Texturado ▼
               <ul>
                 <NavLink to={'/revestimiento-llana'}>
                   <li>A Llana</li>
@@ -86,11 +86,11 @@ export default function NavMenu() {
             <li className={s.menuDesplegableDos}>Techos y Superficies ▼
               <ul>
                 <NavLink to={'/fijadores'}>
-                  <li>Fijadores</li>
+                  <li>Fijador</li>
                 </NavLink>
 
                 <NavLink to={'/enduidos'}>
-                  <li>Enduidos</li>
+                  <li>Enduido</li>
                 </NavLink>
 
                 <NavLink to={'/membranas'}>

@@ -115,12 +115,13 @@ const LatexInteriorLavable = () => {
       <NavMenu />
 
       <div className={s.layout}>
-        <div className={s.titulo}>
-          <h1>Látex Interior Lavable</h1>
-        </div>
+
         <div className={s.bannerLatex}>
           {/* <img src={bannerLatex} alt="banner-latex" /> */}
           <div className={s.bannerFondoLatexInteriorLavable}></div>
+        </div>
+        <div className={s.titulo}>
+          <h1>Látex Interior Lavable</h1>
         </div>
         <div className={s.contenedorProducto}>
           {latexColor?.map(e => {

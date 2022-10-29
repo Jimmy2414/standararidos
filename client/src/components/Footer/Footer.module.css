@@ -60,15 +60,18 @@
 .contacto {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: auto;
   flex-direction: column;
   margin-top: 2%;
+  text-align: justify;
 }
 
 .contacto h2 {
   margin-bottom: 10px;
   font-weight: 100;
+  font-size: 18px;
+  text-align: justify;
 }
 
 li {
@@ -78,17 +81,20 @@ li {
 .contacto ul {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: auto;
   flex-direction: column;
+  text-align: justify;
 }
 
 .contacto li {
   margin-bottom: 5px;
+  text-align: justify;
 }
 
 .contacto a {
   color: white;
+  text-align: justify;
 }
 
 .inicio {
@@ -270,5 +276,24 @@ li {
 
   .infoFinal p {
     margin-left: 2%;
+  }
+
+  .contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    margin-top: 2%;
+    text-align: justify;
+  }
+
+  .contacto ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    text-align: justify;
   }
 }

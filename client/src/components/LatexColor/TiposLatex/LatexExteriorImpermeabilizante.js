@@ -114,12 +114,13 @@ const LatexExteriorImpermeabilizante = () => {
       <NavMenu />
 
       <div className={s.layout}>
-        <div className={s.titulo}>
-          <h1>Látex Exterior Impermeabilizante</h1>
-        </div>
+
         <div className={s.bannerLatex}>
           {/* <img src={bannerLatex} alt="banner-latex" /> */}
           <div className={s.bannerFondoLatexExteriorImpermeabilizante}></div>
+        </div>
+        <div className={s.titulo}>
+          <h1>Látex Exterior Impermeabilizante</h1>
         </div>
         <div className={s.contenedorProducto}>
           {latexColor?.map(e => {
