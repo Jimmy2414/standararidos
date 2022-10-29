@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "build": "echo 'Bulding.... (not actually doing something, but usually I would)'"
+    "build": "npm run build"
   },
   "keywords": [
     "}"
@@ -28,5 +28,4 @@
   "devDependencies": {
     "webpack": "^5.73.0"
   }
- 
 }
