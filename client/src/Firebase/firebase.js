@@ -1,23 +1,24 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getStorage } from "firebase/storage"
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getStorage, ref, uploadBytes } from "firebase/storage"
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCG2JjWCibNPrA7pGpT4azkoBHg8PmP59k",
-  authDomain: "standararidos-2a573.firebaseapp.com",
-  projectId: "standararidos-2a573",
-  storageBucket: "standararidos-2a573.appspot.com",
-  messagingSenderId: "364196849575",
-  appId: "1:364196849575:web:8fafb44d06aa363483b882",
-  measurementId: "G-NDE02LLT6D"
+  apiKey: "AIzaSyC3dLt4mnYGTSt22H1v08vM1hTXUx1YkxQ",
+  authDomain: "standararidosupdated.firebaseapp.com",
+  projectId: "standararidosupdated",
+  storageBucket: "standararidosupdated.appspot.com",
+  messagingSenderId: "834376406928",
+  appId: "1:834376406928:web:ae635edef92664c3e94515",
+  measurementId: "G-R10124F8W9"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 export const storage = getStorage(app)
+
+export function uploadFile(file) {
+  const storageRef = ref(storage, 'some-child')
+  uploadBytes(storageRef, file).then(snapshot => {
+    console.log(snapshot)
+  })
+}

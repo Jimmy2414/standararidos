@@ -10,6 +10,7 @@ import { postProducto, getUrl } from '../Redux/actions/actions';
 import logo from '../img/standarLogo.jpg';
 import validations from './validations';
 import s from '../components/accionesAdmin/subirCosas/Subir.module.css';
+import { uploadFile } from '../Firebase/firebase';
 
 export default function FileUpload() {
   const dispatch = useDispatch();
@@ -215,6 +216,7 @@ export default function FileUpload() {
             <div>
               <label>Subir imagen</label>
               <input type="file" name="imagen" onChange={handleChange} />
+              {/* <input type="file" name="imagen" onChange={e => uploadFile(e.target.files[0])} /> */}
               <div className={s.carga}>
                 <progress
                   className={s.barradecarga}
